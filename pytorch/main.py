@@ -34,8 +34,8 @@ parser.add_argument('--dataset', type=str, choices=['mnist'],
 parser.add_argument('--seed', type=int, default=0, help='random seed (default: 0)')
 
 ## GPU
-parser.add_argument('--cuda', type=int, default=1,
-                    help='use of cuda (default: 1)')
+parser.add_argument('--cuda', type=bool, default=False,
+                    help='use of cuda (default: False)')
 parser.add_argument('--gpuID', type=int, default=0,
                     help='set gpu id to use (default: 0)')
 

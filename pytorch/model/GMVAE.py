@@ -48,8 +48,14 @@ class GMVAE:
     self.losses = LossFunctions()
     self.metrics = Metrics()
 
+    # CUDA Semantics
     if self.cuda:
-      self.network = self.network.cuda() 
+      self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    else:
+      self.device = torch.device("cpu")
+
+    # Send network to device
+    self.network = self.network.to(self.device)
   
 
   def unlabeled_loss(self, data, out_net):
@@ -115,8 +121,8 @@ class GMVAE:
 
     # iterate over the dataset
     for (data, labels) in data_loader:
-      if self.cuda == 1:
-        data = data.cuda()
+  
+      data = data.to(self.device)
 
       optimizer.zero_grad()
 
@@ -188,8 +194,7 @@ class GMVAE:
 
     with torch.no_grad():
       for data, labels in data_loader:
-        if self.cuda == 1:
-          data = data.cuda()
+        data = data.to(self.device)
       
         # flatten data
         data = data.view(data.size(0), -1)
@@ -295,8 +300,7 @@ class GMVAE:
     start_ind = 0
     with torch.no_grad():
       for (data, labels) in data_loader:
-        if self.cuda == 1:
-          data = data.cuda()
+        data = data.to(self.device)
         # flatten data
         data = data.view(data.size(0), -1)  
         out = self.network.inference(data, self.gumbel_temp, self.hard_gumbel)
@@ -333,8 +337,7 @@ class GMVAE:
     it = iter(test_random_loader)
     test_batch_data, _ = it.next()
     original = test_batch_data.data.numpy()
-    if self.cuda:
-      test_batch_data = test_batch_data.cuda()  
+    test_batch_data = test_batch_data.to(self.device)
 
     # obtain reconstructed data  
     out = self.network(test_batch_data, self.gumbel_temp, self.hard_gumbel) 
@@ -383,8 +386,7 @@ class GMVAE:
 
     categorical = F.one_hot(torch.tensor(indices), self.num_classes).float()
     
-    if self.cuda:
-      categorical = categorical.cuda()
+    categorical = categorical.to(self.device)
   
     # infer the gaussian distribution according to the category
     mean, var = self.network.generative.pzy(categorical)
