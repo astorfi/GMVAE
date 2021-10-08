@@ -36,13 +36,13 @@ parser.add_argument('--seed', type=int, default=0, help='random seed (default: 0
 ## GPU
 parser.add_argument('--cuda', type=bool, default=True,
                     help='use of cuda (default: False)')
-parser.add_argument('--gpuID', type=int, default=0,
-                    help='set gpu id to use (default: 0)')
+parser.add_argument('--gpuID', type=int, default=3,
+                    help='set gpu id to use (default: 3)')
 
 ## Training
 parser.add_argument('--epochs', type=int, default=100,
                     help='number of total epochs to run (default: 200)')
-parser.add_argument('--batch_size', default=64, type=int,
+parser.add_argument('--batch_size', default=8, type=int,
                     help='mini-batch size (default: 64)')
 parser.add_argument('--batch_size_val', default=200, type=int,
                     help='mini-batch size of validation (default: 200)')
@@ -111,7 +111,6 @@ if args.dataset == "mnist":
   # Download or load downloaded MNIST dataset
   train_dataset = datasets.MNIST('./mnist', train=True, download=True, transform=transforms.ToTensor())
   test_dataset = datasets.MNIST('./mnist', train=False, transform=transforms.ToTensor())
-
 
 #########################################################
 ## Data Partition

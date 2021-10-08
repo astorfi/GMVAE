@@ -14,12 +14,14 @@ from networks.Networks import *
 from losses.LossFunctions import *
 from metrics.Metrics import *
 import matplotlib.pyplot as plt
+import torch.nn.functional as F
 
 class GMVAE:
 
   def __init__(self, args):
     self.num_epochs = args.epochs
     self.cuda = args.cuda
+    self.gpuID = args.gpuID
     self.verbose = args.verbose
 
     self.batch_size = args.batch_size
@@ -44,15 +46,15 @@ class GMVAE:
     self.decay_temp_rate = args.decay_temp_rate
     self.gumbel_temp = self.init_temp
 
-    self.network = GMVAENet(self.input_size, self.gaussian_size, self.num_classes)
-    self.losses = LossFunctions()
-    self.metrics = Metrics()
-
     # CUDA Semantics
     if self.cuda:
-      self.device = torch.device("cuda:3" if torch.cuda.is_available() else "cpu")
+      self.device = torch.device("cuda:" + str(self.gpuID) if torch.cuda.is_available() else "cpu")
     else:
       self.device = torch.device("cpu")
+
+    self.network = GMVAENet(self.input_size, self.gaussian_size, self.num_classes, self.device)
+    self.losses = LossFunctions()
+    self.metrics = Metrics()
 
     # Send network to device
     self.network = self.network.to(self.device)
@@ -126,8 +128,14 @@ class GMVAE:
 
       optimizer.zero_grad()
 
-      # flatten data
-      data = data.view(data.size(0), -1)
+      # reprocess
+      # Turn images to size_int
+      size_int = 128
+      data = F.interpolate(data, size=size_int)
+      data = data.repeat(1, 3, 1, 1)  # Grayscale to RGB!
+
+      # # flatten data
+      # data = data.view(data.size(0), -1)
       
       # forward call
       out_net = self.network(data, self.gumbel_temp, self.hard_gumbel) 
