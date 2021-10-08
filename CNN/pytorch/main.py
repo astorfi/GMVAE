@@ -34,7 +34,7 @@ parser.add_argument('--dataset', type=str, choices=['mnist'],
 parser.add_argument('--seed', type=int, default=0, help='random seed (default: 0)')
 
 ## GPU
-parser.add_argument('--cuda', type=bool, default=False,
+parser.add_argument('--cuda', type=bool, default=True,
                     help='use of cuda (default: False)')
 parser.add_argument('--gpuID', type=int, default=0,
                     help='set gpu id to use (default: 0)')
@@ -94,9 +94,6 @@ parser.add_argument('--random_search_it', type=int, default=20,
                     help='iterations of random search (default: 20)')
 
 args = parser.parse_args()
-
-if args.cuda == 1:
-   os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpuID)
 
 ## Random Seed
 SEED = args.seed
