@@ -205,7 +205,7 @@ class GMVAE:
         data = data.to(self.device)
       
         # flatten data
-        data = data.view(data.size(0), -1)
+        # data = data.view(data.size(0), -1)
 
         # forward call
         out_net = self.network(data, self.gumbel_temp, self.hard_gumbel) 

@@ -95,6 +95,10 @@ parser.add_argument('--random_search_it', type=int, default=20,
 
 args = parser.parse_args()
 
+if args.cuda == 1:
+  #  os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpuID)
+   os.environ["CUDA_LAUNCH_BLOCKING"] = str(1)
+
 ## Random Seed
 SEED = args.seed
 np.random.seed(SEED)

@@ -35,7 +35,10 @@ class InferenceNet(nn.Module):
             in_channels = h_dim
 
         self.encoderCNN = nn.Sequential(*modules)
-        self.cnn_to_fc = nn.Linear(hidden_dims[-1]*16, x_dim)
+        self.cnn_to_fc= nn.Sequential(
+            nn.Linear(hidden_dims[-1]*16, x_dim),
+            nn.ReLU()
+        )
 
         # q(y|x)
         self.inference_qyx = torch.nn.ModuleList([
@@ -115,7 +118,7 @@ class GenerativeNet(nn.Module):
             nn.Linear(512, 512),
             nn.ReLU(),
             nn.Linear(512, x_dim),
-            torch.nn.Sigmoid()
+            nn.ReLU()
         ])
 
         # Build Decoder
@@ -152,7 +155,7 @@ class GenerativeNet(nn.Module):
                             nn.LeakyReLU(),
                             nn.Conv2d(self.hidden_dims[-1], out_channels= 3,
                                       kernel_size= 3, padding= 1),
-                            nn.Tanh())
+                            torch.nn.Sigmoid())
 
     # p(z|y)
 
