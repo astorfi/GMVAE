@@ -42,7 +42,7 @@ parser.add_argument('--gpuID', type=int, default=3,
 ## Training
 parser.add_argument('--epochs', type=int, default=100,
                     help='number of total epochs to run (default: 200)')
-parser.add_argument('--batch_size', default=8, type=int,
+parser.add_argument('--batch_size', default=64, type=int,
                     help='mini-batch size (default: 64)')
 parser.add_argument('--batch_size_val', default=200, type=int,
                     help='mini-batch size of validation (default: 200)')
