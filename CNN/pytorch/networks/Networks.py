@@ -122,7 +122,7 @@ class GenerativeNet(nn.Module):
         modules = []
 
         self.hidden_dims = [32, 64, 128, 256, 512]
-        self.fc_to_cnn = nn.Linear(x_dim, hidden_dims[-1] * 16)
+        self.fc_to_cnn = nn.Linear(x_dim, self.hidden_dims[-1] * 16)
 
         self.hidden_dims.reverse()
 
@@ -167,8 +167,9 @@ class GenerativeNet(nn.Module):
             z = layer(z)
 
         z = self.fc_to_cnn(z)
-        z = z.view(-1, self.hidden_dims[-1], 4, 4)
+        z = z.view(-1, self.hidden_dims[0], 4, 4)
         z = self.decoderCNN(z)
+        z = self.final_layer(z)
 
         return z
 
