@@ -84,6 +84,7 @@ class Gaussian(nn.Module):
 
   def forward(self, x):
     mu = self.mu(x)
+    # Note: this is extra compared to the regular reparametrization
     var = F.softplus(self.var(x))
     z = self.reparameterize(mu, var)
     return mu, var, z 
