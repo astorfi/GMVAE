@@ -58,7 +58,7 @@ parser.add_argument('--num_classes', type=int, default=10,
                     help='number of classes (default: 10)')
 parser.add_argument('--gaussian_size', default=64, type=int,
                     help='gaussian size (default: 64)')
-parser.add_argument('--input_size', default=784, type=int,
+parser.add_argument('--input_size', default=16384, type=int,
                     help='input size (default: 784)')
 
 ## Partition parameters
@@ -136,9 +136,7 @@ else:
   val_loader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size_val, sampler=SubsetRandomSampler(val_indices))
   test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=args.batch_size_val, shuffle=False)
 
-## Calculate flatten size of each input data
-args.input_size = np.prod(train_dataset[0][0].size())
-print(args.input_size)
+
 #########################################################
 ## Train and Test Model
 #########################################################

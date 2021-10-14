@@ -126,6 +126,11 @@ class GMVAE:
 
       optimizer.zero_grad()
 
+      # Turn images to size_int
+      size_int = 128
+      data = F.interpolate(data, size=size_int)
+      # data = data.repeat(1, 3, 1, 1)  # Grayscale to RGB!
+
       # flatten data
       data = data.view(data.size(0), -1)
       
@@ -195,6 +200,10 @@ class GMVAE:
     with torch.no_grad():
       for data, labels in data_loader:
         data = data.to(self.device)
+
+        size_int = 128
+        data = F.interpolate(data, size=size_int)
+        # data = data.repeat(1, 3, 1, 1)  # Grayscale to RGB!
       
         # flatten data
         data = data.view(data.size(0), -1)

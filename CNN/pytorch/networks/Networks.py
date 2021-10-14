@@ -40,20 +40,32 @@ class InferenceNet(nn.Module):
             nn.ReLU()
         )
 
+        # # q(y|x)
+        # self.inference_qyx = torch.nn.ModuleList([
+        #     nn.Linear(x_dim, 512),
+        #     nn.ReLU(),
+        #     nn.Linear(512, 512),
+        #     nn.ReLU(),
+        #     GumbelSoftmax(512, y_dim, device)
+        # ])
+
         # q(y|x)
         self.inference_qyx = torch.nn.ModuleList([
-            nn.Linear(x_dim, 512),
-            nn.ReLU(),
-            nn.Linear(512, 512),
-            nn.ReLU(),
-            GumbelSoftmax(512, y_dim, device)
+            GumbelSoftmax(x_dim, y_dim, device)
         ])
+
+        # # q(z|y,x)
+        # self.inference_qzyx = torch.nn.ModuleList([
+        #     nn.Linear(x_dim + y_dim, 512),
+        #     nn.ReLU(),
+        #     nn.Linear(512, 512),
+        #     nn.ReLU(),
+        #     Gaussian(512, z_dim)
+        # ])
 
         # q(z|y,x)
         self.inference_qzyx = torch.nn.ModuleList([
             nn.Linear(x_dim + y_dim, 512),
-            nn.ReLU(),
-            nn.Linear(512, 512),
             nn.ReLU(),
             Gaussian(512, z_dim)
         ])
