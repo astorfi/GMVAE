@@ -188,3 +188,22 @@ Loading mnist dataset...
 (Epoch 184 / 300) Train_Loss: 8.496; Val_Loss: 8.470   Train_ACC: 22.288; Val_ACC: 22.590   Train_NMI: 11.147; Val_NMI: 12.085
 (Epoch 185 / 300) Train_Loss: 8.492; Val_Loss: 8.469   Train_ACC: 20.812; Val_ACC: 20.780   Train_NMI: 10.295; Val_NMI: 11.460
 (Epoch 186 / 300) Train_Loss: 8.495; Val_Loss: 8.476   Train_ACC: 21.528; Val_ACC: 22.600   Train_NMI: 10.920; Val_NMI: 11.963
+(Epoch 187 / 300) Train_Loss: 8.493; Val_Loss: 8.477   Train_ACC: 21.187; Val_ACC: 21.690   Train_NMI: 10.646; Val_NMI: 12.317
+(Epoch 188 / 300) Train_Loss: 8.492; Val_Loss: 8.471   Train_ACC: 22.653; Val_ACC: 23.340   Train_NMI: 11.047; Val_NMI: 12.295
+(Epoch 189 / 300) Train_Loss: 8.493; Val_Loss: 8.475   Train_ACC: 21.983; Val_ACC: 23.580   Train_NMI: 10.881; Val_NMI: 12.965
+(Epoch 190 / 300) Train_Loss: 8.493; Val_Loss: 8.470   Train_ACC: 22.298; Val_ACC: 21.390   Train_NMI: 11.094; Val_NMI: 12.015
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/data/conda_env/torfia/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/data/conda_env/torfia/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 233, in run
+    self._record_writer.write(data)
+  File "/data/conda_env/torfia/lib/python3.8/site-packages/tensorboard/summary/writer/record_writer.py", line 40, in write
+    self._writer.write(header + header_crc + data + footer_crc)
+  File "/data/conda_env/torfia/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 519, in write
+    self.fs.append(self.filename, file_content, self.binary_mode)
+  File "/data/conda_env/torfia/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 150, in append
+    self._write(filename, file_content, "ab" if binary_mode else "a")
+  File "/data/conda_env/torfia/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 154, in _write
+    with io.open(filename, mode, encoding=encoding) as f:
+FileNotFoundError: [Errno 2] No such file or directory: b'log_dir/events.out.tfevents.1634245564.deeplearning1.2139.0'
