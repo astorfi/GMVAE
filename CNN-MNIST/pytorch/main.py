@@ -46,7 +46,7 @@ parser.add_argument('--batch_size', default=64, type=int,
                     help='mini-batch size (default: 64)')
 parser.add_argument('--batch_size_val', default=200, type=int,
                     help='mini-batch size of validation (default: 200)')
-parser.add_argument('--learning_rate', default=1e-3, type=float,
+parser.add_argument('--learning_rate', default=1e-5, type=float,
                     help='learning rate (default: 0.001)')
 parser.add_argument('--decay_epoch', default=-1, type=int, 
                     help='Reduces the learning rate every decay_epoch')

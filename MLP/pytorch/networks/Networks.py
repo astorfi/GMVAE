@@ -14,7 +14,7 @@ from networks.Layers import *
 
 # Inference Network
 class InferenceNet(nn.Module):
-  def __init__(self, x_dim, z_dim, y_dim):
+  def __init__(self, x_dim, z_dim, y_dim, device):
     super(InferenceNet, self).__init__()
 
     # q(y|x)
@@ -23,7 +23,7 @@ class InferenceNet(nn.Module):
         nn.ReLU(),
         nn.Linear(512, 512),
         nn.ReLU(),
-        GumbelSoftmax(512, y_dim)
+        GumbelSoftmax(512, y_dim, device)
     ])
 
     # q(z|y,x)
@@ -69,7 +69,7 @@ class InferenceNet(nn.Module):
 
 # Generative Network
 class GenerativeNet(nn.Module):
-  def __init__(self, x_dim, z_dim, y_dim):
+  def __init__(self, x_dim, z_dim, y_dim, device):
     super(GenerativeNet, self).__init__()
 
     # p(z|y)
@@ -111,11 +111,11 @@ class GenerativeNet(nn.Module):
 
 # GMVAE Network
 class GMVAENet(nn.Module):
-  def __init__(self, x_dim, z_dim, y_dim):
+  def __init__(self, x_dim, z_dim, y_dim, device):
     super(GMVAENet, self).__init__()
 
-    self.inference = InferenceNet(x_dim, z_dim, y_dim)
-    self.generative = GenerativeNet(x_dim, z_dim, y_dim)
+    self.inference = InferenceNet(x_dim, z_dim, y_dim, device)
+    self.generative = GenerativeNet(x_dim, z_dim, y_dim, device)
 
     # weight initialization
     for m in self.modules():

@@ -20,7 +20,9 @@ class GMVAE:
   def __init__(self, args):
     self.num_epochs = args.epochs
     self.cuda = args.cuda
+    self.gpuID = args.gpuID
     self.verbose = args.verbose
+    self.device = args.device
 
     self.batch_size = args.batch_size
     self.batch_size_val = args.batch_size_val
@@ -44,15 +46,9 @@ class GMVAE:
     self.decay_temp_rate = args.decay_temp_rate
     self.gumbel_temp = self.init_temp
 
-    self.network = GMVAENet(self.input_size, self.gaussian_size, self.num_classes)
+    self.network = GMVAENet(self.input_size, self.gaussian_size, self.num_classes, self.device)
     self.losses = LossFunctions()
     self.metrics = Metrics()
-
-    # CUDA Semantics
-    if self.cuda:
-      self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    else:
-      self.device = torch.device("cpu")
 
     # Send network to device
     self.network = self.network.to(self.device)
@@ -127,8 +123,8 @@ class GMVAE:
       optimizer.zero_grad()
 
       # Turn images to size_int
-      size_int = 128
-      data = F.interpolate(data, size=size_int)
+      # size_int = 128
+      # data = F.interpolate(data, size=size_int)
       # data = data.repeat(1, 3, 1, 1)  # Grayscale to RGB!
 
       # flatten data
@@ -170,7 +166,7 @@ class GMVAE:
     accuracy = 100.0 * self.metrics.cluster_acc(predicted_labels, true_labels)
     nmi = 100.0 * self.metrics.nmi(predicted_labels, true_labels)
 
-    return total_loss, recon_loss, gauss_loss, cat_loss, accuracy, nmi
+    return total_loss, recon_loss, gauss_loss, cat_loss, accuracy, nmi, self.network
 
 
   def test(self, data_loader, return_loss=False):
@@ -201,8 +197,8 @@ class GMVAE:
       for data, labels in data_loader:
         data = data.to(self.device)
 
-        size_int = 128
-        data = F.interpolate(data, size=size_int)
+        # size_int = 128
+        # data = F.interpolate(data, size=size_int)
         # data = data.repeat(1, 3, 1, 1)  # Grayscale to RGB!
       
         # flatten data
@@ -261,7 +257,7 @@ class GMVAE:
     train_history_nmi, val_history_nmi = [], []
 
     for epoch in range(1, self.num_epochs + 1):
-      train_loss, train_rec, train_gauss, train_cat, train_acc, train_nmi = self.train_epoch(optimizer, train_loader)
+      train_loss, train_rec, train_gauss, train_cat, train_acc, train_nmi, trained_model_for_epoch = self.train_epoch(optimizer, train_loader)
       val_loss, val_rec, val_gauss, val_cat, val_acc, val_nmi = self.test(val_loader, True)
 
       # if verbose then print specific information about training
@@ -288,7 +284,7 @@ class GMVAE:
       train_history_nmi.append(train_nmi)
       val_history_nmi.append(val_nmi)
     return {'train_history_nmi' : train_history_nmi, 'val_history_nmi': val_history_nmi,
-            'train_history_acc': train_history_acc, 'val_history_acc': val_history_acc}
+            'train_history_acc': train_history_acc, 'val_history_acc': val_history_acc}, trained_model_for_epoch, self.gumbel_temp, self.hard_gumbel
   
 
   def latent_features(self, data_loader, return_labels=False):

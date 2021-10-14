@@ -24,19 +24,29 @@ class InferenceNet(nn.Module):
         # Build Encoder
         modules = []
         in_channels = 3
-        for h_dim in hidden_dims:
-            modules.append(
-                nn.Sequential(
-                    nn.Conv2d(in_channels, out_channels=h_dim,
-                              kernel_size=3, stride=2, padding=1),
-                    nn.BatchNorm2d(h_dim),
-                    nn.LeakyReLU())
-            )
-            in_channels = h_dim
+        for h_dim_idx in range(len(hidden_dims)):
+            if h_dim_idx == 0:
+                modules.append(
+                    nn.Sequential(
+                        nn.Conv2d(in_channels, out_channels=hidden_dims[h_dim_idx],
+                                kernel_size=3, stride=2, padding=1),
+                        nn.LeakyReLU())
+                )
+                in_channels = hidden_dims[h_dim_idx]
+            else:
+                modules.append(
+                    nn.Sequential(
+                        nn.Conv2d(in_channels, out_channels=hidden_dims[h_dim_idx],
+                                kernel_size=3, stride=2, padding=1),
+                        nn.BatchNorm2d(hidden_dims[h_dim_idx]),
+                        nn.LeakyReLU())
+                )
+                in_channels = hidden_dims[h_dim_idx]
 
         self.encoderCNN = nn.Sequential(*modules)
         self.cnn_to_fc= nn.Sequential(
             nn.Linear(hidden_dims[-1]*16, x_dim),
+            nn.BatchNorm1d(num_features=x_dim),
             nn.ReLU()
         )
 
@@ -66,6 +76,7 @@ class InferenceNet(nn.Module):
         # q(z|y,x)
         self.inference_qzyx = torch.nn.ModuleList([
             nn.Linear(x_dim + y_dim, 512),
+            nn.BatchNorm1d(num_features=512),
             nn.ReLU(),
             Gaussian(512, z_dim)
         ])

@@ -1,105 +1,448 @@
 Loading mnist dataset...
 /data/conda_env/torfia/lib/python3.8/site-packages/torchvision/datasets/mnist.py:498: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1623448234945/work/torch/csrc/utils/tensor_numpy.cpp:180.)
   return torch.from_numpy(parsed.astype(m[2], copy=False)).view(*s)
-(Epoch 1 / 100) Train_Loss: 2359.402; Val_Loss: 1754.021   Train_ACC: 11.273; Val_ACC: 11.350   Train_NMI: 0.052; Val_NMI: 0.000
-(Epoch 2 / 100) Train_Loss: 1663.110; Val_Loss: 1570.927   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 3 / 100) Train_Loss: 1549.292; Val_Loss: 1509.809   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 4 / 100) Train_Loss: 1492.724; Val_Loss: 1488.196   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 5 / 100) Train_Loss: 1456.327; Val_Loss: 1439.472   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 6 / 100) Train_Loss: 1430.353; Val_Loss: 1419.024   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 7 / 100) Train_Loss: 1412.866; Val_Loss: 1408.003   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 8 / 100) Train_Loss: 1398.450; Val_Loss: 1407.739   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 9 / 100) Train_Loss: 1387.038; Val_Loss: 1389.818   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 10 / 100) Train_Loss: 1378.473; Val_Loss: 1378.488   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 11 / 100) Train_Loss: 1371.158; Val_Loss: 1378.806   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 12 / 100) Train_Loss: 1364.757; Val_Loss: 1382.715   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 13 / 100) Train_Loss: 1359.657; Val_Loss: 1379.150   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 14 / 100) Train_Loss: 1355.708; Val_Loss: 1366.975   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 15 / 100) Train_Loss: 1351.099; Val_Loss: 1368.302   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 16 / 100) Train_Loss: 1348.524; Val_Loss: 1368.960   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 17 / 100) Train_Loss: 1343.890; Val_Loss: 1374.646   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 18 / 100) Train_Loss: 1341.850; Val_Loss: 1358.343   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 19 / 100) Train_Loss: 1340.076; Val_Loss: 1360.240   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 20 / 100) Train_Loss: 1337.181; Val_Loss: 1358.909   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 21 / 100) Train_Loss: 1336.007; Val_Loss: 1358.542   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 22 / 100) Train_Loss: 1333.744; Val_Loss: 1352.875   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 23 / 100) Train_Loss: 1331.183; Val_Loss: 1359.336   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 24 / 100) Train_Loss: 1330.197; Val_Loss: 1363.956   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 25 / 100) Train_Loss: 1329.535; Val_Loss: 1355.377   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 26 / 100) Train_Loss: 1327.305; Val_Loss: 1350.971   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 27 / 100) Train_Loss: 1326.374; Val_Loss: 1360.562   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 28 / 100) Train_Loss: 1325.999; Val_Loss: 1346.601   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 29 / 100) Train_Loss: 1323.806; Val_Loss: 1349.025   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 30 / 100) Train_Loss: 1322.069; Val_Loss: 1346.304   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 31 / 100) Train_Loss: 1321.774; Val_Loss: 1351.729   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 32 / 100) Train_Loss: 1320.872; Val_Loss: 1350.718   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 33 / 100) Train_Loss: 1320.019; Val_Loss: 1340.426   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 34 / 100) Train_Loss: 1318.365; Val_Loss: 1348.079   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 35 / 100) Train_Loss: 1317.340; Val_Loss: 1353.896   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 36 / 100) Train_Loss: 1316.813; Val_Loss: 1344.942   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 37 / 100) Train_Loss: 1316.480; Val_Loss: 1345.983   Train_ACC: 11.243; Val_ACC: 11.350   Train_NMI: 0.004; Val_NMI: 0.000
-(Epoch 38 / 100) Train_Loss: 1315.247; Val_Loss: 1340.584   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 39 / 100) Train_Loss: 1314.547; Val_Loss: 1338.781   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 40 / 100) Train_Loss: 1313.935; Val_Loss: 1342.504   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 41 / 100) Train_Loss: 1313.968; Val_Loss: 1338.051   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 42 / 100) Train_Loss: 1312.675; Val_Loss: 1346.994   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 43 / 100) Train_Loss: 1312.551; Val_Loss: 1346.584   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 44 / 100) Train_Loss: 1311.826; Val_Loss: 1343.614   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 45 / 100) Train_Loss: 1311.360; Val_Loss: 1352.119   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 46 / 100) Train_Loss: 1310.567; Val_Loss: 1343.953   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 47 / 100) Train_Loss: 1309.630; Val_Loss: 1335.298   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 48 / 100) Train_Loss: 1309.182; Val_Loss: 1331.498   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 49 / 100) Train_Loss: 1308.992; Val_Loss: 1339.397   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 50 / 100) Train_Loss: 1308.579; Val_Loss: 1338.361   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 51 / 100) Train_Loss: 1307.805; Val_Loss: 1338.191   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 52 / 100) Train_Loss: 1307.671; Val_Loss: 1346.124   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 53 / 100) Train_Loss: 1306.205; Val_Loss: 1340.178   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 54 / 100) Train_Loss: 1305.777; Val_Loss: 1343.596   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 55 / 100) Train_Loss: 1305.784; Val_Loss: 1336.592   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 56 / 100) Train_Loss: 1305.034; Val_Loss: 1343.556   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 57 / 100) Train_Loss: 1304.517; Val_Loss: 1340.665   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 58 / 100) Train_Loss: 1304.530; Val_Loss: 1341.794   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 59 / 100) Train_Loss: 1303.646; Val_Loss: 1335.056   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 60 / 100) Train_Loss: 1302.442; Val_Loss: 1337.847   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 61 / 100) Train_Loss: 1303.515; Val_Loss: 1332.770   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 62 / 100) Train_Loss: 1303.239; Val_Loss: 1334.026   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 63 / 100) Train_Loss: 1301.275; Val_Loss: 1340.155   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 64 / 100) Train_Loss: 1301.390; Val_Loss: 1334.864   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 65 / 100) Train_Loss: 1302.033; Val_Loss: 1339.528   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 66 / 100) Train_Loss: 1301.493; Val_Loss: 1335.782   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 67 / 100) Train_Loss: 1300.768; Val_Loss: 1336.341   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 68 / 100) Train_Loss: 1300.065; Val_Loss: 1335.619   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 69 / 100) Train_Loss: 1299.617; Val_Loss: 1340.858   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 70 / 100) Train_Loss: 1299.670; Val_Loss: 1342.654   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 71 / 100) Train_Loss: 1298.958; Val_Loss: 1348.537   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 72 / 100) Train_Loss: 1298.019; Val_Loss: 1329.653   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 73 / 100) Train_Loss: 1298.157; Val_Loss: 1337.937   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 74 / 100) Train_Loss: 1298.530; Val_Loss: 1330.173   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 75 / 100) Train_Loss: 1297.763; Val_Loss: 1329.042   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 76 / 100) Train_Loss: 1297.450; Val_Loss: 1331.518   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 77 / 100) Train_Loss: 1296.607; Val_Loss: 1334.603   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 78 / 100) Train_Loss: 1296.973; Val_Loss: 1337.243   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 79 / 100) Train_Loss: 1296.167; Val_Loss: 1329.746   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 80 / 100) Train_Loss: 1296.816; Val_Loss: 1335.635   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 81 / 100) Train_Loss: 1296.756; Val_Loss: 1332.744   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 82 / 100) Train_Loss: 1295.453; Val_Loss: 1338.352   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 83 / 100) Train_Loss: 1295.359; Val_Loss: 1334.212   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 84 / 100) Train_Loss: 1296.114; Val_Loss: 1327.933   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 85 / 100) Train_Loss: 1295.187; Val_Loss: 1335.685   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 86 / 100) Train_Loss: 1294.479; Val_Loss: 1329.961   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 87 / 100) Train_Loss: 1295.358; Val_Loss: 1331.253   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 88 / 100) Train_Loss: 1294.822; Val_Loss: 1331.783   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 89 / 100) Train_Loss: 1293.805; Val_Loss: 1330.728   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 90 / 100) Train_Loss: 1293.785; Val_Loss: 1323.912   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 91 / 100) Train_Loss: 1293.908; Val_Loss: 1329.609   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 92 / 100) Train_Loss: 1292.677; Val_Loss: 1329.684   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 93 / 100) Train_Loss: 1293.456; Val_Loss: 1325.898   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 94 / 100) Train_Loss: 1292.720; Val_Loss: 1329.480   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 95 / 100) Train_Loss: 1292.799; Val_Loss: 1332.029   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 96 / 100) Train_Loss: 1292.575; Val_Loss: 1333.179   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 97 / 100) Train_Loss: 1292.442; Val_Loss: 1331.136   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 98 / 100) Train_Loss: 1292.976; Val_Loss: 1335.362   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 99 / 100) Train_Loss: 1291.925; Val_Loss: 1332.939   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-(Epoch 100 / 100) Train_Loss: 1291.458; Val_Loss: 1332.746   Train_ACC: 11.237; Val_ACC: 11.350   Train_NMI: 0.000; Val_NMI: 0.000
-Testing phase...
-Accuracy: 11.35000, NMI: 0.00000
+(Epoch 1 / 100) Train_Loss: 154.820; Val_Loss: 123.673   Train_ACC: 28.920; Val_ACC: 36.130   Train_NMI: 20.905; Val_NMI: 32.150
+(Epoch 2 / 100) Train_Loss: 118.105; Val_Loss: 112.461   Train_ACC: 36.815; Val_ACC: 41.870   Train_NMI: 30.927; Val_NMI: 35.000
+(Epoch 3 / 100) Train_Loss: 111.051; Val_Loss: 107.924   Train_ACC: 39.977; Val_ACC: 43.090   Train_NMI: 33.669; Val_NMI: 37.618
+(Epoch 4 / 100) Train_Loss: 107.615; Val_Loss: 105.825   Train_ACC: 41.192; Val_ACC: 43.510   Train_NMI: 35.399; Val_NMI: 37.539
+(Epoch 5 / 100) Train_Loss: 105.552; Val_Loss: 104.617   Train_ACC: 41.897; Val_ACC: 42.600   Train_NMI: 37.145; Val_NMI: 39.906
+(Epoch 6 / 100) Train_Loss: 104.142; Val_Loss: 103.473   Train_ACC: 42.648; Val_ACC: 44.320   Train_NMI: 38.081; Val_NMI: 41.066
+(Epoch 7 / 100) Train_Loss: 103.051; Val_Loss: 102.509   Train_ACC: 43.613; Val_ACC: 45.490   Train_NMI: 39.146; Val_NMI: 42.429
+(Epoch 8 / 100) Train_Loss: 102.313; Val_Loss: 101.976   Train_ACC: 44.483; Val_ACC: 47.040   Train_NMI: 40.280; Val_NMI: 43.359
+(Epoch 9 / 100) Train_Loss: 101.688; Val_Loss: 102.029   Train_ACC: 44.857; Val_ACC: 46.940   Train_NMI: 41.447; Val_NMI: 44.813
+(Epoch 10 / 100) Train_Loss: 101.123; Val_Loss: 100.937   Train_ACC: 45.257; Val_ACC: 47.660   Train_NMI: 41.853; Val_NMI: 45.570
+(Epoch 11 / 100) Train_Loss: 100.644; Val_Loss: 101.322   Train_ACC: 45.613; Val_ACC: 47.960   Train_NMI: 42.918; Val_NMI: 46.019
+(Epoch 12 / 100) Train_Loss: 100.280; Val_Loss: 100.807   Train_ACC: 45.728; Val_ACC: 46.910   Train_NMI: 43.569; Val_NMI: 44.940
+Loading mnist dataset...
+/data/conda_env/torfia/lib/python3.8/site-packages/torchvision/datasets/mnist.py:498: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1623448234945/work/torch/csrc/utils/tensor_numpy.cpp:180.)
+  return torch.from_numpy(parsed.astype(m[2], copy=False)).view(*s)
+(Epoch 1 / 100)
+Train - REC: 142.45676;  Gauss: 11.40323;  Cat: 0.95995;
+Valid - REC: 107.73294;  Gauss: 14.64620;  Cat: 1.29339;
+Accuracy=Train: 28.92000; Val: 36.13000   NMI=Train: 20.90495; Val: 32.15011   Total Loss=Train: 154.81994; Val: 123.67254
+Gumbel Temperature: 0.986
+(Epoch 2 / 100)
+Train - REC: 101.37726;  Gauss: 15.33740;  Cat: 1.39076;
+Valid - REC: 95.39017;  Gauss: 15.58056;  Cat: 1.48980;
+Accuracy=Train: 36.81500; Val: 41.87000   NMI=Train: 30.92683; Val: 34.99988   Total Loss=Train: 118.10542; Val: 112.46053
+Gumbel Temperature: 0.973
+(Epoch 3 / 100)
+Train - REC: 93.39731;  Gauss: 16.18169;  Cat: 1.47150;
+Valid - REC: 90.06590;  Gauss: 16.40779;  Cat: 1.45070;
+Accuracy=Train: 39.97667; Val: 43.09000   NMI=Train: 33.66913; Val: 37.61758   Total Loss=Train: 111.05050; Val: 107.92439
+Gumbel Temperature: 0.959
+(Epoch 4 / 100)
+Train - REC: 89.52237;  Gauss: 16.58590;  Cat: 1.50624;
+Valid - REC: 87.43715;  Gauss: 16.95317;  Cat: 1.43433;
+Accuracy=Train: 41.19167; Val: 43.51000   NMI=Train: 35.39892; Val: 37.53895   Total Loss=Train: 107.61452; Val: 105.82465
+Gumbel Temperature: 0.946
+(Epoch 5 / 100)
+Train - REC: 87.17584;  Gauss: 16.85396;  Cat: 1.52178;
+Valid - REC: 86.05128;  Gauss: 17.00800;  Cat: 1.55806;
+Accuracy=Train: 41.89667; Val: 42.60000   NMI=Train: 37.14530; Val: 39.90630   Total Loss=Train: 105.55158; Val: 104.61735
+Gumbel Temperature: 0.933
+(Epoch 6 / 100)
+Train - REC: 85.57677;  Gauss: 17.02432;  Cat: 1.54102;
+Valid - REC: 84.88828;  Gauss: 17.00387;  Cat: 1.58125;
+Accuracy=Train: 42.64833; Val: 44.32000   NMI=Train: 38.08121; Val: 41.06611   Total Loss=Train: 104.14211; Val: 103.47340
+Gumbel Temperature: 0.920
+(Epoch 7 / 100)
+Train - REC: 84.34714;  Gauss: 17.15897;  Cat: 1.54519;
+Valid - REC: 83.89664;  Gauss: 17.04246;  Cat: 1.56949;
+Accuracy=Train: 43.61333; Val: 45.49000   NMI=Train: 39.14559; Val: 42.42865   Total Loss=Train: 103.05130; Val: 102.50859
+Gumbel Temperature: 0.908
+(Epoch 8 / 100)
+Train - REC: 83.48875;  Gauss: 17.26234;  Cat: 1.56217;
+Valid - REC: 83.03215;  Gauss: 17.38817;  Cat: 1.55581;
+Accuracy=Train: 44.48333; Val: 47.04000   NMI=Train: 40.28025; Val: 43.35876   Total Loss=Train: 102.31325; Val: 101.97613
+Gumbel Temperature: 0.895
+(Epoch 9 / 100)
+Train - REC: 82.78553;  Gauss: 17.33898;  Cat: 1.56331;
+Valid - REC: 82.97385;  Gauss: 17.44385;  Cat: 1.61095;
+Accuracy=Train: 44.85667; Val: 46.94000   NMI=Train: 41.44657; Val: 44.81347   Total Loss=Train: 101.68782; Val: 102.02865
+Gumbel Temperature: 0.883
+(Epoch 10 / 100)
+Train - REC: 82.12793;  Gauss: 17.41779;  Cat: 1.57687;
+Valid - REC: 81.97629;  Gauss: 17.39908;  Cat: 1.56158;
+Accuracy=Train: 45.25667; Val: 47.66000   NMI=Train: 41.85314; Val: 45.57018   Total Loss=Train: 101.12259; Val: 100.93694
+Gumbel Temperature: 0.871
+(Epoch 11 / 100)
+Train - REC: 81.57173;  Gauss: 17.49162;  Cat: 1.58115;
+Valid - REC: 82.14003;  Gauss: 17.63600;  Cat: 1.54617;
+Accuracy=Train: 45.61333; Val: 47.96000   NMI=Train: 42.91795; Val: 46.01880   Total Loss=Train: 100.64450; Val: 101.32220
+Gumbel Temperature: 0.859
+(Epoch 12 / 100)
+Train - REC: 81.13838;  Gauss: 17.54624;  Cat: 1.59552;
+Valid - REC: 81.60083;  Gauss: 17.61069;  Cat: 1.59501;
+Accuracy=Train: 45.72833; Val: 46.91000   NMI=Train: 43.56876; Val: 44.93956   Total Loss=Train: 100.28014; Val: 100.80653
+Gumbel Temperature: 0.847
+(Epoch 13 / 100)
+Train - REC: 80.76286;  Gauss: 17.58365;  Cat: 1.61217;
+Valid - REC: 81.52243;  Gauss: 17.41095;  Cat: 1.60608;
+Accuracy=Train: 46.29333; Val: 47.24000   NMI=Train: 44.16057; Val: 46.83101   Total Loss=Train: 99.95868; Val: 100.53946
+Gumbel Temperature: 0.835
+(Epoch 14 / 100)
+Train - REC: 80.41332;  Gauss: 17.64963;  Cat: 1.61543;
+Valid - REC: 81.12880;  Gauss: 17.37207;  Cat: 1.61807;
+Accuracy=Train: 46.65000; Val: 47.30000   NMI=Train: 44.81381; Val: 47.05726   Total Loss=Train: 99.67838; Val: 100.11894
+Gumbel Temperature: 0.824
+(Epoch 15 / 100)
+Train - REC: 80.11468;  Gauss: 17.70809;  Cat: 1.62699;
+Valid - REC: 80.57274;  Gauss: 17.83596;  Cat: 1.63346;
+Accuracy=Train: 47.11667; Val: 48.92000   NMI=Train: 44.93690; Val: 48.76715   Total Loss=Train: 99.44976; Val: 100.04216
+Gumbel Temperature: 0.812
+(Epoch 16 / 100)
+Train - REC: 79.77340;  Gauss: 17.74138;  Cat: 1.63527;
+Valid - REC: 80.59379;  Gauss: 17.68564;  Cat: 1.61868;
+Accuracy=Train: 47.06667; Val: 46.56000   NMI=Train: 45.82478; Val: 46.61203   Total Loss=Train: 99.15005; Val: 99.89811
+Gumbel Temperature: 0.801
+(Epoch 17 / 100)
+Train - REC: 79.58706;  Gauss: 17.76412;  Cat: 1.63358;
+Valid - REC: 79.98975;  Gauss: 17.90161;  Cat: 1.62023;
+Accuracy=Train: 46.99500; Val: 48.07000   NMI=Train: 46.11768; Val: 48.37163   Total Loss=Train: 98.98476; Val: 99.51158
+Gumbel Temperature: 0.790
+(Epoch 18 / 100)
+Train - REC: 79.28686;  Gauss: 17.79929;  Cat: 1.64334;
+Valid - REC: 80.07032;  Gauss: 17.77029;  Cat: 1.68259;
+Accuracy=Train: 47.35333; Val: 49.10000   NMI=Train: 47.01329; Val: 50.12808   Total Loss=Train: 98.72949; Val: 99.52320
+Gumbel Temperature: 0.779
+(Epoch 19 / 100)
+Train - REC: 79.07790;  Gauss: 17.83190;  Cat: 1.65449;
+Valid - REC: 80.24631;  Gauss: 17.53869;  Cat: 1.66483;
+Accuracy=Train: 47.76333; Val: 49.22000   NMI=Train: 47.86357; Val: 50.11990   Total Loss=Train: 98.56429; Val: 99.44984
+Gumbel Temperature: 0.768
+(Epoch 20 / 100)
+Train - REC: 78.87779;  Gauss: 17.84157;  Cat: 1.66670;
+Valid - REC: 80.82747;  Gauss: 17.42463;  Cat: 1.65979;
+Accuracy=Train: 48.30667; Val: 48.67000   NMI=Train: 48.06536; Val: 49.74904   Total Loss=Train: 98.38606; Val: 99.91189
+Gumbel Temperature: 0.758
+(Epoch 21 / 100)
+Train - REC: 78.65725;  Gauss: 17.88055;  Cat: 1.66855;
+Valid - REC: 80.55052;  Gauss: 17.33323;  Cat: 1.67987;
+Accuracy=Train: 48.65333; Val: 49.51000   NMI=Train: 48.80902; Val: 50.11280   Total Loss=Train: 98.20635; Val: 99.56363
+Gumbel Temperature: 0.747
+(Epoch 22 / 100)
+Train - REC: 78.52670;  Gauss: 17.93236;  Cat: 1.67839;
+Valid - REC: 79.99387;  Gauss: 17.78599;  Cat: 1.68343;
+Accuracy=Train: 49.07167; Val: 49.51000   NMI=Train: 49.24693; Val: 51.04433   Total Loss=Train: 98.13745; Val: 99.46329
+Gumbel Temperature: 0.737
+(Epoch 23 / 100)
+Train - REC: 78.32910;  Gauss: 17.91849;  Cat: 1.68958;
+Valid - REC: 80.20830;  Gauss: 17.58582;  Cat: 1.65214;
+Accuracy=Train: 49.43667; Val: 50.16000   NMI=Train: 49.48903; Val: 50.36981   Total Loss=Train: 97.93716; Val: 99.44627
+Gumbel Temperature: 0.727
+(Epoch 24 / 100)
+Train - REC: 78.18509;  Gauss: 17.97501;  Cat: 1.70059;
+Valid - REC: 79.58994;  Gauss: 18.13828;  Cat: 1.70080;
+Accuracy=Train: 49.61167; Val: 51.25000   NMI=Train: 49.62212; Val: 52.16604   Total Loss=Train: 97.86069; Val: 99.42903
+Gumbel Temperature: 0.717
+(Epoch 25 / 100)
+Train - REC: 78.00476;  Gauss: 18.00054;  Cat: 1.70878;
+Valid - REC: 79.60410;  Gauss: 17.92432;  Cat: 1.68901;
+Accuracy=Train: 50.02667; Val: 50.39000   NMI=Train: 50.53985; Val: 51.43800   Total Loss=Train: 97.71408; Val: 99.21743
+Gumbel Temperature: 0.707
+(Epoch 26 / 100)
+Train - REC: 77.85756;  Gauss: 18.03580;  Cat: 1.71565;
+Valid - REC: 79.19467;  Gauss: 18.08711;  Cat: 1.71798;
+Accuracy=Train: 50.54833; Val: 51.33000   NMI=Train: 50.69012; Val: 51.35380   Total Loss=Train: 97.60901; Val: 98.99976
+Gumbel Temperature: 0.697
+(Epoch 27 / 100)
+Train - REC: 77.70077;  Gauss: 18.09592;  Cat: 1.71799;
+Valid - REC: 79.02164;  Gauss: 18.42969;  Cat: 1.74253;
+Accuracy=Train: 50.67333; Val: 51.60000   NMI=Train: 50.96480; Val: 53.68948   Total Loss=Train: 97.51467; Val: 99.19385
+Gumbel Temperature: 0.688
+(Epoch 28 / 100)
+Train - REC: 77.54974;  Gauss: 18.11192;  Cat: 1.73727;
+Valid - REC: 78.96136;  Gauss: 18.19156;  Cat: 1.72995;
+Accuracy=Train: 51.50667; Val: 52.25000   NMI=Train: 51.55952; Val: 53.15224   Total Loss=Train: 97.39893; Val: 98.88287
+Gumbel Temperature: 0.678
+(Epoch 29 / 100)
+Train - REC: 77.41993;  Gauss: 18.14844;  Cat: 1.73573;
+Valid - REC: 79.33905;  Gauss: 17.99854;  Cat: 1.73268;
+Accuracy=Train: 51.47000; Val: 53.01000   NMI=Train: 52.14830; Val: 53.06492   Total Loss=Train: 97.30410; Val: 99.07027
+Gumbel Temperature: 0.669
+(Epoch 30 / 100)
+Train - REC: 77.25860;  Gauss: 18.18106;  Cat: 1.74533;
+Valid - REC: 78.93213;  Gauss: 18.26471;  Cat: 1.74637;
+Accuracy=Train: 51.87000; Val: 52.83000   NMI=Train: 52.21297; Val: 53.24048   Total Loss=Train: 97.18499; Val: 98.94321
+Gumbel Temperature: 0.660
+(Epoch 31 / 100)
+Train - REC: 77.16155;  Gauss: 18.18104;  Cat: 1.75883;
+Valid - REC: 78.99407;  Gauss: 18.28376;  Cat: 1.75589;
+Accuracy=Train: 52.16667; Val: 53.32000   NMI=Train: 52.45737; Val: 54.80201   Total Loss=Train: 97.10142; Val: 99.03372
+Gumbel Temperature: 0.651
+(Epoch 32 / 100)
+Train - REC: 77.06129;  Gauss: 18.20070;  Cat: 1.75020;
+Valid - REC: 79.05047;  Gauss: 18.09270;  Cat: 1.74055;
+Accuracy=Train: 52.19167; Val: 52.64000   NMI=Train: 52.66995; Val: 53.96321   Total Loss=Train: 97.01219; Val: 98.88372
+Gumbel Temperature: 0.642
+(Epoch 33 / 100)
+Train - REC: 76.97075;  Gauss: 18.22561;  Cat: 1.75928;
+Valid - REC: 78.40225;  Gauss: 18.38835;  Cat: 1.74068;
+Accuracy=Train: 52.05667; Val: 53.23000   NMI=Train: 52.41294; Val: 54.17661   Total Loss=Train: 96.95563; Val: 98.53128
+Gumbel Temperature: 0.633
+(Epoch 34 / 100)
+Train - REC: 76.84244;  Gauss: 18.24615;  Cat: 1.77503;
+Valid - REC: 78.68084;  Gauss: 18.21076;  Cat: 1.77668;
+Accuracy=Train: 52.92667; Val: 53.63000   NMI=Train: 53.06652; Val: 55.45311   Total Loss=Train: 96.86362; Val: 98.66828
+Gumbel Temperature: 0.624
+(Epoch 35 / 100)
+Train - REC: 76.76340;  Gauss: 18.26243;  Cat: 1.77929;
+Valid - REC: 79.04029;  Gauss: 18.14481;  Cat: 1.79548;
+Accuracy=Train: 52.61833; Val: 52.78000   NMI=Train: 53.22603; Val: 53.74316   Total Loss=Train: 96.80512; Val: 98.98058
+Gumbel Temperature: 0.616
+(Epoch 36 / 100)
+Train - REC: 76.63519;  Gauss: 18.29266;  Cat: 1.78793;
+Valid - REC: 78.48856;  Gauss: 18.13984;  Cat: 1.76914;
+Accuracy=Train: 53.27667; Val: 54.23000   NMI=Train: 53.41597; Val: 55.29543   Total Loss=Train: 96.71578; Val: 98.39753
+Gumbel Temperature: 0.607
+(Epoch 37 / 100)
+Train - REC: 76.61211;  Gauss: 18.27582;  Cat: 1.79769;
+Valid - REC: 78.67950;  Gauss: 18.09580;  Cat: 1.80539;
+Accuracy=Train: 53.13667; Val: 53.05000   NMI=Train: 53.61326; Val: 54.50424   Total Loss=Train: 96.68562; Val: 98.58069
+Gumbel Temperature: 0.599
+(Epoch 38 / 100)
+Train - REC: 76.48411;  Gauss: 18.31516;  Cat: 1.80012;
+Valid - REC: 78.42563;  Gauss: 18.37361;  Cat: 1.82098;
+Accuracy=Train: 53.24667; Val: 55.07000   NMI=Train: 53.63892; Val: 54.72231   Total Loss=Train: 96.59938; Val: 98.62022
+Gumbel Temperature: 0.590
+(Epoch 39 / 100)
+Train - REC: 76.41058;  Gauss: 18.33567;  Cat: 1.78771;
+Valid - REC: 78.60406;  Gauss: 18.24393;  Cat: 1.77894;
+Accuracy=Train: 53.43500; Val: 54.10000   NMI=Train: 53.80136; Val: 54.01757   Total Loss=Train: 96.53395; Val: 98.62692
+Gumbel Temperature: 0.582
+(Epoch 40 / 100)
+Train - REC: 76.33123;  Gauss: 18.35710;  Cat: 1.79862;
+Valid - REC: 78.73460;  Gauss: 18.01989;  Cat: 1.80148;
+Accuracy=Train: 53.27167; Val: 53.03000   NMI=Train: 54.08435; Val: 54.41784   Total Loss=Train: 96.48695; Val: 98.55597
+Gumbel Temperature: 0.574
+(Epoch 41 / 100)
+Train - REC: 76.21527;  Gauss: 18.36225;  Cat: 1.81141;
+Valid - REC: 78.69774;  Gauss: 18.12015;  Cat: 1.78097;
+Accuracy=Train: 53.52667; Val: 53.76000   NMI=Train: 54.52302; Val: 54.88715   Total Loss=Train: 96.38893; Val: 98.59885
+Gumbel Temperature: 0.566
+(Epoch 42 / 100)
+Train - REC: 76.22486;  Gauss: 18.38899;  Cat: 1.81981;
+Valid - REC: 78.15178;  Gauss: 18.34580;  Cat: 1.79993;
+Accuracy=Train: 53.54000; Val: 54.60000   NMI=Train: 54.37581; Val: 56.28460   Total Loss=Train: 96.43366; Val: 98.29751
+Gumbel Temperature: 0.559
+(Epoch 43 / 100)
+Train - REC: 76.10836;  Gauss: 18.40022;  Cat: 1.81846;
+Valid - REC: 78.73890;  Gauss: 18.03261;  Cat: 1.81847;
+Accuracy=Train: 54.07833; Val: 55.02000   NMI=Train: 55.11150; Val: 56.45152   Total Loss=Train: 96.32704; Val: 98.58998
+Gumbel Temperature: 0.551
+(Epoch 44 / 100)
+Train - REC: 76.05436;  Gauss: 18.39574;  Cat: 1.81566;
+Valid - REC: 78.37320;  Gauss: 18.19888;  Cat: 1.82693;
+Accuracy=Train: 54.30167; Val: 53.92000   NMI=Train: 55.45919; Val: 55.89971   Total Loss=Train: 96.26576; Val: 98.39902
+Gumbel Temperature: 0.543
+(Epoch 45 / 100)
+Train - REC: 75.99292;  Gauss: 18.41107;  Cat: 1.82827;
+Valid - REC: 78.28344;  Gauss: 18.36781;  Cat: 1.82098;
+Accuracy=Train: 54.21167; Val: 55.67000   NMI=Train: 55.49438; Val: 56.98729   Total Loss=Train: 96.23226; Val: 98.47223
+Gumbel Temperature: 0.536
+(Epoch 46 / 100)
+Train - REC: 75.90412;  Gauss: 18.44103;  Cat: 1.83492;
+Valid - REC: 78.38930;  Gauss: 18.22135;  Cat: 1.81911;
+Accuracy=Train: 54.81500; Val: 54.75000   NMI=Train: 55.71384; Val: 56.56210   Total Loss=Train: 96.18007; Val: 98.42977
+Gumbel Temperature: 0.529
+(Epoch 47 / 100)
+Train - REC: 75.84228;  Gauss: 18.44405;  Cat: 1.84165;
+Valid - REC: 78.69194;  Gauss: 18.11968;  Cat: 1.83726;
+Accuracy=Train: 54.67667; Val: 54.55000   NMI=Train: 55.54366; Val: 55.95153   Total Loss=Train: 96.12797; Val: 98.64888
+Gumbel Temperature: 0.521
+(Epoch 48 / 100)
+Train - REC: 75.77761;  Gauss: 18.45900;  Cat: 1.83989;
+Valid - REC: 78.06401;  Gauss: 18.70384;  Cat: 1.83100;
+Accuracy=Train: 54.74333; Val: 54.59000   NMI=Train: 55.60592; Val: 56.33495   Total Loss=Train: 96.07650; Val: 98.59884
+Gumbel Temperature: 0.514
+(Epoch 49 / 100)
+Train - REC: 75.70324;  Gauss: 18.46392;  Cat: 1.85322;
+Valid - REC: 78.18635;  Gauss: 18.44837;  Cat: 1.84997;
+Accuracy=Train: 54.83333; Val: 55.31000   NMI=Train: 55.79774; Val: 56.86529   Total Loss=Train: 96.02038; Val: 98.48469
+Gumbel Temperature: 0.507
+(Epoch 50 / 100)
+Train - REC: 75.67948;  Gauss: 18.45883;  Cat: 1.86622;
+Valid - REC: 78.22065;  Gauss: 18.32517;  Cat: 1.84594;
+Accuracy=Train: 55.32667; Val: 56.12000   NMI=Train: 56.31048; Val: 57.23136   Total Loss=Train: 96.00452; Val: 98.39176
+Gumbel Temperature: 0.500
+(Epoch 51 / 100)
+Train - REC: 75.61104;  Gauss: 18.45499;  Cat: 1.87220;
+Valid - REC: 78.27874;  Gauss: 18.17128;  Cat: 1.87260;
+Accuracy=Train: 55.34000; Val: 55.75000   NMI=Train: 56.47524; Val: 57.66846   Total Loss=Train: 95.93822; Val: 98.32262
+Gumbel Temperature: 0.500
+(Epoch 52 / 100)
+Train - REC: 75.59583;  Gauss: 18.48740;  Cat: 1.87195;
+Valid - REC: 78.64094;  Gauss: 18.22418;  Cat: 1.85526;
+Accuracy=Train: 55.72833; Val: 56.29000   NMI=Train: 56.81132; Val: 58.27549   Total Loss=Train: 95.95518; Val: 98.72038
+Gumbel Temperature: 0.500
+(Epoch 53 / 100)
+Train - REC: 75.51300;  Gauss: 18.48054;  Cat: 1.87590;
+Valid - REC: 77.63142;  Gauss: 18.71468;  Cat: 1.86626;
+Accuracy=Train: 55.45500; Val: 55.68000   NMI=Train: 56.60284; Val: 57.56393   Total Loss=Train: 95.86944; Val: 98.21236
+Gumbel Temperature: 0.500
+(Epoch 54 / 100)
+Train - REC: 75.47448;  Gauss: 18.46498;  Cat: 1.87787;
+Valid - REC: 77.85504;  Gauss: 18.57886;  Cat: 1.89949;
+Accuracy=Train: 55.94500; Val: 56.78000   NMI=Train: 56.98018; Val: 58.93981   Total Loss=Train: 95.81733; Val: 98.33339
+Gumbel Temperature: 0.500
+(Epoch 55 / 100)
+Train - REC: 75.38047;  Gauss: 18.48207;  Cat: 1.88165;
+Valid - REC: 78.18350;  Gauss: 18.33887;  Cat: 1.87412;
+Accuracy=Train: 56.45833; Val: 56.53000   NMI=Train: 57.38169; Val: 58.11011   Total Loss=Train: 95.74419; Val: 98.39649
+Gumbel Temperature: 0.500
+(Epoch 56 / 100)
+Train - REC: 75.40135;  Gauss: 18.47828;  Cat: 1.86837;
+Valid - REC: 77.91799;  Gauss: 18.76644;  Cat: 1.88809;
+Accuracy=Train: 55.79833; Val: 56.88000   NMI=Train: 56.94134; Val: 59.28999   Total Loss=Train: 95.74801; Val: 98.57253
+Gumbel Temperature: 0.500
+(Epoch 57 / 100)
+Train - REC: 75.32683;  Gauss: 18.48197;  Cat: 1.88295;
+Valid - REC: 78.19129;  Gauss: 18.33962;  Cat: 1.88359;
+Accuracy=Train: 56.78000; Val: 58.35000   NMI=Train: 57.86259; Val: 59.44622   Total Loss=Train: 95.69175; Val: 98.41449
+Gumbel Temperature: 0.500
+(Epoch 58 / 100)
+Train - REC: 75.28048;  Gauss: 18.47173;  Cat: 1.90371;
+Valid - REC: 78.18078;  Gauss: 18.64408;  Cat: 1.89209;
+Accuracy=Train: 56.48667; Val: 56.48000   NMI=Train: 57.49589; Val: 57.76544   Total Loss=Train: 95.65591; Val: 98.71695
+Gumbel Temperature: 0.500
+(Epoch 59 / 100)
+Train - REC: 75.23572;  Gauss: 18.49599;  Cat: 1.89027;
+Valid - REC: 78.41591;  Gauss: 18.31196;  Cat: 1.84947;
+Accuracy=Train: 56.45500; Val: 56.68000   NMI=Train: 57.36529; Val: 57.58866   Total Loss=Train: 95.62198; Val: 98.57735
+Gumbel Temperature: 0.500
+(Epoch 60 / 100)
+Train - REC: 75.22283;  Gauss: 18.48609;  Cat: 1.89278;
+Valid - REC: 78.01004;  Gauss: 18.63838;  Cat: 1.88294;
+Accuracy=Train: 56.57000; Val: 56.75000   NMI=Train: 57.64119; Val: 58.51887   Total Loss=Train: 95.60169; Val: 98.53136
+Gumbel Temperature: 0.500
+(Epoch 61 / 100)
+Train - REC: 75.14761;  Gauss: 18.50095;  Cat: 1.88099;
+Valid - REC: 77.87585;  Gauss: 18.46412;  Cat: 1.89463;
+Accuracy=Train: 57.04333; Val: 58.22000   NMI=Train: 57.72213; Val: 59.40272   Total Loss=Train: 95.52955; Val: 98.23460
+Gumbel Temperature: 0.500
+(Epoch 62 / 100)
+Train - REC: 75.12711;  Gauss: 18.49281;  Cat: 1.90358;
+Valid - REC: 78.29550;  Gauss: 18.31918;  Cat: 1.89085;
+Accuracy=Train: 57.36167; Val: 57.92000   NMI=Train: 58.12958; Val: 59.13771   Total Loss=Train: 95.52349; Val: 98.50554
+Gumbel Temperature: 0.500
+(Epoch 63 / 100)
+Train - REC: 75.06866;  Gauss: 18.49259;  Cat: 1.90025;
+Valid - REC: 78.42157;  Gauss: 18.15748;  Cat: 1.86652;
+Accuracy=Train: 56.96333; Val: 56.17000   NMI=Train: 57.88312; Val: 58.30464   Total Loss=Train: 95.46150; Val: 98.44558
+Gumbel Temperature: 0.500
+(Epoch 64 / 100)
+Train - REC: 75.08078;  Gauss: 18.51746;  Cat: 1.88819;
+Valid - REC: 78.19623;  Gauss: 18.60765;  Cat: 1.87965;
+Accuracy=Train: 57.13500; Val: 58.90000   NMI=Train: 58.21870; Val: 58.94904   Total Loss=Train: 95.48643; Val: 98.68353
+Gumbel Temperature: 0.500
+(Epoch 65 / 100)
+Train - REC: 74.97201;  Gauss: 18.52001;  Cat: 1.90096;
+Valid - REC: 78.37688;  Gauss: 17.96644;  Cat: 1.89805;
+Accuracy=Train: 57.76167; Val: 58.56000   NMI=Train: 58.54885; Val: 60.00594   Total Loss=Train: 95.39298; Val: 98.24137
+Gumbel Temperature: 0.500
+(Epoch 66 / 100)
+Train - REC: 74.97373;  Gauss: 18.50389;  Cat: 1.89689;
+Valid - REC: 77.70106;  Gauss: 18.71337;  Cat: 1.89195;
+Accuracy=Train: 57.50000; Val: 57.72000   NMI=Train: 58.15020; Val: 59.16877   Total Loss=Train: 95.37451; Val: 98.30638
+Gumbel Temperature: 0.500
+(Epoch 67 / 100)
+Train - REC: 74.92133;  Gauss: 18.48637;  Cat: 1.91127;
+Valid - REC: 78.14491;  Gauss: 18.23161;  Cat: 1.89719;
+Accuracy=Train: 57.61667; Val: 58.11000   NMI=Train: 58.21216; Val: 59.23378   Total Loss=Train: 95.31897; Val: 98.27370
+Gumbel Temperature: 0.500
+(Epoch 68 / 100)
+Train - REC: 74.89590;  Gauss: 18.51757;  Cat: 1.89637;
+Valid - REC: 77.74586;  Gauss: 18.52452;  Cat: 1.88099;
+Accuracy=Train: 58.00333; Val: 59.33000   NMI=Train: 58.52425; Val: 60.16305   Total Loss=Train: 95.30984; Val: 98.15137
+Gumbel Temperature: 0.500
+(Epoch 69 / 100)
+Train - REC: 74.85748;  Gauss: 18.53083;  Cat: 1.90880;
+Valid - REC: 78.09897;  Gauss: 18.34295;  Cat: 1.89544;
+Accuracy=Train: 57.74167; Val: 58.92000   NMI=Train: 58.38541; Val: 59.56184   Total Loss=Train: 95.29711; Val: 98.33736
+Gumbel Temperature: 0.500
+(Epoch 70 / 100)
+Train - REC: 74.84993;  Gauss: 18.50390;  Cat: 1.91037;
+Valid - REC: 78.36663;  Gauss: 18.08250;  Cat: 1.86117;
+Accuracy=Train: 57.89667; Val: 57.99000   NMI=Train: 58.68901; Val: 58.67125   Total Loss=Train: 95.26421; Val: 98.31030
+Gumbel Temperature: 0.500
+(Epoch 71 / 100)
+Train - REC: 74.78614;  Gauss: 18.52551;  Cat: 1.90312;
+Valid - REC: 77.61472;  Gauss: 18.60225;  Cat: 1.88957;
+Accuracy=Train: 58.01167; Val: 58.69000   NMI=Train: 58.74658; Val: 59.85102   Total Loss=Train: 95.21477; Val: 98.10654
+Gumbel Temperature: 0.500
+(Epoch 72 / 100)
+Train - REC: 74.74386;  Gauss: 18.51206;  Cat: 1.90290;
+Valid - REC: 78.16039;  Gauss: 18.38549;  Cat: 1.90002;
+Accuracy=Train: 58.52833; Val: 57.85000   NMI=Train: 59.06754; Val: 59.34345   Total Loss=Train: 95.15882; Val: 98.44590
+Gumbel Temperature: 0.500
+(Epoch 73 / 100)
+Train - REC: 74.72517;  Gauss: 18.53661;  Cat: 1.90527;
+Valid - REC: 77.85833;  Gauss: 18.61775;  Cat: 1.88862;
+Accuracy=Train: 58.70667; Val: 59.96000   NMI=Train: 59.35323; Val: 61.01896   Total Loss=Train: 95.16705; Val: 98.36471
+Gumbel Temperature: 0.500
+(Epoch 74 / 100)
+Train - REC: 74.69324;  Gauss: 18.51714;  Cat: 1.91022;
+Valid - REC: 77.64656;  Gauss: 18.51111;  Cat: 1.89933;
+Accuracy=Train: 58.83833; Val: 58.97000   NMI=Train: 59.59659; Val: 59.86663   Total Loss=Train: 95.12060; Val: 98.05700
+Gumbel Temperature: 0.500
+(Epoch 75 / 100)
+Train - REC: 74.68375;  Gauss: 18.51377;  Cat: 1.92258;
+Valid - REC: 78.20409;  Gauss: 18.39515;  Cat: 1.91892;
+Accuracy=Train: 58.72167; Val: 59.34000   NMI=Train: 59.68065; Val: 60.58468   Total Loss=Train: 95.12010; Val: 98.51817
+Gumbel Temperature: 0.500
+(Epoch 76 / 100)
+Train - REC: 74.64827;  Gauss: 18.52489;  Cat: 1.91354;
+Valid - REC: 77.98047;  Gauss: 18.27161;  Cat: 1.88847;
+Accuracy=Train: 58.67500; Val: 58.65000   NMI=Train: 59.56410; Val: 58.44617   Total Loss=Train: 95.08670; Val: 98.14055
+Gumbel Temperature: 0.500
+(Epoch 77 / 100)
+Train - REC: 74.59286;  Gauss: 18.52354;  Cat: 1.92152;
+Valid - REC: 77.83049;  Gauss: 18.59586;  Cat: 1.90616;
+Accuracy=Train: 58.68667; Val: 59.41000   NMI=Train: 59.30664; Val: 60.03048   Total Loss=Train: 95.03792; Val: 98.33251
+Gumbel Temperature: 0.500
+(Epoch 78 / 100)
+Train - REC: 74.58563;  Gauss: 18.53718;  Cat: 1.91278;
+Valid - REC: 77.91254;  Gauss: 18.59701;  Cat: 1.90007;
+Accuracy=Train: 58.99500; Val: 57.60000   NMI=Train: 59.48199; Val: 59.13340   Total Loss=Train: 95.03559; Val: 98.40962
+Gumbel Temperature: 0.500
+(Epoch 79 / 100)
+Train - REC: 74.56276;  Gauss: 18.52566;  Cat: 1.91672;
+Valid - REC: 77.39772;  Gauss: 18.74037;  Cat: 1.89818;
+Accuracy=Train: 58.70667; Val: 58.16000   NMI=Train: 59.55323; Val: 59.44691   Total Loss=Train: 95.00515; Val: 98.03628
+Gumbel Temperature: 0.500
+(Epoch 80 / 100)
+Train - REC: 74.51521;  Gauss: 18.55242;  Cat: 1.91949;
+Valid - REC: 78.08623;  Gauss: 18.44631;  Cat: 1.91750;
+Accuracy=Train: 59.13667; Val: 59.68000   NMI=Train: 59.45307; Val: 60.02957   Total Loss=Train: 94.98712; Val: 98.45004
+Gumbel Temperature: 0.500
+(Epoch 81 / 100)
+Train - REC: 74.49021;  Gauss: 18.54862;  Cat: 1.92391;
+Valid - REC: 78.09211;  Gauss: 18.44782;  Cat: 1.91425;
+Accuracy=Train: 59.45667; Val: 59.62000   NMI=Train: 59.93095; Val: 60.79379   Total Loss=Train: 94.96274; Val: 98.45418
+Gumbel Temperature: 0.500
+(Epoch 82 / 100)
+Train - REC: 74.46569;  Gauss: 18.52941;  Cat: 1.93450;
+Valid - REC: 77.91734;  Gauss: 18.43955;  Cat: 1.93706;
+Accuracy=Train: 59.47667; Val: 59.66000   NMI=Train: 60.22181; Val: 60.58122   Total Loss=Train: 94.92961; Val: 98.29396
+Gumbel Temperature: 0.500
+(Epoch 83 / 100)
+Train - REC: 74.44878;  Gauss: 18.52563;  Cat: 1.94765;
+Valid - REC: 77.96133;  Gauss: 18.30187;  Cat: 1.94064;
+Accuracy=Train: 59.75167; Val: 59.76000   NMI=Train: 60.41066; Val: 61.77666   Total Loss=Train: 94.92205; Val: 98.20385
+Gumbel Temperature: 0.500
+(Epoch 84 / 100)
+Train - REC: 74.42985;  Gauss: 18.55170;  Cat: 1.94248;
+Valid - REC: 77.78218;  Gauss: 18.28136;  Cat: 1.90953;
+Accuracy=Train: 59.97000; Val: 60.49000   NMI=Train: 60.90486; Val: 60.58937   Total Loss=Train: 94.92403; Val: 97.97308
+Gumbel Temperature: 0.500
+(Epoch 85 / 100)
+Train - REC: 74.34377;  Gauss: 18.53482;  Cat: 1.94541;
+Valid - REC: 77.75152;  Gauss: 18.73175;  Cat: 1.94365;
+Accuracy=Train: 59.66667; Val: 59.34000   NMI=Train: 60.49801; Val: 61.56696   Total Loss=Train: 94.82400; Val: 98.42693
+Gumbel Temperature: 0.500
+(Epoch 86 / 100)
+Train - REC: 74.36517;  Gauss: 18.54584;  Cat: 1.93146;
+Valid - REC: 77.88073;  Gauss: 18.44363;  Cat: 1.92660;
+Accuracy=Train: 59.61333; Val: 60.08000   NMI=Train: 60.39274; Val: 61.03485   Total Loss=Train: 94.84247; Val: 98.25095
+Gumbel Temperature: 0.500

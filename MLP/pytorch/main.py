@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 import argparse
 import random
 import numpy as np
+import pickle
 import os
 import torch
 from torchvision import datasets, transforms
@@ -34,13 +35,15 @@ parser.add_argument('--dataset', type=str, choices=['mnist'],
 parser.add_argument('--seed', type=int, default=0, help='random seed (default: 0)')
 
 ## GPU
-parser.add_argument('--cuda', type=bool, default=False,
+parser.add_argument('--cuda', type=bool, default=True,
                     help='use of cuda (default: False)')
-parser.add_argument('--gpuID', type=int, default=0,
+parser.add_argument('--gpuID', type=int, default=2,
                     help='set gpu id to use (default: 0)')
 
 ## Training
-parser.add_argument('--epochs', type=int, default=100,
+parser.add_argument('--training', type=bool, default=False,
+                    help='Training phase?')
+parser.add_argument('--epochs', type=int, default=1,
                     help='number of total epochs to run (default: 200)')
 parser.add_argument('--batch_size', default=64, type=int,
                     help='mini-batch size (default: 64)')
@@ -58,7 +61,7 @@ parser.add_argument('--num_classes', type=int, default=10,
                     help='number of classes (default: 10)')
 parser.add_argument('--gaussian_size', default=64, type=int,
                     help='gaussian size (default: 64)')
-parser.add_argument('--input_size', default=16384, type=int,
+parser.add_argument('--input_size', default=784, type=int,
                     help='input size (default: 784)')
 
 ## Partition parameters
@@ -88,15 +91,22 @@ parser.add_argument('--rec_type', type=str, choices=['bce', 'mse'],
                     default='bce', help='desired reconstruction loss function (default: bce)')
 
 ## Others
-parser.add_argument('--verbose', default=0, type=int,
+parser.add_argument('--verbose', default=1, type=int,
                     help='print extra information at every epoch.(default: 0)')
 parser.add_argument('--random_search_it', type=int, default=20,
                     help='iterations of random search (default: 20)')
 
 args = parser.parse_args()
 
-if args.cuda == 1:
-   os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpuID)
+# CUDA Semantics
+if args.cuda:
+    args.device = torch.device(
+        "cuda:" + str(args.gpuID) if torch.cuda.is_available() else "cpu")
+else:
+    args.device = torch.device("cpu")
+
+# if args.cuda == 1:
+#    os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpuID)
 
 ## Random Seed
 SEED = args.seed
@@ -142,8 +152,62 @@ else:
 #########################################################
 gmvae = GMVAE(args)
 
-## Training Phase
-history_loss = gmvae.train(train_loader, val_loader)
+if args.training:
+  ## Training Phase
+  history_loss, model, gumbel_temp, hard_gumbel = gmvae.train(train_loader, val_loader)
+  checkpoint = {
+                'model': model.inference.state_dict(),
+                'hard_gumbel': hard_gumbel,
+                'gumbel_temp' : gumbel_temp
+            }
+  torch.save(checkpoint, os.path.expanduser('~/github/inference-mlp-original.pt'))
+else:
+  # Create model
+  loaded_inference_model = gmvae.network.inference
+
+  # load checkpoint and parameters
+  loaded = torch.load(os.path.expanduser('~/github/inference-mlp-original.pt'))
+  m_state_dict = loaded['model']
+  hard_gumbel = loaded['hard_gumbel']
+  gumbel_temp = loaded['gumbel_temp']
+
+  # update model
+  loaded_inference_model.load_state_dict(m_state_dict)
+  
+  features = []
+  labels = []
+  with torch.no_grad():
+      for data, label in test_loader:
+        data = data.to(args.device)
+
+        # size_int = 128
+        # data = F.interpolate(data, size=size_int)
+        # data = data.repeat(1, 3, 1, 1)  # Grayscale to RGB!
+      
+        # flatten data
+        data = data.view(data.size(0), -1)
+
+        # forward call
+        out_net = loaded_inference_model(data, gumbel_temp, hard_gumbel)
+        
+        # Feature extraction for batch
+        feature_batch = out_net['gaussian'].detach().cpu().numpy()
+        features.append(feature_batch)
+        labels.append(label[:,np.newaxis])
+
+  # Ultimate features
+  features = np.vstack(features)
+  labels = np.vstack(labels)
+  data_to_save = {'features': features, 'labels': labels}
+
+  with open(os.path.expanduser('~/github/features.pickle'), 'wb') as handle:
+    pickle.dump(data_to_save, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+  with open(os.path.expanduser('~/github/features.pickle'), 'rb') as handle:
+    data_to_load = pickle.load(handle)
+  
+  # Sanity check
+  print(data_to_save == data_to_load)
 
 ## Testing Phase
 accuracy, nmi = gmvae.test(test_loader)
