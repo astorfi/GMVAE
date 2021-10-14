@@ -16,6 +16,9 @@ from metrics.Metrics import *
 import matplotlib.pyplot as plt
 import torch.nn.functional as F
 
+from torch.utils.tensorboard import SummaryWriter
+writer = SummaryWriter('log_dir') 
+
 
 class GMVAE:
 
@@ -136,6 +139,7 @@ class GMVAE:
             size_int = 32
             data = F.interpolate(data, size=size_int)
             data = data.repeat(1, 3, 1, 1)  # Grayscale to RGB!
+            writer.add_image('my_image', data[0], 0)
 
             # # flatten data
             # data = data.view(data.size(0), -1)
