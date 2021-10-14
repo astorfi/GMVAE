@@ -58,7 +58,7 @@ parser.add_argument('--num_classes', type=int, default=10,
                     help='number of classes (default: 10)')
 parser.add_argument('--gaussian_size', default=64, type=int,
                     help='gaussian size (default: 64)')
-parser.add_argument('--input_size', default=784, type=int,
+parser.add_argument('--input_size', default=1024, type=int,
                     help='input size (default: 784)')
 
 ## Partition parameters

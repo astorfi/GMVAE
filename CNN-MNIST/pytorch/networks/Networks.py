@@ -19,7 +19,7 @@ class InferenceNet(nn.Module):
     def __init__(self, x_dim, z_dim, y_dim, device):
         super(InferenceNet, self).__init__()
 
-        hidden_dims = [32, 64, 128, 256, 512]
+        hidden_dims = [32, 64, 128]
 
         # Build Encoder
         modules = []
@@ -136,7 +136,7 @@ class GenerativeNet(nn.Module):
         # Build Decoder
         modules = []
 
-        self.hidden_dims = [32, 64, 128, 256, 512]
+        self.hidden_dims = [32, 64, 128]
         self.fc_to_cnn = nn.Linear(x_dim, self.hidden_dims[-1] * 16)
 
         self.hidden_dims.reverse()

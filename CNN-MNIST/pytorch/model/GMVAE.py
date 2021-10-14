@@ -133,7 +133,7 @@ class GMVAE:
 
             # reprocess
             # Turn images to size_int
-            size_int = 128
+            size_int = 32
             data = F.interpolate(data, size=size_int)
             data = data.repeat(1, 3, 1, 1)  # Grayscale to RGB!
 
@@ -210,7 +210,7 @@ class GMVAE:
 
                 # reprocess
                 # Turn images to size_int
-                size_int = 128
+                size_int = 32
                 data = F.interpolate(data, size=size_int)
                 data = data.repeat(1, 3, 1, 1)  # Grayscale to RGB!
 
