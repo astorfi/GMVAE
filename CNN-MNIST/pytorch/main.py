@@ -198,12 +198,12 @@ else:
       for data, label in test_loader:
         data = data.to(args.device)
 
-        # size_int = 128
-        # data = F.interpolate(data, size=size_int)
-        # data = data.repeat(1, 3, 1, 1)  # Grayscale to RGB!
+        size_int = 32
+        data = F.interpolate(data, size=size_int)
+        data = data.repeat(1, 3, 1, 1)  # Grayscale to RGB!
       
         # flatten data
-        data = data.view(data.size(0), -1)
+        # data = data.view(data.size(0), -1)
 
         # forward call
         out_net = loaded_inference_model(data, gumbel_temp, hard_gumbel)
