@@ -16,9 +16,6 @@ from metrics.Metrics import *
 import matplotlib.pyplot as plt
 import torch.nn.functional as F
 
-from torch.utils.tensorboard import SummaryWriter
-writer = SummaryWriter('log_dir') 
-
 
 class GMVAE:
 
@@ -27,6 +24,7 @@ class GMVAE:
         self.cuda = args.cuda
         self.gpuID = args.gpuID
         self.verbose = args.verbose
+        self.device = args.device
 
         self.batch_size = args.batch_size
         self.batch_size_val = args.batch_size_val
@@ -49,13 +47,6 @@ class GMVAE:
         self.min_temp = args.min_temp
         self.decay_temp_rate = args.decay_temp_rate
         self.gumbel_temp = self.init_temp
-
-        # CUDA Semantics
-        if self.cuda:
-            self.device = torch.device(
-                "cuda:" + str(self.gpuID) if torch.cuda.is_available() else "cpu")
-        else:
-            self.device = torch.device("cpu")
 
         self.network = GMVAENet(
             self.input_size, self.gaussian_size, self.num_classes, self.device)
@@ -139,7 +130,6 @@ class GMVAE:
             size_int = 32
             data = F.interpolate(data, size=size_int)
             data = data.repeat(1, 3, 1, 1)  # Grayscale to RGB!
-            writer.add_image('my_image', data[0], 0)
 
             # # flatten data
             # data = data.view(data.size(0), -1)
@@ -182,7 +172,7 @@ class GMVAE:
             self.metrics.cluster_acc(predicted_labels, true_labels)
         nmi = 100.0 * self.metrics.nmi(predicted_labels, true_labels)
 
-        return total_loss, recon_loss, gauss_loss, cat_loss, accuracy, nmi
+        return total_loss, recon_loss, gauss_loss, cat_loss, accuracy, nmi, self.network
 
     def test(self, data_loader, return_loss=False):
         """Test the model with new data
@@ -277,7 +267,7 @@ class GMVAE:
         train_history_nmi, val_history_nmi = [], []
 
         for epoch in range(1, self.num_epochs + 1):
-            train_loss, train_rec, train_gauss, train_cat, train_acc, train_nmi = self.train_epoch(
+            train_loss, train_rec, train_gauss, train_cat, train_acc, train_nmi, trained_model_for_epoch = self.train_epoch(
                 optimizer, train_loader)
             val_loss, val_rec, val_gauss, val_cat, val_acc, val_nmi = self.test(
                 val_loader, True)
@@ -307,7 +297,7 @@ class GMVAE:
             train_history_nmi.append(train_nmi)
             val_history_nmi.append(val_nmi)
         return {'train_history_nmi': train_history_nmi, 'val_history_nmi': val_history_nmi,
-                'train_history_acc': train_history_acc, 'val_history_acc': val_history_acc}
+                'train_history_acc': train_history_acc, 'val_history_acc': val_history_acc}, trained_model_for_epoch, self.gumbel_temp, self.hard_gumbel
 
     def latent_features(self, data_loader, return_labels=False):
         """Obtain latent features learnt by the model
