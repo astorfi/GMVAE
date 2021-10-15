@@ -29,6 +29,9 @@ parser = argparse.ArgumentParser(description='PyTorch Implementation of DGM Clus
 parser.add_argument('-f', '--file',
                     help='Path for input file. First line should contain number of lines to search in')
 
+parser.add_argument('--expPath', type=str, default=os.path.expanduser('~/pytorchexp/mnistMLPGMVAE'),
+                    help='Path for exp')
+
 ## Dataset
 parser.add_argument('--dataset', type=str, choices=['mnist'],
                     default='mnist', help='dataset (default: mnist)')
@@ -43,7 +46,7 @@ parser.add_argument('--gpuID', type=int, default=2,
 ## Training
 parser.add_argument('--training', type=bool, default=False,
                     help='Training phase?')
-parser.add_argument('--epochs', type=int, default=1,
+parser.add_argument('--epochs', type=int, default=200,
                     help='number of total epochs to run (default: 200)')
 parser.add_argument('--batch_size', default=64, type=int,
                     help='mini-batch size (default: 64)')
@@ -97,6 +100,17 @@ parser.add_argument('--random_search_it', type=int, default=20,
                     help='iterations of random search (default: 20)')
 
 args = parser.parse_args()
+
+def ensureDir(path):
+  # Check whether the specified path exists or not
+  if not os.path.exists(path):
+    
+    # Create a new directory because it does not exist 
+    os.makedirs(path)
+
+
+# Create dir
+ensureDir(args.expPath)
 
 # CUDA Semantics
 if args.cuda:
@@ -160,13 +174,18 @@ if args.training:
                 'hard_gumbel': hard_gumbel,
                 'gumbel_temp' : gumbel_temp
             }
-  torch.save(checkpoint, os.path.expanduser('~/github/inference-mlp-original.pt'))
+  torch.save(checkpoint, os.path.join(args.expPath,'inference-mlp-original.pt'))
+
+  ## Testing Phase
+  accuracy, nmi = gmvae.test(test_loader)
+  print("Testing phase...")
+  print("Accuracy: %.5lf, NMI: %.5lf" % (accuracy, nmi) )
 else:
   # Create model
   loaded_inference_model = gmvae.network.inference
 
   # load checkpoint and parameters
-  loaded = torch.load(os.path.expanduser('~/github/inference-mlp-original.pt'))
+  loaded = torch.load(os.path.join(args.expPath,'inference-mlp-original.pt'))
   m_state_dict = loaded['model']
   hard_gumbel = loaded['hard_gumbel']
   gumbel_temp = loaded['gumbel_temp']
@@ -200,17 +219,44 @@ else:
   labels = np.vstack(labels)
   data_to_save = {'features': features, 'labels': labels}
 
-  with open(os.path.expanduser('~/github/features.pickle'), 'wb') as handle:
+  with open(os.path.join(args.expPath,'features.pickle'), 'wb') as handle:
     pickle.dump(data_to_save, handle, protocol=pickle.HIGHEST_PROTOCOL)
-
-  with open(os.path.expanduser('~/github/features.pickle'), 'rb') as handle:
-    data_to_load = pickle.load(handle)
   
   # Sanity check
-  print(data_to_save == data_to_load)
+  with open(os.path.join(args.expPath,'features.pickle'), 'rb') as handle:
+    data_to_load = pickle.load(handle)
 
-## Testing Phase
-accuracy, nmi = gmvae.test(test_loader)
-print("Testing phase...")
-print("Accuracy: %.5lf, NMI: %.5lf" % (accuracy, nmi) )
+
+  # TSNE
+  import numpy as np
+  from sklearn.manifold import TSNE
+
+  tsne_kwargs = {
+        "n_components": 2,
+        "n_iter": 1000,
+        "n_iter_without_progress": 200,
+        "random_state": 9,
+    }
+
+  tsne_model = TSNE(**tsne_kwargs)
+  res = tsne_model.fit_transform(features)
+
+  if tsne_kwargs['n_components'] == 2:
+      # PLOTTING FOR ENTIRE DATASET
+      plt.scatter(res[:, 0], res[:, 1], marker='o')
+      plt.xlabel('tSNE Dimension 1')
+      plt.ylabel('tSNE Dimension 2')
+      plt.show()
+      plt.savefig(os.path.join(args.expPath,'tSNE_2components_full.png'))
+      plt.close()
+
+      # RANDOMLY SAMPLE 500 POINTS FOR PLOTTING
+      idx = np.random.randint(res.shape[0], size=500)
+      plt.scatter(res[idx, 0], res[idx, 1], marker='o')
+      plt.xlabel('tSNE Dimension 1')
+      plt.ylabel('tSNE Dimension 2')
+      plt.savefig(os.path.join(args.expPath,'tSNE_2components_sample500.png'))
+      plt.show()
+      plt.close()
+
 

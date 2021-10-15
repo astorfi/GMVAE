@@ -446,3 +446,1015 @@ Train - REC: 74.36517;  Gauss: 18.54584;  Cat: 1.93146;
 Valid - REC: 77.88073;  Gauss: 18.44363;  Cat: 1.92660;
 Accuracy=Train: 59.61333; Val: 60.08000   NMI=Train: 60.39274; Val: 61.03485   Total Loss=Train: 94.84247; Val: 98.25095
 Gumbel Temperature: 0.500
+Loading mnist dataset...
+/data/conda_env/torfia/lib/python3.8/site-packages/torchvision/datasets/mnist.py:498: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1623448234945/work/torch/csrc/utils/tensor_numpy.cpp:180.)
+  return torch.from_numpy(parsed.astype(m[2], copy=False)).view(*s)
+Traceback (most recent call last):
+  File "main.py", line 210, in <module>
+    print(data_to_save == data_to_load)
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+Loading mnist dataset...
+/data/conda_env/torfia/lib/python3.8/site-packages/torchvision/datasets/mnist.py:498: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1623448234945/work/torch/csrc/utils/tensor_numpy.cpp:180.)
+  return torch.from_numpy(parsed.astype(m[2], copy=False)).view(*s)
+(Epoch 1 / 200)
+Train - REC: 142.45676;  Gauss: 11.40323;  Cat: 0.95995;
+Valid - REC: 107.73294;  Gauss: 14.64620;  Cat: 1.29339;
+Accuracy=Train: 28.92000; Val: 36.13000   NMI=Train: 20.90495; Val: 32.15011   Total Loss=Train: 154.81994; Val: 123.67254
+Gumbel Temperature: 0.986
+(Epoch 2 / 200)
+Train - REC: 101.37726;  Gauss: 15.33740;  Cat: 1.39076;
+Valid - REC: 95.39017;  Gauss: 15.58056;  Cat: 1.48980;
+Accuracy=Train: 36.81500; Val: 41.87000   NMI=Train: 30.92683; Val: 34.99988   Total Loss=Train: 118.10542; Val: 112.46053
+Gumbel Temperature: 0.973
+(Epoch 3 / 200)
+Train - REC: 93.39731;  Gauss: 16.18169;  Cat: 1.47150;
+Valid - REC: 90.06590;  Gauss: 16.40779;  Cat: 1.45070;
+Accuracy=Train: 39.97667; Val: 43.09000   NMI=Train: 33.66913; Val: 37.61758   Total Loss=Train: 111.05050; Val: 107.92439
+Gumbel Temperature: 0.959
+(Epoch 4 / 200)
+Train - REC: 89.52237;  Gauss: 16.58590;  Cat: 1.50624;
+Valid - REC: 87.43715;  Gauss: 16.95317;  Cat: 1.43433;
+Accuracy=Train: 41.19167; Val: 43.51000   NMI=Train: 35.39892; Val: 37.53895   Total Loss=Train: 107.61452; Val: 105.82465
+Gumbel Temperature: 0.946
+(Epoch 5 / 200)
+Train - REC: 87.17584;  Gauss: 16.85396;  Cat: 1.52178;
+Valid - REC: 86.05128;  Gauss: 17.00800;  Cat: 1.55806;
+Accuracy=Train: 41.89667; Val: 42.60000   NMI=Train: 37.14530; Val: 39.90630   Total Loss=Train: 105.55158; Val: 104.61735
+Gumbel Temperature: 0.933
+(Epoch 6 / 200)
+Train - REC: 85.57677;  Gauss: 17.02432;  Cat: 1.54102;
+Valid - REC: 84.88828;  Gauss: 17.00387;  Cat: 1.58125;
+Accuracy=Train: 42.64833; Val: 44.32000   NMI=Train: 38.08121; Val: 41.06611   Total Loss=Train: 104.14211; Val: 103.47340
+Gumbel Temperature: 0.920
+(Epoch 7 / 200)
+Train - REC: 84.34714;  Gauss: 17.15897;  Cat: 1.54519;
+Valid - REC: 83.89664;  Gauss: 17.04246;  Cat: 1.56949;
+Accuracy=Train: 43.61333; Val: 45.49000   NMI=Train: 39.14559; Val: 42.42865   Total Loss=Train: 103.05130; Val: 102.50859
+Gumbel Temperature: 0.908
+(Epoch 8 / 200)
+Train - REC: 83.48875;  Gauss: 17.26234;  Cat: 1.56217;
+Valid - REC: 83.03215;  Gauss: 17.38817;  Cat: 1.55581;
+Accuracy=Train: 44.48333; Val: 47.04000   NMI=Train: 40.28025; Val: 43.35876   Total Loss=Train: 102.31325; Val: 101.97613
+Gumbel Temperature: 0.895
+(Epoch 9 / 200)
+Train - REC: 82.78553;  Gauss: 17.33898;  Cat: 1.56331;
+Valid - REC: 82.97385;  Gauss: 17.44385;  Cat: 1.61095;
+Accuracy=Train: 44.85667; Val: 46.94000   NMI=Train: 41.44657; Val: 44.81347   Total Loss=Train: 101.68782; Val: 102.02865
+Gumbel Temperature: 0.883
+(Epoch 10 / 200)
+Train - REC: 82.12793;  Gauss: 17.41779;  Cat: 1.57687;
+Valid - REC: 81.97629;  Gauss: 17.39908;  Cat: 1.56158;
+Accuracy=Train: 45.25667; Val: 47.66000   NMI=Train: 41.85314; Val: 45.57018   Total Loss=Train: 101.12259; Val: 100.93694
+Gumbel Temperature: 0.871
+(Epoch 11 / 200)
+Train - REC: 81.57173;  Gauss: 17.49162;  Cat: 1.58115;
+Valid - REC: 82.14003;  Gauss: 17.63600;  Cat: 1.54617;
+Accuracy=Train: 45.61333; Val: 47.96000   NMI=Train: 42.91795; Val: 46.01880   Total Loss=Train: 100.64450; Val: 101.32220
+Gumbel Temperature: 0.859
+(Epoch 12 / 200)
+Train - REC: 81.13838;  Gauss: 17.54624;  Cat: 1.59552;
+Valid - REC: 81.60083;  Gauss: 17.61069;  Cat: 1.59501;
+Accuracy=Train: 45.72833; Val: 46.91000   NMI=Train: 43.56876; Val: 44.93956   Total Loss=Train: 100.28014; Val: 100.80653
+Gumbel Temperature: 0.847
+(Epoch 13 / 200)
+Train - REC: 80.76286;  Gauss: 17.58365;  Cat: 1.61217;
+Valid - REC: 81.52243;  Gauss: 17.41095;  Cat: 1.60608;
+Accuracy=Train: 46.29333; Val: 47.24000   NMI=Train: 44.16057; Val: 46.83101   Total Loss=Train: 99.95868; Val: 100.53946
+Gumbel Temperature: 0.835
+(Epoch 14 / 200)
+Train - REC: 80.41332;  Gauss: 17.64963;  Cat: 1.61543;
+Valid - REC: 81.12880;  Gauss: 17.37207;  Cat: 1.61807;
+Accuracy=Train: 46.65000; Val: 47.30000   NMI=Train: 44.81381; Val: 47.05726   Total Loss=Train: 99.67838; Val: 100.11894
+Gumbel Temperature: 0.824
+(Epoch 15 / 200)
+Train - REC: 80.11468;  Gauss: 17.70809;  Cat: 1.62699;
+Valid - REC: 80.57274;  Gauss: 17.83596;  Cat: 1.63346;
+Accuracy=Train: 47.11667; Val: 48.92000   NMI=Train: 44.93690; Val: 48.76715   Total Loss=Train: 99.44976; Val: 100.04216
+Gumbel Temperature: 0.812
+(Epoch 16 / 200)
+Train - REC: 79.77340;  Gauss: 17.74138;  Cat: 1.63527;
+Valid - REC: 80.59379;  Gauss: 17.68564;  Cat: 1.61868;
+Accuracy=Train: 47.06667; Val: 46.56000   NMI=Train: 45.82478; Val: 46.61203   Total Loss=Train: 99.15005; Val: 99.89811
+Gumbel Temperature: 0.801
+(Epoch 17 / 200)
+Train - REC: 79.58706;  Gauss: 17.76412;  Cat: 1.63358;
+Valid - REC: 79.98975;  Gauss: 17.90161;  Cat: 1.62023;
+Accuracy=Train: 46.99500; Val: 48.07000   NMI=Train: 46.11768; Val: 48.37163   Total Loss=Train: 98.98476; Val: 99.51158
+Gumbel Temperature: 0.790
+(Epoch 18 / 200)
+Train - REC: 79.28686;  Gauss: 17.79929;  Cat: 1.64334;
+Valid - REC: 80.07032;  Gauss: 17.77029;  Cat: 1.68259;
+Accuracy=Train: 47.35333; Val: 49.10000   NMI=Train: 47.01329; Val: 50.12808   Total Loss=Train: 98.72949; Val: 99.52320
+Gumbel Temperature: 0.779
+(Epoch 19 / 200)
+Train - REC: 79.07790;  Gauss: 17.83190;  Cat: 1.65449;
+Valid - REC: 80.24631;  Gauss: 17.53869;  Cat: 1.66483;
+Accuracy=Train: 47.76333; Val: 49.22000   NMI=Train: 47.86357; Val: 50.11990   Total Loss=Train: 98.56429; Val: 99.44984
+Gumbel Temperature: 0.768
+(Epoch 20 / 200)
+Train - REC: 78.87779;  Gauss: 17.84157;  Cat: 1.66670;
+Valid - REC: 80.82747;  Gauss: 17.42463;  Cat: 1.65979;
+Accuracy=Train: 48.30667; Val: 48.67000   NMI=Train: 48.06536; Val: 49.74904   Total Loss=Train: 98.38606; Val: 99.91189
+Gumbel Temperature: 0.758
+(Epoch 21 / 200)
+Train - REC: 78.65725;  Gauss: 17.88055;  Cat: 1.66855;
+Valid - REC: 80.55052;  Gauss: 17.33323;  Cat: 1.67987;
+Accuracy=Train: 48.65333; Val: 49.51000   NMI=Train: 48.80902; Val: 50.11280   Total Loss=Train: 98.20635; Val: 99.56363
+Gumbel Temperature: 0.747
+(Epoch 22 / 200)
+Train - REC: 78.52670;  Gauss: 17.93236;  Cat: 1.67839;
+Valid - REC: 79.99387;  Gauss: 17.78599;  Cat: 1.68343;
+Accuracy=Train: 49.07167; Val: 49.51000   NMI=Train: 49.24693; Val: 51.04433   Total Loss=Train: 98.13745; Val: 99.46329
+Gumbel Temperature: 0.737
+(Epoch 23 / 200)
+Train - REC: 78.32910;  Gauss: 17.91849;  Cat: 1.68958;
+Valid - REC: 80.20830;  Gauss: 17.58582;  Cat: 1.65214;
+Accuracy=Train: 49.43667; Val: 50.16000   NMI=Train: 49.48903; Val: 50.36981   Total Loss=Train: 97.93716; Val: 99.44627
+Gumbel Temperature: 0.727
+(Epoch 24 / 200)
+Train - REC: 78.18509;  Gauss: 17.97501;  Cat: 1.70059;
+Valid - REC: 79.58994;  Gauss: 18.13828;  Cat: 1.70080;
+Accuracy=Train: 49.61167; Val: 51.25000   NMI=Train: 49.62212; Val: 52.16604   Total Loss=Train: 97.86069; Val: 99.42903
+Gumbel Temperature: 0.717
+(Epoch 25 / 200)
+Train - REC: 78.00476;  Gauss: 18.00054;  Cat: 1.70878;
+Valid - REC: 79.60410;  Gauss: 17.92432;  Cat: 1.68901;
+Accuracy=Train: 50.02667; Val: 50.39000   NMI=Train: 50.53985; Val: 51.43800   Total Loss=Train: 97.71408; Val: 99.21743
+Gumbel Temperature: 0.707
+(Epoch 26 / 200)
+Train - REC: 77.85756;  Gauss: 18.03580;  Cat: 1.71565;
+Valid - REC: 79.19467;  Gauss: 18.08711;  Cat: 1.71798;
+Accuracy=Train: 50.54833; Val: 51.33000   NMI=Train: 50.69012; Val: 51.35380   Total Loss=Train: 97.60901; Val: 98.99976
+Gumbel Temperature: 0.697
+(Epoch 27 / 200)
+Train - REC: 77.70077;  Gauss: 18.09592;  Cat: 1.71799;
+Valid - REC: 79.02164;  Gauss: 18.42969;  Cat: 1.74253;
+Accuracy=Train: 50.67333; Val: 51.60000   NMI=Train: 50.96480; Val: 53.68948   Total Loss=Train: 97.51467; Val: 99.19385
+Gumbel Temperature: 0.688
+(Epoch 28 / 200)
+Train - REC: 77.54974;  Gauss: 18.11192;  Cat: 1.73727;
+Valid - REC: 78.96136;  Gauss: 18.19156;  Cat: 1.72995;
+Accuracy=Train: 51.50667; Val: 52.25000   NMI=Train: 51.55952; Val: 53.15224   Total Loss=Train: 97.39893; Val: 98.88287
+Gumbel Temperature: 0.678
+(Epoch 29 / 200)
+Train - REC: 77.41993;  Gauss: 18.14844;  Cat: 1.73573;
+Valid - REC: 79.33905;  Gauss: 17.99854;  Cat: 1.73268;
+Accuracy=Train: 51.47000; Val: 53.01000   NMI=Train: 52.14830; Val: 53.06492   Total Loss=Train: 97.30410; Val: 99.07027
+Gumbel Temperature: 0.669
+(Epoch 30 / 200)
+Train - REC: 77.25860;  Gauss: 18.18106;  Cat: 1.74533;
+Valid - REC: 78.93213;  Gauss: 18.26471;  Cat: 1.74637;
+Accuracy=Train: 51.87000; Val: 52.83000   NMI=Train: 52.21297; Val: 53.24048   Total Loss=Train: 97.18499; Val: 98.94321
+Gumbel Temperature: 0.660
+(Epoch 31 / 200)
+Train - REC: 77.16155;  Gauss: 18.18104;  Cat: 1.75883;
+Valid - REC: 78.99407;  Gauss: 18.28376;  Cat: 1.75589;
+Accuracy=Train: 52.16667; Val: 53.32000   NMI=Train: 52.45737; Val: 54.80201   Total Loss=Train: 97.10142; Val: 99.03372
+Gumbel Temperature: 0.651
+(Epoch 32 / 200)
+Train - REC: 77.06129;  Gauss: 18.20070;  Cat: 1.75020;
+Valid - REC: 79.05047;  Gauss: 18.09270;  Cat: 1.74055;
+Accuracy=Train: 52.19167; Val: 52.64000   NMI=Train: 52.66995; Val: 53.96321   Total Loss=Train: 97.01219; Val: 98.88372
+Gumbel Temperature: 0.642
+(Epoch 33 / 200)
+Train - REC: 76.97075;  Gauss: 18.22561;  Cat: 1.75928;
+Valid - REC: 78.40225;  Gauss: 18.38835;  Cat: 1.74068;
+Accuracy=Train: 52.05667; Val: 53.23000   NMI=Train: 52.41294; Val: 54.17661   Total Loss=Train: 96.95563; Val: 98.53128
+Gumbel Temperature: 0.633
+(Epoch 34 / 200)
+Train - REC: 76.84244;  Gauss: 18.24615;  Cat: 1.77503;
+Valid - REC: 78.68084;  Gauss: 18.21076;  Cat: 1.77668;
+Accuracy=Train: 52.92667; Val: 53.63000   NMI=Train: 53.06652; Val: 55.45311   Total Loss=Train: 96.86362; Val: 98.66828
+Gumbel Temperature: 0.624
+(Epoch 35 / 200)
+Train - REC: 76.76340;  Gauss: 18.26243;  Cat: 1.77929;
+Valid - REC: 79.04029;  Gauss: 18.14481;  Cat: 1.79548;
+Accuracy=Train: 52.61833; Val: 52.78000   NMI=Train: 53.22603; Val: 53.74316   Total Loss=Train: 96.80512; Val: 98.98058
+Gumbel Temperature: 0.616
+(Epoch 36 / 200)
+Train - REC: 76.63519;  Gauss: 18.29266;  Cat: 1.78793;
+Valid - REC: 78.48856;  Gauss: 18.13984;  Cat: 1.76914;
+Accuracy=Train: 53.27667; Val: 54.23000   NMI=Train: 53.41597; Val: 55.29543   Total Loss=Train: 96.71578; Val: 98.39753
+Gumbel Temperature: 0.607
+(Epoch 37 / 200)
+Train - REC: 76.61211;  Gauss: 18.27582;  Cat: 1.79769;
+Valid - REC: 78.67950;  Gauss: 18.09580;  Cat: 1.80539;
+Accuracy=Train: 53.13667; Val: 53.05000   NMI=Train: 53.61326; Val: 54.50424   Total Loss=Train: 96.68562; Val: 98.58069
+Gumbel Temperature: 0.599
+(Epoch 38 / 200)
+Train - REC: 76.48411;  Gauss: 18.31516;  Cat: 1.80012;
+Valid - REC: 78.42563;  Gauss: 18.37361;  Cat: 1.82098;
+Accuracy=Train: 53.24667; Val: 55.07000   NMI=Train: 53.63892; Val: 54.72231   Total Loss=Train: 96.59938; Val: 98.62022
+Gumbel Temperature: 0.590
+(Epoch 39 / 200)
+Train - REC: 76.41058;  Gauss: 18.33567;  Cat: 1.78771;
+Valid - REC: 78.60406;  Gauss: 18.24393;  Cat: 1.77894;
+Accuracy=Train: 53.43500; Val: 54.10000   NMI=Train: 53.80136; Val: 54.01757   Total Loss=Train: 96.53395; Val: 98.62692
+Gumbel Temperature: 0.582
+(Epoch 40 / 200)
+Train - REC: 76.33123;  Gauss: 18.35710;  Cat: 1.79862;
+Valid - REC: 78.73460;  Gauss: 18.01989;  Cat: 1.80148;
+Accuracy=Train: 53.27167; Val: 53.03000   NMI=Train: 54.08435; Val: 54.41784   Total Loss=Train: 96.48695; Val: 98.55597
+Gumbel Temperature: 0.574
+(Epoch 41 / 200)
+Train - REC: 76.21527;  Gauss: 18.36225;  Cat: 1.81141;
+Valid - REC: 78.69774;  Gauss: 18.12015;  Cat: 1.78097;
+Accuracy=Train: 53.52667; Val: 53.76000   NMI=Train: 54.52302; Val: 54.88715   Total Loss=Train: 96.38893; Val: 98.59885
+Gumbel Temperature: 0.566
+(Epoch 42 / 200)
+Train - REC: 76.22486;  Gauss: 18.38899;  Cat: 1.81981;
+Valid - REC: 78.15178;  Gauss: 18.34580;  Cat: 1.79993;
+Accuracy=Train: 53.54000; Val: 54.60000   NMI=Train: 54.37581; Val: 56.28460   Total Loss=Train: 96.43366; Val: 98.29751
+Gumbel Temperature: 0.559
+(Epoch 43 / 200)
+Train - REC: 76.10836;  Gauss: 18.40022;  Cat: 1.81846;
+Valid - REC: 78.73890;  Gauss: 18.03261;  Cat: 1.81847;
+Accuracy=Train: 54.07833; Val: 55.02000   NMI=Train: 55.11150; Val: 56.45152   Total Loss=Train: 96.32704; Val: 98.58998
+Gumbel Temperature: 0.551
+(Epoch 44 / 200)
+Train - REC: 76.05436;  Gauss: 18.39574;  Cat: 1.81566;
+Valid - REC: 78.37320;  Gauss: 18.19888;  Cat: 1.82693;
+Accuracy=Train: 54.30167; Val: 53.92000   NMI=Train: 55.45919; Val: 55.89971   Total Loss=Train: 96.26576; Val: 98.39902
+Gumbel Temperature: 0.543
+(Epoch 45 / 200)
+Train - REC: 75.99292;  Gauss: 18.41107;  Cat: 1.82827;
+Valid - REC: 78.28344;  Gauss: 18.36781;  Cat: 1.82098;
+Accuracy=Train: 54.21167; Val: 55.67000   NMI=Train: 55.49438; Val: 56.98729   Total Loss=Train: 96.23226; Val: 98.47223
+Gumbel Temperature: 0.536
+(Epoch 46 / 200)
+Train - REC: 75.90412;  Gauss: 18.44103;  Cat: 1.83492;
+Valid - REC: 78.38930;  Gauss: 18.22135;  Cat: 1.81911;
+Accuracy=Train: 54.81500; Val: 54.75000   NMI=Train: 55.71384; Val: 56.56210   Total Loss=Train: 96.18007; Val: 98.42977
+Gumbel Temperature: 0.529
+(Epoch 47 / 200)
+Train - REC: 75.84228;  Gauss: 18.44405;  Cat: 1.84165;
+Valid - REC: 78.69194;  Gauss: 18.11968;  Cat: 1.83726;
+Accuracy=Train: 54.67667; Val: 54.55000   NMI=Train: 55.54366; Val: 55.95153   Total Loss=Train: 96.12797; Val: 98.64888
+Gumbel Temperature: 0.521
+(Epoch 48 / 200)
+Train - REC: 75.77761;  Gauss: 18.45900;  Cat: 1.83989;
+Valid - REC: 78.06401;  Gauss: 18.70384;  Cat: 1.83100;
+Accuracy=Train: 54.74333; Val: 54.59000   NMI=Train: 55.60592; Val: 56.33495   Total Loss=Train: 96.07650; Val: 98.59884
+Gumbel Temperature: 0.514
+(Epoch 49 / 200)
+Train - REC: 75.70324;  Gauss: 18.46392;  Cat: 1.85322;
+Valid - REC: 78.18635;  Gauss: 18.44837;  Cat: 1.84997;
+Accuracy=Train: 54.83333; Val: 55.31000   NMI=Train: 55.79774; Val: 56.86529   Total Loss=Train: 96.02038; Val: 98.48469
+Gumbel Temperature: 0.507
+(Epoch 50 / 200)
+Train - REC: 75.67948;  Gauss: 18.45883;  Cat: 1.86622;
+Valid - REC: 78.22065;  Gauss: 18.32517;  Cat: 1.84594;
+Accuracy=Train: 55.32667; Val: 56.12000   NMI=Train: 56.31048; Val: 57.23136   Total Loss=Train: 96.00452; Val: 98.39176
+Gumbel Temperature: 0.500
+(Epoch 51 / 200)
+Train - REC: 75.61104;  Gauss: 18.45499;  Cat: 1.87220;
+Valid - REC: 78.27874;  Gauss: 18.17128;  Cat: 1.87260;
+Accuracy=Train: 55.34000; Val: 55.75000   NMI=Train: 56.47524; Val: 57.66846   Total Loss=Train: 95.93822; Val: 98.32262
+Gumbel Temperature: 0.500
+(Epoch 52 / 200)
+Train - REC: 75.59583;  Gauss: 18.48740;  Cat: 1.87195;
+Valid - REC: 78.64094;  Gauss: 18.22418;  Cat: 1.85526;
+Accuracy=Train: 55.72833; Val: 56.29000   NMI=Train: 56.81132; Val: 58.27549   Total Loss=Train: 95.95518; Val: 98.72038
+Gumbel Temperature: 0.500
+(Epoch 53 / 200)
+Train - REC: 75.51300;  Gauss: 18.48054;  Cat: 1.87590;
+Valid - REC: 77.63142;  Gauss: 18.71468;  Cat: 1.86626;
+Accuracy=Train: 55.45500; Val: 55.68000   NMI=Train: 56.60284; Val: 57.56393   Total Loss=Train: 95.86944; Val: 98.21236
+Gumbel Temperature: 0.500
+(Epoch 54 / 200)
+Train - REC: 75.47448;  Gauss: 18.46498;  Cat: 1.87787;
+Valid - REC: 77.85504;  Gauss: 18.57886;  Cat: 1.89949;
+Accuracy=Train: 55.94500; Val: 56.78000   NMI=Train: 56.98018; Val: 58.93981   Total Loss=Train: 95.81733; Val: 98.33339
+Gumbel Temperature: 0.500
+(Epoch 55 / 200)
+Train - REC: 75.38047;  Gauss: 18.48207;  Cat: 1.88165;
+Valid - REC: 78.18350;  Gauss: 18.33887;  Cat: 1.87412;
+Accuracy=Train: 56.45833; Val: 56.53000   NMI=Train: 57.38169; Val: 58.11011   Total Loss=Train: 95.74419; Val: 98.39649
+Gumbel Temperature: 0.500
+(Epoch 56 / 200)
+Train - REC: 75.40135;  Gauss: 18.47828;  Cat: 1.86837;
+Valid - REC: 77.91799;  Gauss: 18.76644;  Cat: 1.88809;
+Accuracy=Train: 55.79833; Val: 56.88000   NMI=Train: 56.94134; Val: 59.28999   Total Loss=Train: 95.74801; Val: 98.57253
+Gumbel Temperature: 0.500
+(Epoch 57 / 200)
+Train - REC: 75.32683;  Gauss: 18.48197;  Cat: 1.88295;
+Valid - REC: 78.19129;  Gauss: 18.33962;  Cat: 1.88359;
+Accuracy=Train: 56.78000; Val: 58.35000   NMI=Train: 57.86259; Val: 59.44622   Total Loss=Train: 95.69175; Val: 98.41449
+Gumbel Temperature: 0.500
+(Epoch 58 / 200)
+Train - REC: 75.28048;  Gauss: 18.47173;  Cat: 1.90371;
+Valid - REC: 78.18078;  Gauss: 18.64408;  Cat: 1.89209;
+Accuracy=Train: 56.48667; Val: 56.48000   NMI=Train: 57.49589; Val: 57.76544   Total Loss=Train: 95.65591; Val: 98.71695
+Gumbel Temperature: 0.500
+(Epoch 59 / 200)
+Train - REC: 75.23572;  Gauss: 18.49599;  Cat: 1.89027;
+Valid - REC: 78.41591;  Gauss: 18.31196;  Cat: 1.84947;
+Accuracy=Train: 56.45500; Val: 56.68000   NMI=Train: 57.36529; Val: 57.58866   Total Loss=Train: 95.62198; Val: 98.57735
+Gumbel Temperature: 0.500
+(Epoch 60 / 200)
+Train - REC: 75.22283;  Gauss: 18.48609;  Cat: 1.89278;
+Valid - REC: 78.01004;  Gauss: 18.63838;  Cat: 1.88294;
+Accuracy=Train: 56.57000; Val: 56.75000   NMI=Train: 57.64119; Val: 58.51887   Total Loss=Train: 95.60169; Val: 98.53136
+Gumbel Temperature: 0.500
+(Epoch 61 / 200)
+Train - REC: 75.14761;  Gauss: 18.50095;  Cat: 1.88099;
+Valid - REC: 77.87585;  Gauss: 18.46412;  Cat: 1.89463;
+Accuracy=Train: 57.04333; Val: 58.22000   NMI=Train: 57.72213; Val: 59.40272   Total Loss=Train: 95.52955; Val: 98.23460
+Gumbel Temperature: 0.500
+(Epoch 62 / 200)
+Train - REC: 75.12711;  Gauss: 18.49281;  Cat: 1.90358;
+Valid - REC: 78.29550;  Gauss: 18.31918;  Cat: 1.89085;
+Accuracy=Train: 57.36167; Val: 57.92000   NMI=Train: 58.12958; Val: 59.13771   Total Loss=Train: 95.52349; Val: 98.50554
+Gumbel Temperature: 0.500
+(Epoch 63 / 200)
+Train - REC: 75.06866;  Gauss: 18.49259;  Cat: 1.90025;
+Valid - REC: 78.42157;  Gauss: 18.15748;  Cat: 1.86652;
+Accuracy=Train: 56.96333; Val: 56.17000   NMI=Train: 57.88312; Val: 58.30464   Total Loss=Train: 95.46150; Val: 98.44558
+Gumbel Temperature: 0.500
+(Epoch 64 / 200)
+Train - REC: 75.08078;  Gauss: 18.51746;  Cat: 1.88819;
+Valid - REC: 78.19623;  Gauss: 18.60765;  Cat: 1.87965;
+Accuracy=Train: 57.13500; Val: 58.90000   NMI=Train: 58.21870; Val: 58.94904   Total Loss=Train: 95.48643; Val: 98.68353
+Gumbel Temperature: 0.500
+(Epoch 65 / 200)
+Train - REC: 74.97201;  Gauss: 18.52001;  Cat: 1.90096;
+Valid - REC: 78.37688;  Gauss: 17.96644;  Cat: 1.89805;
+Accuracy=Train: 57.76167; Val: 58.56000   NMI=Train: 58.54885; Val: 60.00594   Total Loss=Train: 95.39298; Val: 98.24137
+Gumbel Temperature: 0.500
+(Epoch 66 / 200)
+Train - REC: 74.97373;  Gauss: 18.50389;  Cat: 1.89689;
+Valid - REC: 77.70106;  Gauss: 18.71337;  Cat: 1.89195;
+Accuracy=Train: 57.50000; Val: 57.72000   NMI=Train: 58.15020; Val: 59.16877   Total Loss=Train: 95.37451; Val: 98.30638
+Gumbel Temperature: 0.500
+(Epoch 67 / 200)
+Train - REC: 74.92133;  Gauss: 18.48637;  Cat: 1.91127;
+Valid - REC: 78.14491;  Gauss: 18.23161;  Cat: 1.89719;
+Accuracy=Train: 57.61667; Val: 58.11000   NMI=Train: 58.21216; Val: 59.23378   Total Loss=Train: 95.31897; Val: 98.27370
+Gumbel Temperature: 0.500
+(Epoch 68 / 200)
+Train - REC: 74.89590;  Gauss: 18.51757;  Cat: 1.89637;
+Valid - REC: 77.74586;  Gauss: 18.52452;  Cat: 1.88099;
+Accuracy=Train: 58.00333; Val: 59.33000   NMI=Train: 58.52425; Val: 60.16305   Total Loss=Train: 95.30984; Val: 98.15137
+Gumbel Temperature: 0.500
+(Epoch 69 / 200)
+Train - REC: 74.85748;  Gauss: 18.53083;  Cat: 1.90880;
+Valid - REC: 78.09897;  Gauss: 18.34295;  Cat: 1.89544;
+Accuracy=Train: 57.74167; Val: 58.92000   NMI=Train: 58.38541; Val: 59.56184   Total Loss=Train: 95.29711; Val: 98.33736
+Gumbel Temperature: 0.500
+(Epoch 70 / 200)
+Train - REC: 74.84993;  Gauss: 18.50390;  Cat: 1.91037;
+Valid - REC: 78.36663;  Gauss: 18.08250;  Cat: 1.86117;
+Accuracy=Train: 57.89667; Val: 57.99000   NMI=Train: 58.68901; Val: 58.67125   Total Loss=Train: 95.26421; Val: 98.31030
+Gumbel Temperature: 0.500
+(Epoch 71 / 200)
+Train - REC: 74.78614;  Gauss: 18.52551;  Cat: 1.90312;
+Valid - REC: 77.61472;  Gauss: 18.60225;  Cat: 1.88957;
+Accuracy=Train: 58.01167; Val: 58.69000   NMI=Train: 58.74658; Val: 59.85102   Total Loss=Train: 95.21477; Val: 98.10654
+Gumbel Temperature: 0.500
+(Epoch 72 / 200)
+Train - REC: 74.74386;  Gauss: 18.51206;  Cat: 1.90290;
+Valid - REC: 78.16039;  Gauss: 18.38549;  Cat: 1.90002;
+Accuracy=Train: 58.52833; Val: 57.85000   NMI=Train: 59.06754; Val: 59.34345   Total Loss=Train: 95.15882; Val: 98.44590
+Gumbel Temperature: 0.500
+(Epoch 73 / 200)
+Train - REC: 74.72517;  Gauss: 18.53661;  Cat: 1.90527;
+Valid - REC: 77.85833;  Gauss: 18.61775;  Cat: 1.88862;
+Accuracy=Train: 58.70667; Val: 59.96000   NMI=Train: 59.35323; Val: 61.01896   Total Loss=Train: 95.16705; Val: 98.36471
+Gumbel Temperature: 0.500
+(Epoch 74 / 200)
+Train - REC: 74.69324;  Gauss: 18.51714;  Cat: 1.91022;
+Valid - REC: 77.64656;  Gauss: 18.51111;  Cat: 1.89933;
+Accuracy=Train: 58.83833; Val: 58.97000   NMI=Train: 59.59659; Val: 59.86663   Total Loss=Train: 95.12060; Val: 98.05700
+Gumbel Temperature: 0.500
+(Epoch 75 / 200)
+Train - REC: 74.68375;  Gauss: 18.51377;  Cat: 1.92258;
+Valid - REC: 78.20409;  Gauss: 18.39515;  Cat: 1.91892;
+Accuracy=Train: 58.72167; Val: 59.34000   NMI=Train: 59.68065; Val: 60.58468   Total Loss=Train: 95.12010; Val: 98.51817
+Gumbel Temperature: 0.500
+(Epoch 76 / 200)
+Train - REC: 74.64827;  Gauss: 18.52489;  Cat: 1.91354;
+Valid - REC: 77.98047;  Gauss: 18.27161;  Cat: 1.88847;
+Accuracy=Train: 58.67500; Val: 58.65000   NMI=Train: 59.56410; Val: 58.44617   Total Loss=Train: 95.08670; Val: 98.14055
+Gumbel Temperature: 0.500
+(Epoch 77 / 200)
+Train - REC: 74.59286;  Gauss: 18.52354;  Cat: 1.92152;
+Valid - REC: 77.83049;  Gauss: 18.59586;  Cat: 1.90616;
+Accuracy=Train: 58.68667; Val: 59.41000   NMI=Train: 59.30664; Val: 60.03048   Total Loss=Train: 95.03792; Val: 98.33251
+Gumbel Temperature: 0.500
+(Epoch 78 / 200)
+Train - REC: 74.58563;  Gauss: 18.53718;  Cat: 1.91278;
+Valid - REC: 77.91254;  Gauss: 18.59701;  Cat: 1.90007;
+Accuracy=Train: 58.99500; Val: 57.60000   NMI=Train: 59.48199; Val: 59.13340   Total Loss=Train: 95.03559; Val: 98.40962
+Gumbel Temperature: 0.500
+(Epoch 79 / 200)
+Train - REC: 74.56276;  Gauss: 18.52566;  Cat: 1.91672;
+Valid - REC: 77.39772;  Gauss: 18.74037;  Cat: 1.89818;
+Accuracy=Train: 58.70667; Val: 58.16000   NMI=Train: 59.55323; Val: 59.44691   Total Loss=Train: 95.00515; Val: 98.03628
+Gumbel Temperature: 0.500
+(Epoch 80 / 200)
+Train - REC: 74.51521;  Gauss: 18.55242;  Cat: 1.91949;
+Valid - REC: 78.08623;  Gauss: 18.44631;  Cat: 1.91750;
+Accuracy=Train: 59.13667; Val: 59.68000   NMI=Train: 59.45307; Val: 60.02957   Total Loss=Train: 94.98712; Val: 98.45004
+Gumbel Temperature: 0.500
+(Epoch 81 / 200)
+Train - REC: 74.49021;  Gauss: 18.54862;  Cat: 1.92391;
+Valid - REC: 78.09211;  Gauss: 18.44782;  Cat: 1.91425;
+Accuracy=Train: 59.45667; Val: 59.62000   NMI=Train: 59.93095; Val: 60.79379   Total Loss=Train: 94.96274; Val: 98.45418
+Gumbel Temperature: 0.500
+(Epoch 82 / 200)
+Train - REC: 74.46569;  Gauss: 18.52941;  Cat: 1.93450;
+Valid - REC: 77.91734;  Gauss: 18.43955;  Cat: 1.93706;
+Accuracy=Train: 59.47667; Val: 59.66000   NMI=Train: 60.22181; Val: 60.58122   Total Loss=Train: 94.92961; Val: 98.29396
+Gumbel Temperature: 0.500
+(Epoch 83 / 200)
+Train - REC: 74.44878;  Gauss: 18.52563;  Cat: 1.94765;
+Valid - REC: 77.96133;  Gauss: 18.30187;  Cat: 1.94064;
+Accuracy=Train: 59.75167; Val: 59.76000   NMI=Train: 60.41066; Val: 61.77666   Total Loss=Train: 94.92205; Val: 98.20385
+Gumbel Temperature: 0.500
+(Epoch 84 / 200)
+Train - REC: 74.42985;  Gauss: 18.55170;  Cat: 1.94248;
+Valid - REC: 77.78218;  Gauss: 18.28136;  Cat: 1.90953;
+Accuracy=Train: 59.97000; Val: 60.49000   NMI=Train: 60.90486; Val: 60.58937   Total Loss=Train: 94.92403; Val: 97.97308
+Gumbel Temperature: 0.500
+(Epoch 85 / 200)
+Train - REC: 74.34377;  Gauss: 18.53482;  Cat: 1.94541;
+Valid - REC: 77.75152;  Gauss: 18.73175;  Cat: 1.94365;
+Accuracy=Train: 59.66667; Val: 59.34000   NMI=Train: 60.49801; Val: 61.56696   Total Loss=Train: 94.82400; Val: 98.42693
+Gumbel Temperature: 0.500
+(Epoch 86 / 200)
+Train - REC: 74.36517;  Gauss: 18.54584;  Cat: 1.93146;
+Valid - REC: 77.88073;  Gauss: 18.44363;  Cat: 1.92660;
+Accuracy=Train: 59.61333; Val: 60.08000   NMI=Train: 60.39274; Val: 61.03485   Total Loss=Train: 94.84247; Val: 98.25095
+Gumbel Temperature: 0.500
+(Epoch 87 / 200)
+Train - REC: 74.35059;  Gauss: 18.57141;  Cat: 1.93104;
+Valid - REC: 77.56591;  Gauss: 18.60725;  Cat: 1.92729;
+Accuracy=Train: 59.88667; Val: 60.80000   NMI=Train: 60.57438; Val: 61.80663   Total Loss=Train: 94.85304; Val: 98.10044
+Gumbel Temperature: 0.500
+(Epoch 88 / 200)
+Train - REC: 74.30961;  Gauss: 18.55698;  Cat: 1.93535;
+Valid - REC: 77.72422;  Gauss: 18.77323;  Cat: 1.92046;
+Accuracy=Train: 59.98500; Val: 59.68000   NMI=Train: 60.57521; Val: 60.30088   Total Loss=Train: 94.80194; Val: 98.41791
+Gumbel Temperature: 0.500
+(Epoch 89 / 200)
+Train - REC: 74.25478;  Gauss: 18.54524;  Cat: 1.93645;
+Valid - REC: 78.00440;  Gauss: 18.39267;  Cat: 1.92256;
+Accuracy=Train: 60.30000; Val: 60.44000   NMI=Train: 61.13924; Val: 61.28592   Total Loss=Train: 94.73647; Val: 98.31963
+Gumbel Temperature: 0.500
+(Epoch 90 / 200)
+Train - REC: 74.26222;  Gauss: 18.54593;  Cat: 1.93142;
+Valid - REC: 77.62170;  Gauss: 18.48503;  Cat: 1.90701;
+Accuracy=Train: 59.73000; Val: 60.15000   NMI=Train: 60.68181; Val: 61.25095   Total Loss=Train: 94.73957; Val: 98.01374
+Gumbel Temperature: 0.500
+(Epoch 91 / 200)
+Train - REC: 74.23923;  Gauss: 18.56117;  Cat: 1.93976;
+Valid - REC: 77.70957;  Gauss: 18.47310;  Cat: 1.92774;
+Accuracy=Train: 60.04667; Val: 60.58000   NMI=Train: 60.83479; Val: 61.31758   Total Loss=Train: 94.74017; Val: 98.11040
+Gumbel Temperature: 0.500
+(Epoch 92 / 200)
+Train - REC: 74.23710;  Gauss: 18.56440;  Cat: 1.93659;
+Valid - REC: 78.06830;  Gauss: 18.29169;  Cat: 1.93030;
+Accuracy=Train: 59.90500; Val: 59.92000   NMI=Train: 60.82362; Val: 61.36932   Total Loss=Train: 94.73809; Val: 98.29029
+Gumbel Temperature: 0.500
+(Epoch 93 / 200)
+Train - REC: 74.15585;  Gauss: 18.57872;  Cat: 1.93815;
+Valid - REC: 77.80026;  Gauss: 18.46539;  Cat: 1.92423;
+Accuracy=Train: 59.85000; Val: 60.55000   NMI=Train: 60.62856; Val: 62.11615   Total Loss=Train: 94.67272; Val: 98.18989
+Gumbel Temperature: 0.500
+(Epoch 94 / 200)
+Train - REC: 74.16680;  Gauss: 18.57780;  Cat: 1.93638;
+Valid - REC: 77.99599;  Gauss: 18.31399;  Cat: 1.90883;
+Accuracy=Train: 60.18167; Val: 60.66000   NMI=Train: 60.82220; Val: 61.64667   Total Loss=Train: 94.68097; Val: 98.21881
+Gumbel Temperature: 0.500
+(Epoch 95 / 200)
+Train - REC: 74.18063;  Gauss: 18.56513;  Cat: 1.94322;
+Valid - REC: 77.86080;  Gauss: 18.31736;  Cat: 1.91589;
+Accuracy=Train: 60.00000; Val: 60.14000   NMI=Train: 60.93200; Val: 61.36642   Total Loss=Train: 94.68898; Val: 98.09406
+Gumbel Temperature: 0.500
+(Epoch 96 / 200)
+Train - REC: 74.12686;  Gauss: 18.57120;  Cat: 1.93423;
+Valid - REC: 77.70805;  Gauss: 18.50164;  Cat: 1.94244;
+Accuracy=Train: 60.12333; Val: 59.61000   NMI=Train: 60.55460; Val: 60.17073   Total Loss=Train: 94.63229; Val: 98.15214
+Gumbel Temperature: 0.500
+(Epoch 97 / 200)
+Train - REC: 74.09275;  Gauss: 18.55483;  Cat: 1.93838;
+Valid - REC: 78.07315;  Gauss: 18.32494;  Cat: 1.92319;
+Accuracy=Train: 60.00667; Val: 60.14000   NMI=Train: 60.64767; Val: 61.03269   Total Loss=Train: 94.58596; Val: 98.32128
+Gumbel Temperature: 0.500
+(Epoch 98 / 200)
+Train - REC: 74.07473;  Gauss: 18.57291;  Cat: 1.94301;
+Valid - REC: 77.47026;  Gauss: 18.75768;  Cat: 1.93267;
+Accuracy=Train: 60.37000; Val: 60.64000   NMI=Train: 60.80181; Val: 60.98569   Total Loss=Train: 94.59065; Val: 98.16061
+Gumbel Temperature: 0.500
+(Epoch 99 / 200)
+Train - REC: 74.07032;  Gauss: 18.55159;  Cat: 1.93717;
+Valid - REC: 77.52308;  Gauss: 18.60775;  Cat: 1.91405;
+Accuracy=Train: 60.21333; Val: 60.37000   NMI=Train: 60.75825; Val: 60.92707   Total Loss=Train: 94.55908; Val: 98.04488
+Gumbel Temperature: 0.500
+(Epoch 100 / 200)
+Train - REC: 74.05118;  Gauss: 18.55009;  Cat: 1.94526;
+Valid - REC: 77.83822;  Gauss: 18.67706;  Cat: 1.92567;
+Accuracy=Train: 60.56333; Val: 61.29000   NMI=Train: 61.18479; Val: 62.05663   Total Loss=Train: 94.54652; Val: 98.44096
+Gumbel Temperature: 0.500
+(Epoch 101 / 200)
+Train - REC: 74.04015;  Gauss: 18.57171;  Cat: 1.93337;
+Valid - REC: 77.55942;  Gauss: 18.76076;  Cat: 1.92775;
+Accuracy=Train: 60.57000; Val: 61.04000   NMI=Train: 61.20866; Val: 61.81032   Total Loss=Train: 94.54524; Val: 98.24793
+Gumbel Temperature: 0.500
+(Epoch 102 / 200)
+Train - REC: 74.02908;  Gauss: 18.57314;  Cat: 1.94271;
+Valid - REC: 77.87331;  Gauss: 18.41186;  Cat: 1.94315;
+Accuracy=Train: 60.44833; Val: 61.00000   NMI=Train: 60.87591; Val: 62.04693   Total Loss=Train: 94.54494; Val: 98.22831
+Gumbel Temperature: 0.500
+(Epoch 103 / 200)
+Train - REC: 74.02537;  Gauss: 18.56305;  Cat: 1.94254;
+Valid - REC: 77.77744;  Gauss: 18.37151;  Cat: 1.91349;
+Accuracy=Train: 60.95667; Val: 61.24000   NMI=Train: 61.03707; Val: 61.30294   Total Loss=Train: 94.53096; Val: 98.06244
+Gumbel Temperature: 0.500
+(Epoch 104 / 200)
+Train - REC: 73.96134;  Gauss: 18.58780;  Cat: 1.93988;
+Valid - REC: 77.94260;  Gauss: 18.43223;  Cat: 1.91640;
+Accuracy=Train: 60.81500; Val: 61.39000   NMI=Train: 61.23511; Val: 61.52907   Total Loss=Train: 94.48902; Val: 98.29123
+Gumbel Temperature: 0.500
+(Epoch 105 / 200)
+Train - REC: 73.93918;  Gauss: 18.56803;  Cat: 1.94732;
+Valid - REC: 77.30993;  Gauss: 18.77644;  Cat: 1.93716;
+Accuracy=Train: 61.09333; Val: 62.06000   NMI=Train: 61.44143; Val: 61.79611   Total Loss=Train: 94.45454; Val: 98.02354
+Gumbel Temperature: 0.500
+(Epoch 106 / 200)
+Train - REC: 73.94515;  Gauss: 18.55813;  Cat: 1.95313;
+Valid - REC: 77.74133;  Gauss: 18.39095;  Cat: 1.92070;
+Accuracy=Train: 61.04167; Val: 60.77000   NMI=Train: 61.23334; Val: 61.63336   Total Loss=Train: 94.45640; Val: 98.05298
+Gumbel Temperature: 0.500
+(Epoch 107 / 200)
+Train - REC: 73.94581;  Gauss: 18.56138;  Cat: 1.94078;
+Valid - REC: 77.47604;  Gauss: 18.84959;  Cat: 1.93059;
+Accuracy=Train: 61.13833; Val: 62.24000   NMI=Train: 61.31255; Val: 62.27079   Total Loss=Train: 94.44796; Val: 98.25623
+Gumbel Temperature: 0.500
+(Epoch 108 / 200)
+Train - REC: 73.88423;  Gauss: 18.57145;  Cat: 1.95343;
+Valid - REC: 77.78741;  Gauss: 18.35602;  Cat: 1.92185;
+Accuracy=Train: 61.32167; Val: 61.52000   NMI=Train: 61.56024; Val: 62.30418   Total Loss=Train: 94.40911; Val: 98.06527
+Gumbel Temperature: 0.500
+(Epoch 109 / 200)
+Train - REC: 73.91320;  Gauss: 18.57802;  Cat: 1.94603;
+Valid - REC: 77.61264;  Gauss: 18.53670;  Cat: 1.93551;
+Accuracy=Train: 61.00000; Val: 61.71000   NMI=Train: 61.47827; Val: 62.37026   Total Loss=Train: 94.43725; Val: 98.08485
+Gumbel Temperature: 0.500
+(Epoch 110 / 200)
+Train - REC: 73.82971;  Gauss: 18.59111;  Cat: 1.95030;
+Valid - REC: 77.81075;  Gauss: 18.24962;  Cat: 1.93863;
+Accuracy=Train: 60.94667; Val: 62.34000   NMI=Train: 61.55769; Val: 62.72445   Total Loss=Train: 94.37112; Val: 97.99901
+Gumbel Temperature: 0.500
+(Epoch 111 / 200)
+Train - REC: 73.87183;  Gauss: 18.58649;  Cat: 1.94534;
+Valid - REC: 77.55618;  Gauss: 18.63128;  Cat: 1.93508;
+Accuracy=Train: 61.09500; Val: 62.38000   NMI=Train: 61.37454; Val: 62.33262   Total Loss=Train: 94.40367; Val: 98.12255
+Gumbel Temperature: 0.500
+(Epoch 112 / 200)
+Train - REC: 73.81840;  Gauss: 18.58169;  Cat: 1.94848;
+Valid - REC: 77.51077;  Gauss: 18.69786;  Cat: 1.94136;
+Accuracy=Train: 61.22833; Val: 61.09000   NMI=Train: 61.65443; Val: 62.37841   Total Loss=Train: 94.34856; Val: 98.14998
+Gumbel Temperature: 0.500
+(Epoch 113 / 200)
+Train - REC: 73.80158;  Gauss: 18.58575;  Cat: 1.95135;
+Valid - REC: 77.68725;  Gauss: 18.40246;  Cat: 1.94157;
+Accuracy=Train: 61.32000; Val: 61.61000   NMI=Train: 61.70814; Val: 62.25166   Total Loss=Train: 94.33868; Val: 98.03127
+Gumbel Temperature: 0.500
+(Epoch 114 / 200)
+Train - REC: 73.79083;  Gauss: 18.59022;  Cat: 1.95230;
+Valid - REC: 77.28200;  Gauss: 18.80631;  Cat: 1.93282;
+Accuracy=Train: 61.47667; Val: 61.57000   NMI=Train: 62.07549; Val: 62.18991   Total Loss=Train: 94.33335; Val: 98.02114
+Gumbel Temperature: 0.500
+(Epoch 115 / 200)
+Train - REC: 73.76629;  Gauss: 18.57794;  Cat: 1.95239;
+Valid - REC: 77.81473;  Gauss: 18.40779;  Cat: 1.93978;
+Accuracy=Train: 61.24167; Val: 61.69000   NMI=Train: 61.43490; Val: 61.76730   Total Loss=Train: 94.29661; Val: 98.16230
+Gumbel Temperature: 0.500
+(Epoch 116 / 200)
+Train - REC: 73.77666;  Gauss: 18.59485;  Cat: 1.95514;
+Valid - REC: 77.56599;  Gauss: 18.70193;  Cat: 1.95211;
+Accuracy=Train: 61.94667; Val: 62.08000   NMI=Train: 62.02915; Val: 62.83068   Total Loss=Train: 94.32665; Val: 98.22002
+Gumbel Temperature: 0.500
+(Epoch 117 / 200)
+Train - REC: 73.77959;  Gauss: 18.56080;  Cat: 1.95379;
+Valid - REC: 77.60461;  Gauss: 18.61255;  Cat: 1.92444;
+Accuracy=Train: 61.76833; Val: 61.94000   NMI=Train: 61.89058; Val: 62.10249   Total Loss=Train: 94.29418; Val: 98.14160
+Gumbel Temperature: 0.500
+(Epoch 118 / 200)
+Train - REC: 73.72646;  Gauss: 18.59237;  Cat: 1.96124;
+Valid - REC: 77.78643;  Gauss: 18.51191;  Cat: 1.95364;
+Accuracy=Train: 61.52500; Val: 61.27000   NMI=Train: 61.79694; Val: 62.18523   Total Loss=Train: 94.28007; Val: 98.25198
+Gumbel Temperature: 0.500
+(Epoch 119 / 200)
+Train - REC: 73.72797;  Gauss: 18.58819;  Cat: 1.95550;
+Valid - REC: 77.91262;  Gauss: 18.34548;  Cat: 1.93990;
+Accuracy=Train: 61.53667; Val: 61.96000   NMI=Train: 61.63117; Val: 62.42607   Total Loss=Train: 94.27165; Val: 98.19799
+Gumbel Temperature: 0.500
+(Epoch 120 / 200)
+Train - REC: 73.68400;  Gauss: 18.58241;  Cat: 1.95682;
+Valid - REC: 78.17822;  Gauss: 18.24165;  Cat: 1.92367;
+Accuracy=Train: 61.90000; Val: 62.93000   NMI=Train: 61.96050; Val: 63.25938   Total Loss=Train: 94.22323; Val: 98.34354
+Gumbel Temperature: 0.500
+(Epoch 121 / 200)
+Train - REC: 73.69636;  Gauss: 18.57227;  Cat: 1.95214;
+Valid - REC: 78.07203;  Gauss: 18.31453;  Cat: 1.92411;
+Accuracy=Train: 61.61333; Val: 62.04000   NMI=Train: 61.79496; Val: 61.99751   Total Loss=Train: 94.22077; Val: 98.31068
+Gumbel Temperature: 0.500
+(Epoch 122 / 200)
+Train - REC: 73.65198;  Gauss: 18.60537;  Cat: 1.94383;
+Valid - REC: 77.62186;  Gauss: 18.54952;  Cat: 1.93852;
+Accuracy=Train: 61.53167; Val: 62.62000   NMI=Train: 61.75262; Val: 62.13166   Total Loss=Train: 94.20118; Val: 98.10990
+Gumbel Temperature: 0.500
+(Epoch 123 / 200)
+Train - REC: 73.65307;  Gauss: 18.58115;  Cat: 1.95867;
+Valid - REC: 77.67271;  Gauss: 18.61627;  Cat: 1.94718;
+Accuracy=Train: 61.76167; Val: 62.50000   NMI=Train: 61.83348; Val: 61.88329   Total Loss=Train: 94.19289; Val: 98.23616
+Gumbel Temperature: 0.500
+(Epoch 124 / 200)
+Train - REC: 73.65745;  Gauss: 18.59188;  Cat: 1.94956;
+Valid - REC: 77.55847;  Gauss: 18.75437;  Cat: 1.93567;
+Accuracy=Train: 61.71333; Val: 63.06000   NMI=Train: 61.78931; Val: 62.65217   Total Loss=Train: 94.19889; Val: 98.24851
+Gumbel Temperature: 0.500
+(Epoch 125 / 200)
+Train - REC: 73.61277;  Gauss: 18.59652;  Cat: 1.95804;
+Valid - REC: 77.57658;  Gauss: 18.61759;  Cat: 1.94136;
+Accuracy=Train: 62.09667; Val: 62.81000   NMI=Train: 62.22017; Val: 63.66204   Total Loss=Train: 94.16733; Val: 98.13553
+Gumbel Temperature: 0.500
+(Epoch 126 / 200)
+Train - REC: 73.62211;  Gauss: 18.60158;  Cat: 1.95286;
+Valid - REC: 77.71802;  Gauss: 18.74191;  Cat: 1.93941;
+Accuracy=Train: 62.30833; Val: 61.57000   NMI=Train: 62.23820; Val: 62.33162   Total Loss=Train: 94.17654; Val: 98.39934
+Gumbel Temperature: 0.500
+(Epoch 127 / 200)
+Train - REC: 73.60865;  Gauss: 18.59366;  Cat: 1.96728;
+Valid - REC: 77.84112;  Gauss: 18.32693;  Cat: 1.95877;
+Accuracy=Train: 62.59167; Val: 63.00000   NMI=Train: 62.44918; Val: 62.95594   Total Loss=Train: 94.16959; Val: 98.12681
+Gumbel Temperature: 0.500
+(Epoch 128 / 200)
+Train - REC: 73.57684;  Gauss: 18.58172;  Cat: 1.96153;
+Valid - REC: 77.45573;  Gauss: 18.66016;  Cat: 1.95114;
+Accuracy=Train: 62.33833; Val: 62.68000   NMI=Train: 62.15500; Val: 62.28669   Total Loss=Train: 94.12009; Val: 98.06703
+Gumbel Temperature: 0.500
+(Epoch 129 / 200)
+Train - REC: 73.60882;  Gauss: 18.57609;  Cat: 1.96751;
+Valid - REC: 78.05601;  Gauss: 18.09954;  Cat: 1.95163;
+Accuracy=Train: 62.62167; Val: 63.32000   NMI=Train: 62.48826; Val: 62.69756   Total Loss=Train: 94.15242; Val: 98.10719
+Gumbel Temperature: 0.500
+(Epoch 130 / 200)
+Train - REC: 73.53113;  Gauss: 18.59010;  Cat: 1.96325;
+Valid - REC: 78.05246;  Gauss: 18.42293;  Cat: 1.96164;
+Accuracy=Train: 62.45500; Val: 62.43000   NMI=Train: 62.34390; Val: 62.60142   Total Loss=Train: 94.08448; Val: 98.43704
+Gumbel Temperature: 0.500
+(Epoch 131 / 200)
+Train - REC: 73.51950;  Gauss: 18.60318;  Cat: 1.96368;
+Valid - REC: 77.88509;  Gauss: 18.34282;  Cat: 1.94303;
+Accuracy=Train: 62.37500; Val: 62.61000   NMI=Train: 62.28290; Val: 62.38635   Total Loss=Train: 94.08636; Val: 98.17094
+Gumbel Temperature: 0.500
+(Epoch 132 / 200)
+Train - REC: 73.54599;  Gauss: 18.61708;  Cat: 1.96068;
+Valid - REC: 78.11248;  Gauss: 18.12813;  Cat: 1.94719;
+Accuracy=Train: 62.70333; Val: 62.77000   NMI=Train: 62.74201; Val: 63.09977   Total Loss=Train: 94.12375; Val: 98.18781
+Gumbel Temperature: 0.500
+(Epoch 133 / 200)
+Train - REC: 73.53007;  Gauss: 18.60020;  Cat: 1.94974;
+Valid - REC: 78.15389;  Gauss: 18.23511;  Cat: 1.95281;
+Accuracy=Train: 62.72833; Val: 64.58000   NMI=Train: 62.57807; Val: 64.15907   Total Loss=Train: 94.08001; Val: 98.34181
+Gumbel Temperature: 0.500
+(Epoch 134 / 200)
+Train - REC: 73.48273;  Gauss: 18.59231;  Cat: 1.96539;
+Valid - REC: 77.87059;  Gauss: 18.38131;  Cat: 1.95892;
+Accuracy=Train: 62.62167; Val: 62.88000   NMI=Train: 62.34412; Val: 62.71914   Total Loss=Train: 94.04043; Val: 98.21081
+Gumbel Temperature: 0.500
+(Epoch 135 / 200)
+Train - REC: 73.49897;  Gauss: 18.61375;  Cat: 1.95999;
+Valid - REC: 77.62794;  Gauss: 18.49380;  Cat: 1.94173;
+Accuracy=Train: 62.44333; Val: 62.91000   NMI=Train: 62.36449; Val: 63.25150   Total Loss=Train: 94.07271; Val: 98.06347
+Gumbel Temperature: 0.500
+(Epoch 136 / 200)
+Train - REC: 73.48246;  Gauss: 18.62154;  Cat: 1.95087;
+Valid - REC: 77.74367;  Gauss: 18.48052;  Cat: 1.95092;
+Accuracy=Train: 62.59000; Val: 63.32000   NMI=Train: 62.49780; Val: 63.27328   Total Loss=Train: 94.05487; Val: 98.17512
+Gumbel Temperature: 0.500
+(Epoch 137 / 200)
+Train - REC: 73.43429;  Gauss: 18.61420;  Cat: 1.95666;
+Valid - REC: 77.39877;  Gauss: 18.63580;  Cat: 1.95480;
+Accuracy=Train: 62.59167; Val: 62.48000   NMI=Train: 62.40722; Val: 62.64739   Total Loss=Train: 94.00514; Val: 97.98938
+Gumbel Temperature: 0.500
+(Epoch 138 / 200)
+Train - REC: 73.49553;  Gauss: 18.61898;  Cat: 1.96435;
+Valid - REC: 78.13666;  Gauss: 18.34332;  Cat: 1.94002;
+Accuracy=Train: 62.34333; Val: 61.49000   NMI=Train: 62.00724; Val: 61.59600   Total Loss=Train: 94.07885; Val: 98.42000
+Gumbel Temperature: 0.500
+(Epoch 139 / 200)
+Train - REC: 73.42356;  Gauss: 18.60455;  Cat: 1.96316;
+Valid - REC: 77.53562;  Gauss: 18.71986;  Cat: 1.95674;
+Accuracy=Train: 62.92833; Val: 63.10000   NMI=Train: 62.59269; Val: 62.55246   Total Loss=Train: 93.99127; Val: 98.21221
+Gumbel Temperature: 0.500
+(Epoch 140 / 200)
+Train - REC: 73.42497;  Gauss: 18.62204;  Cat: 1.96775;
+Valid - REC: 77.50512;  Gauss: 18.64791;  Cat: 1.93589;
+Accuracy=Train: 62.83333; Val: 63.46000   NMI=Train: 62.51487; Val: 62.76705   Total Loss=Train: 94.01476; Val: 98.08891
+Gumbel Temperature: 0.500
+(Epoch 141 / 200)
+Train - REC: 73.43001;  Gauss: 18.61178;  Cat: 1.96214;
+Valid - REC: 77.66457;  Gauss: 18.60056;  Cat: 1.94556;
+Accuracy=Train: 62.93167; Val: 62.84000   NMI=Train: 62.59392; Val: 63.06450   Total Loss=Train: 94.00393; Val: 98.21069
+Gumbel Temperature: 0.500
+(Epoch 142 / 200)
+Train - REC: 73.39652;  Gauss: 18.62551;  Cat: 1.95913;
+Valid - REC: 77.51188;  Gauss: 18.50619;  Cat: 1.94912;
+Accuracy=Train: 63.15667; Val: 63.64000   NMI=Train: 62.74103; Val: 63.22593   Total Loss=Train: 93.98117; Val: 97.96720
+Gumbel Temperature: 0.500
+(Epoch 143 / 200)
+Train - REC: 73.37651;  Gauss: 18.61770;  Cat: 1.95431;
+Valid - REC: 77.60283;  Gauss: 18.51488;  Cat: 1.92704;
+Accuracy=Train: 63.37333; Val: 63.68000   NMI=Train: 63.12639; Val: 63.09340   Total Loss=Train: 93.94852; Val: 98.04476
+Gumbel Temperature: 0.500
+(Epoch 144 / 200)
+Train - REC: 73.37073;  Gauss: 18.60825;  Cat: 1.95762;
+Valid - REC: 77.67841;  Gauss: 18.51013;  Cat: 1.94446;
+Accuracy=Train: 62.97000; Val: 63.77000   NMI=Train: 62.66740; Val: 63.77123   Total Loss=Train: 93.93660; Val: 98.13299
+Gumbel Temperature: 0.500
+(Epoch 145 / 200)
+Train - REC: 73.38878;  Gauss: 18.62939;  Cat: 1.95991;
+Valid - REC: 77.40002;  Gauss: 18.54640;  Cat: 1.93721;
+Accuracy=Train: 63.10167; Val: 63.73000   NMI=Train: 62.94906; Val: 63.60673   Total Loss=Train: 93.97807; Val: 97.88363
+Gumbel Temperature: 0.500
+(Epoch 146 / 200)
+Train - REC: 73.33679;  Gauss: 18.63480;  Cat: 1.96017;
+Valid - REC: 77.86362;  Gauss: 18.32794;  Cat: 1.95562;
+Accuracy=Train: 62.99833; Val: 63.95000   NMI=Train: 62.61986; Val: 63.25659   Total Loss=Train: 93.93176; Val: 98.14719
+Gumbel Temperature: 0.500
+(Epoch 147 / 200)
+Train - REC: 73.35270;  Gauss: 18.62782;  Cat: 1.97072;
+Valid - REC: 77.97611;  Gauss: 18.55010;  Cat: 1.96090;
+Accuracy=Train: 63.53000; Val: 63.50000   NMI=Train: 63.37048; Val: 63.37992   Total Loss=Train: 93.95124; Val: 98.48711
+Gumbel Temperature: 0.500
+(Epoch 148 / 200)
+Train - REC: 73.32818;  Gauss: 18.62757;  Cat: 1.97035;
+Valid - REC: 78.04675;  Gauss: 18.34757;  Cat: 1.95230;
+Accuracy=Train: 63.34000; Val: 64.22000   NMI=Train: 62.98633; Val: 63.94564   Total Loss=Train: 93.92610; Val: 98.34661
+Gumbel Temperature: 0.500
+(Epoch 149 / 200)
+Train - REC: 73.32494;  Gauss: 18.63565;  Cat: 1.96322;
+Valid - REC: 77.66617;  Gauss: 18.61703;  Cat: 1.96205;
+Accuracy=Train: 63.28667; Val: 64.22000   NMI=Train: 62.93534; Val: 63.92019   Total Loss=Train: 93.92382; Val: 98.24525
+Gumbel Temperature: 0.500
+(Epoch 150 / 200)
+Train - REC: 73.32653;  Gauss: 18.64620;  Cat: 1.97044;
+Valid - REC: 77.54338;  Gauss: 18.48108;  Cat: 1.94348;
+Accuracy=Train: 63.50833; Val: 63.88000   NMI=Train: 62.97524; Val: 63.44532   Total Loss=Train: 93.94317; Val: 97.96794
+Gumbel Temperature: 0.500
+(Epoch 151 / 200)
+Train - REC: 73.28756;  Gauss: 18.61381;  Cat: 1.97518;
+Valid - REC: 77.38286;  Gauss: 18.71986;  Cat: 1.94290;
+Accuracy=Train: 63.70167; Val: 63.40000   NMI=Train: 63.33628; Val: 63.05279   Total Loss=Train: 93.87655; Val: 98.04562
+Gumbel Temperature: 0.500
+(Epoch 152 / 200)
+Train - REC: 73.26993;  Gauss: 18.61081;  Cat: 1.95693;
+Valid - REC: 77.08900;  Gauss: 18.79275;  Cat: 1.95188;
+Accuracy=Train: 63.58833; Val: 64.27000   NMI=Train: 63.33301; Val: 63.74042   Total Loss=Train: 93.83767; Val: 97.83363
+Gumbel Temperature: 0.500
+(Epoch 153 / 200)
+Train - REC: 73.29973;  Gauss: 18.63076;  Cat: 1.97198;
+Valid - REC: 77.56608;  Gauss: 18.66723;  Cat: 1.96115;
+Accuracy=Train: 63.19667; Val: 65.18000   NMI=Train: 62.98008; Val: 64.07140   Total Loss=Train: 93.90248; Val: 98.19446
+Gumbel Temperature: 0.500
+(Epoch 154 / 200)
+Train - REC: 73.25941;  Gauss: 18.59677;  Cat: 1.96771;
+Valid - REC: 77.43053;  Gauss: 18.66873;  Cat: 1.96232;
+Accuracy=Train: 63.70667; Val: 64.29000   NMI=Train: 63.01001; Val: 63.63555   Total Loss=Train: 93.82390; Val: 98.06159
+Gumbel Temperature: 0.500
+(Epoch 155 / 200)
+Train - REC: 73.27127;  Gauss: 18.61376;  Cat: 1.97457;
+Valid - REC: 77.55316;  Gauss: 18.45720;  Cat: 1.95164;
+Accuracy=Train: 63.96833; Val: 63.69000   NMI=Train: 63.48574; Val: 63.37408   Total Loss=Train: 93.85960; Val: 97.96199
+Gumbel Temperature: 0.500
+(Epoch 156 / 200)
+Train - REC: 73.24777;  Gauss: 18.62692;  Cat: 1.96719;
+Valid - REC: 77.99476;  Gauss: 18.29760;  Cat: 1.95347;
+Accuracy=Train: 63.70667; Val: 63.80000   NMI=Train: 63.01067; Val: 63.23118   Total Loss=Train: 93.84189; Val: 98.24582
+Gumbel Temperature: 0.500
+(Epoch 157 / 200)
+Train - REC: 73.26378;  Gauss: 18.61921;  Cat: 1.96795;
+Valid - REC: 77.91104;  Gauss: 18.64065;  Cat: 1.94731;
+Accuracy=Train: 63.62500; Val: 64.10000   NMI=Train: 63.05913; Val: 64.06612   Total Loss=Train: 93.85094; Val: 98.49901
+Gumbel Temperature: 0.500
+(Epoch 158 / 200)
+Train - REC: 73.21739;  Gauss: 18.60504;  Cat: 1.97707;
+Valid - REC: 77.65721;  Gauss: 18.48437;  Cat: 1.97044;
+Accuracy=Train: 64.39500; Val: 63.96000   NMI=Train: 63.59109; Val: 63.33549   Total Loss=Train: 93.79949; Val: 98.11203
+Gumbel Temperature: 0.500
+(Epoch 159 / 200)
+Train - REC: 73.19822;  Gauss: 18.63665;  Cat: 1.97367;
+Valid - REC: 77.59031;  Gauss: 18.55911;  Cat: 1.95793;
+Accuracy=Train: 64.16833; Val: 64.37000   NMI=Train: 63.31103; Val: 64.16453   Total Loss=Train: 93.80853; Val: 98.10735
+Gumbel Temperature: 0.500
+(Epoch 160 / 200)
+Train - REC: 73.19755;  Gauss: 18.61970;  Cat: 1.96520;
+Valid - REC: 77.32496;  Gauss: 18.64380;  Cat: 1.95476;
+Accuracy=Train: 64.26667; Val: 64.76000   NMI=Train: 63.49881; Val: 64.06623   Total Loss=Train: 93.78245; Val: 97.92352
+Gumbel Temperature: 0.500
+(Epoch 161 / 200)
+Train - REC: 73.18357;  Gauss: 18.62808;  Cat: 1.97188;
+Valid - REC: 77.89017;  Gauss: 18.39874;  Cat: 1.94678;
+Accuracy=Train: 63.93667; Val: 62.78000   NMI=Train: 63.17318; Val: 62.51468   Total Loss=Train: 93.78353; Val: 98.23568
+Gumbel Temperature: 0.500
+(Epoch 162 / 200)
+Train - REC: 73.16938;  Gauss: 18.63685;  Cat: 1.96068;
+Valid - REC: 77.34842;  Gauss: 18.74649;  Cat: 1.94954;
+Accuracy=Train: 64.07833; Val: 64.31000   NMI=Train: 63.42443; Val: 64.12228   Total Loss=Train: 93.76691; Val: 98.04444
+Gumbel Temperature: 0.500
+(Epoch 163 / 200)
+Train - REC: 73.18142;  Gauss: 18.62682;  Cat: 1.96768;
+Valid - REC: 77.40955;  Gauss: 18.66765;  Cat: 1.96253;
+Accuracy=Train: 64.11167; Val: 63.68000   NMI=Train: 63.40270; Val: 63.31005   Total Loss=Train: 93.77592; Val: 98.03974
+Gumbel Temperature: 0.500
+(Epoch 164 / 200)
+Train - REC: 73.14036;  Gauss: 18.61156;  Cat: 1.97527;
+Valid - REC: 77.79787;  Gauss: 18.56532;  Cat: 1.97196;
+Accuracy=Train: 64.24333; Val: 65.17000   NMI=Train: 63.31658; Val: 64.72867   Total Loss=Train: 93.72719; Val: 98.33515
+Gumbel Temperature: 0.500
+(Epoch 165 / 200)
+Train - REC: 73.13474;  Gauss: 18.64078;  Cat: 1.97027;
+Valid - REC: 77.42718;  Gauss: 18.70384;  Cat: 1.96318;
+Accuracy=Train: 64.40667; Val: 64.54000   NMI=Train: 63.56329; Val: 64.07042   Total Loss=Train: 93.74579; Val: 98.09419
+Gumbel Temperature: 0.500
+(Epoch 166 / 200)
+Train - REC: 73.15643;  Gauss: 18.62717;  Cat: 1.96768;
+Valid - REC: 77.52609;  Gauss: 18.59730;  Cat: 1.96753;
+Accuracy=Train: 64.41000; Val: 65.35000   NMI=Train: 63.60391; Val: 64.62203   Total Loss=Train: 93.75128; Val: 98.09092
+Gumbel Temperature: 0.500
+(Epoch 167 / 200)
+Train - REC: 73.13325;  Gauss: 18.63963;  Cat: 1.96547;
+Valid - REC: 77.87743;  Gauss: 18.48442;  Cat: 1.96186;
+Accuracy=Train: 64.29167; Val: 64.01000   NMI=Train: 63.23669; Val: 63.19633   Total Loss=Train: 93.73836; Val: 98.32372
+Gumbel Temperature: 0.500
+(Epoch 168 / 200)
+Train - REC: 73.12693;  Gauss: 18.62085;  Cat: 1.96933;
+Valid - REC: 77.77922;  Gauss: 18.37270;  Cat: 1.95171;
+Accuracy=Train: 64.06333; Val: 64.39000   NMI=Train: 63.47936; Val: 64.09992   Total Loss=Train: 93.71711; Val: 98.10363
+Gumbel Temperature: 0.500
+(Epoch 169 / 200)
+Train - REC: 73.08887;  Gauss: 18.62490;  Cat: 1.96656;
+Valid - REC: 77.94997;  Gauss: 18.44704;  Cat: 1.96435;
+Accuracy=Train: 64.12500; Val: 65.32000   NMI=Train: 63.46924; Val: 64.31723   Total Loss=Train: 93.68034; Val: 98.36137
+Gumbel Temperature: 0.500
+(Epoch 170 / 200)
+Train - REC: 73.09389;  Gauss: 18.63828;  Cat: 1.97329;
+Valid - REC: 77.13611;  Gauss: 18.94413;  Cat: 1.94833;
+Accuracy=Train: 64.37667; Val: 64.97000   NMI=Train: 63.55059; Val: 64.20120   Total Loss=Train: 93.70546; Val: 98.02857
+Gumbel Temperature: 0.500
+(Epoch 171 / 200)
+Train - REC: 73.10728;  Gauss: 18.65300;  Cat: 1.96347;
+Valid - REC: 77.58285;  Gauss: 18.64685;  Cat: 1.94719;
+Accuracy=Train: 64.16833; Val: 65.07000   NMI=Train: 63.31142; Val: 64.51594   Total Loss=Train: 93.72374; Val: 98.17688
+Gumbel Temperature: 0.500
+(Epoch 172 / 200)
+Train - REC: 73.06453;  Gauss: 18.64041;  Cat: 1.97139;
+Valid - REC: 77.94856;  Gauss: 18.29954;  Cat: 1.96863;
+Accuracy=Train: 64.38667; Val: 64.54000   NMI=Train: 63.74415; Val: 64.74697   Total Loss=Train: 93.67633; Val: 98.21673
+Gumbel Temperature: 0.500
+(Epoch 173 / 200)
+Train - REC: 73.07479;  Gauss: 18.64829;  Cat: 1.97355;
+Valid - REC: 77.45578;  Gauss: 18.80951;  Cat: 1.96367;
+Accuracy=Train: 64.45000; Val: 65.76000   NMI=Train: 63.86929; Val: 65.30530   Total Loss=Train: 93.69663; Val: 98.22897
+Gumbel Temperature: 0.500
+(Epoch 174 / 200)
+Train - REC: 73.04925;  Gauss: 18.62538;  Cat: 1.97591;
+Valid - REC: 77.54329;  Gauss: 18.61740;  Cat: 1.96163;
+Accuracy=Train: 64.62000; Val: 64.69000   NMI=Train: 63.84408; Val: 64.37100   Total Loss=Train: 93.65054; Val: 98.12232
+Gumbel Temperature: 0.500
+(Epoch 175 / 200)
+Train - REC: 73.06473;  Gauss: 18.64966;  Cat: 1.96528;
+Valid - REC: 77.75592;  Gauss: 18.47154;  Cat: 1.96564;
+Accuracy=Train: 64.64500; Val: 65.67000   NMI=Train: 64.02355; Val: 64.69278   Total Loss=Train: 93.67968; Val: 98.19309
+Gumbel Temperature: 0.500
+(Epoch 176 / 200)
+Train - REC: 73.05171;  Gauss: 18.64223;  Cat: 1.97189;
+Valid - REC: 77.86260;  Gauss: 18.37411;  Cat: 1.95753;
+Accuracy=Train: 64.69000; Val: 64.99000   NMI=Train: 63.78733; Val: 64.36424   Total Loss=Train: 93.66584; Val: 98.19423
+Gumbel Temperature: 0.500
+(Epoch 177 / 200)
+Train - REC: 73.03047;  Gauss: 18.65161;  Cat: 1.96102;
+Valid - REC: 77.64613;  Gauss: 18.47593;  Cat: 1.94718;
+Accuracy=Train: 64.64833; Val: 64.36000   NMI=Train: 63.77885; Val: 63.20624   Total Loss=Train: 93.64310; Val: 98.06924
+Gumbel Temperature: 0.500
+(Epoch 178 / 200)
+Train - REC: 73.02145;  Gauss: 18.65094;  Cat: 1.96711;
+Valid - REC: 77.86088;  Gauss: 18.43489;  Cat: 1.98507;
+Accuracy=Train: 64.86000; Val: 65.35000   NMI=Train: 64.00475; Val: 64.70205   Total Loss=Train: 93.63950; Val: 98.28085
+Gumbel Temperature: 0.500
+(Epoch 179 / 200)
+Train - REC: 73.02773;  Gauss: 18.63708;  Cat: 1.97375;
+Valid - REC: 77.65367;  Gauss: 18.67579;  Cat: 1.94826;
+Accuracy=Train: 64.88167; Val: 65.63000   NMI=Train: 64.18157; Val: 64.85367   Total Loss=Train: 93.63855; Val: 98.27772
+Gumbel Temperature: 0.500
+(Epoch 180 / 200)
+Train - REC: 72.96814;  Gauss: 18.64875;  Cat: 1.97160;
+Valid - REC: 77.92608;  Gauss: 18.20471;  Cat: 1.95743;
+Accuracy=Train: 64.58333; Val: 64.94000   NMI=Train: 64.01047; Val: 64.40319   Total Loss=Train: 93.58849; Val: 98.08822
+Gumbel Temperature: 0.500
+(Epoch 181 / 200)
+Train - REC: 73.01470;  Gauss: 18.63190;  Cat: 1.97386;
+Valid - REC: 77.43046;  Gauss: 18.79474;  Cat: 1.95810;
+Accuracy=Train: 64.90000; Val: 65.68000   NMI=Train: 64.06438; Val: 64.47974   Total Loss=Train: 93.62046; Val: 98.18330
+Gumbel Temperature: 0.500
+(Epoch 182 / 200)
+Train - REC: 72.96879;  Gauss: 18.64933;  Cat: 1.96508;
+Valid - REC: 77.71921;  Gauss: 18.56175;  Cat: 1.94487;
+Accuracy=Train: 65.00333; Val: 64.86000   NMI=Train: 64.05615; Val: 63.51431   Total Loss=Train: 93.58320; Val: 98.22583
+Gumbel Temperature: 0.500
+(Epoch 183 / 200)
+Train - REC: 72.97690;  Gauss: 18.63324;  Cat: 1.96428;
+Valid - REC: 77.98268;  Gauss: 18.45573;  Cat: 1.95742;
+Accuracy=Train: 65.00833; Val: 65.98000   NMI=Train: 64.19764; Val: 64.96413   Total Loss=Train: 93.57442; Val: 98.39583
+Gumbel Temperature: 0.500
+(Epoch 184 / 200)
+Train - REC: 72.94446;  Gauss: 18.66227;  Cat: 1.97671;
+Valid - REC: 77.44113;  Gauss: 18.81186;  Cat: 1.96580;
+Accuracy=Train: 64.85833; Val: 66.02000   NMI=Train: 63.92205; Val: 64.77295   Total Loss=Train: 93.58344; Val: 98.21879
+Gumbel Temperature: 0.500
+(Epoch 185 / 200)
+Train - REC: 72.98598;  Gauss: 18.64869;  Cat: 1.96421;
+Valid - REC: 77.47486;  Gauss: 18.81334;  Cat: 1.97094;
+Accuracy=Train: 65.31833; Val: 65.57000   NMI=Train: 64.37532; Val: 65.16257   Total Loss=Train: 93.59888; Val: 98.25914
+Gumbel Temperature: 0.500
+(Epoch 186 / 200)
+Train - REC: 72.98736;  Gauss: 18.66027;  Cat: 1.96802;
+Valid - REC: 77.61545;  Gauss: 18.59980;  Cat: 1.94349;
+Accuracy=Train: 65.32000; Val: 64.63000   NMI=Train: 64.50134; Val: 63.90311   Total Loss=Train: 93.61566; Val: 98.15875
+Gumbel Temperature: 0.500
+(Epoch 187 / 200)
+Train - REC: 72.95325;  Gauss: 18.64312;  Cat: 1.97023;
+Valid - REC: 77.74536;  Gauss: 18.55691;  Cat: 1.95389;
+Accuracy=Train: 65.33167; Val: 64.95000   NMI=Train: 64.56735; Val: 64.13394   Total Loss=Train: 93.56660; Val: 98.25617
+Gumbel Temperature: 0.500
+(Epoch 188 / 200)
+Train - REC: 72.92629;  Gauss: 18.63599;  Cat: 1.96867;
+Valid - REC: 77.19906;  Gauss: 18.71722;  Cat: 1.97242;
+Accuracy=Train: 65.45667; Val: 67.15000   NMI=Train: 64.35917; Val: 66.13629   Total Loss=Train: 93.53094; Val: 97.88870
+Gumbel Temperature: 0.500
+(Epoch 189 / 200)
+Train - REC: 72.92960;  Gauss: 18.65703;  Cat: 1.96611;
+Valid - REC: 77.50839;  Gauss: 18.61843;  Cat: 1.97309;
+Accuracy=Train: 65.71000; Val: 66.65000   NMI=Train: 64.63990; Val: 65.86486   Total Loss=Train: 93.55275; Val: 98.09991
+Gumbel Temperature: 0.500
+(Epoch 190 / 200)
+Train - REC: 72.90612;  Gauss: 18.66206;  Cat: 1.97879;
+Valid - REC: 77.64307;  Gauss: 18.48068;  Cat: 1.97866;
+Accuracy=Train: 65.44333; Val: 65.75000   NMI=Train: 64.39341; Val: 64.77753   Total Loss=Train: 93.54696; Val: 98.10241
+Gumbel Temperature: 0.500
+(Epoch 191 / 200)
+Train - REC: 72.92311;  Gauss: 18.66336;  Cat: 1.97502;
+Valid - REC: 77.70893;  Gauss: 18.60694;  Cat: 1.96750;
+Accuracy=Train: 65.69833; Val: 66.65000   NMI=Train: 64.50515; Val: 66.15157   Total Loss=Train: 93.56149; Val: 98.28337
+Gumbel Temperature: 0.500
+(Epoch 192 / 200)
+Train - REC: 72.87934;  Gauss: 18.64151;  Cat: 1.97724;
+Valid - REC: 77.88985;  Gauss: 18.42164;  Cat: 1.95573;
+Accuracy=Train: 65.81333; Val: 66.55000   NMI=Train: 64.85588; Val: 65.59079   Total Loss=Train: 93.49809; Val: 98.26721
+Gumbel Temperature: 0.500
+(Epoch 193 / 200)
+Train - REC: 72.88104;  Gauss: 18.62137;  Cat: 1.97849;
+Valid - REC: 77.52366;  Gauss: 18.56668;  Cat: 1.94185;
+Accuracy=Train: 65.66667; Val: 65.15000   NMI=Train: 64.85600; Val: 64.48823   Total Loss=Train: 93.48089; Val: 98.03219
+Gumbel Temperature: 0.500
+(Epoch 194 / 200)
+Train - REC: 72.91623;  Gauss: 18.66210;  Cat: 1.97526;
+Valid - REC: 77.55428;  Gauss: 18.80192;  Cat: 1.95894;
+Accuracy=Train: 65.46167; Val: 66.59000   NMI=Train: 64.50088; Val: 65.21875   Total Loss=Train: 93.55359; Val: 98.31514
+Gumbel Temperature: 0.500
+(Epoch 195 / 200)
+Train - REC: 72.88979;  Gauss: 18.64420;  Cat: 1.98278;
+Valid - REC: 77.48366;  Gauss: 18.53876;  Cat: 1.98345;
+Accuracy=Train: 65.58000; Val: 67.20000   NMI=Train: 64.70591; Val: 66.81509   Total Loss=Train: 93.51677; Val: 98.00587
+Gumbel Temperature: 0.500
+(Epoch 196 / 200)
+Train - REC: 72.89185;  Gauss: 18.64398;  Cat: 1.97800;
+Valid - REC: 77.56385;  Gauss: 18.63993;  Cat: 1.95272;
+Accuracy=Train: 65.62000; Val: 65.55000   NMI=Train: 64.64524; Val: 64.64253   Total Loss=Train: 93.51383; Val: 98.15649
+Gumbel Temperature: 0.500
+(Epoch 197 / 200)
+Train - REC: 72.86849;  Gauss: 18.64745;  Cat: 1.97962;
+Valid - REC: 77.78077;  Gauss: 18.41313;  Cat: 1.97866;
+Accuracy=Train: 66.01500; Val: 66.95000   NMI=Train: 65.12485; Val: 65.82972   Total Loss=Train: 93.49556; Val: 98.17256
+Gumbel Temperature: 0.500
+(Epoch 198 / 200)
+Train - REC: 72.84564;  Gauss: 18.66475;  Cat: 1.97962;
+Valid - REC: 77.67738;  Gauss: 18.50404;  Cat: 1.95668;
+Accuracy=Train: 65.90000; Val: 65.77000   NMI=Train: 65.30562; Val: 65.39484   Total Loss=Train: 93.49001; Val: 98.13810
+Gumbel Temperature: 0.500
+(Epoch 199 / 200)
+Train - REC: 72.84404;  Gauss: 18.63869;  Cat: 1.96922;
+Valid - REC: 77.98532;  Gauss: 18.32387;  Cat: 1.94896;
+Accuracy=Train: 65.95000; Val: 65.94000   NMI=Train: 64.90271; Val: 64.90813   Total Loss=Train: 93.45195; Val: 98.25815
+Gumbel Temperature: 0.500
+(Epoch 200 / 200)
+Train - REC: 72.88615;  Gauss: 18.65556;  Cat: 1.97442;
+Valid - REC: 77.29759;  Gauss: 18.73124;  Cat: 1.94501;
+Accuracy=Train: 65.69500; Val: 65.63000   NMI=Train: 64.79867; Val: 64.60082   Total Loss=Train: 93.51613; Val: 97.97384
+Gumbel Temperature: 0.500
+Testing phase...
+Accuracy: 65.63000, NMI: 64.60082
