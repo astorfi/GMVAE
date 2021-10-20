@@ -19,11 +19,11 @@ class InferenceNet(nn.Module):
     def __init__(self, x_dim, z_dim, y_dim, device):
         super(InferenceNet, self).__init__()
 
-        hidden_dims = [32, 64, 128]
+        hidden_dims = [32, 64, 128, 256, 512]
 
         # Build Encoder
         modules = []
-        in_channels = 3
+        in_channels = 1
         for h_dim_idx in range(len(hidden_dims)):
             if h_dim_idx == 0:
                 modules.append(
@@ -45,9 +45,9 @@ class InferenceNet(nn.Module):
 
         self.encoderCNN = nn.Sequential(*modules)
         self.cnn_to_fc= nn.Sequential(
-            nn.Linear(hidden_dims[-1]*16, x_dim),
+            nn.Linear(hidden_dims[-1], x_dim),
             nn.BatchNorm1d(num_features=x_dim),
-            nn.ReLU()
+            nn.LeakyReLU()
         )
 
         # # q(y|x)
@@ -77,7 +77,7 @@ class InferenceNet(nn.Module):
         self.inference_qzyx = torch.nn.ModuleList([
             nn.Linear(x_dim + y_dim, 512),
             nn.BatchNorm1d(num_features=512),
-            nn.ReLU(),
+            nn.LeakyReLU(),
             Gaussian(512, z_dim)
         ])
 
@@ -147,8 +147,8 @@ class GenerativeNet(nn.Module):
         # Build Decoder
         modules = []
 
-        self.hidden_dims = [32, 64, 128]
-        self.fc_to_cnn = nn.Linear(x_dim, self.hidden_dims[-1] * 16)
+        self.hidden_dims = [32, 64, 128, 256, 512]
+        self.fc_to_cnn = nn.Linear(x_dim, self.hidden_dims[-1])
 
         self.hidden_dims.reverse()
 
@@ -176,7 +176,7 @@ class GenerativeNet(nn.Module):
                                                output_padding=1),
                             nn.BatchNorm2d(self.hidden_dims[-1]),
                             nn.LeakyReLU(),
-                            nn.Conv2d(self.hidden_dims[-1], out_channels= 3,
+                            nn.Conv2d(self.hidden_dims[-1], out_channels= 1,
                                       kernel_size= 3, padding= 1),
                             torch.nn.Sigmoid())
 
@@ -193,7 +193,7 @@ class GenerativeNet(nn.Module):
             z = layer(z)
 
         z = self.fc_to_cnn(z)
-        z = z.view(-1, self.hidden_dims[0], 4, 4)
+        z = z.view(-1, self.hidden_dims[0], 1, 1)
         z = self.decoderCNN(z)
         z = self.final_layer(z)
 
