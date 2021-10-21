@@ -44,11 +44,11 @@ class InferenceNet(nn.Module):
                 in_channels = hidden_dims[h_dim_idx]
 
         self.encoderCNN = nn.Sequential(*modules)
-        self.cnn_to_fc= nn.Sequential(
-            nn.Linear(hidden_dims[-1], x_dim),
-            nn.BatchNorm1d(num_features=x_dim),
-            nn.LeakyReLU()
-        )
+        # self.cnn_to_fc= nn.Sequential(
+        #     nn.Linear(hidden_dims[-1], x_dim),
+        #     nn.BatchNorm1d(num_features=x_dim),
+        #     nn.LeakyReLU()
+        # )
 
         # # q(y|x)
         # self.inference_qyx = torch.nn.ModuleList([
@@ -88,7 +88,7 @@ class InferenceNet(nn.Module):
         # Feature extraction
         x = self.encoderCNN(x)
         x = torch.flatten(x, start_dim=1)
-        x = self.cnn_to_fc(x)
+        # x = self.cnn_to_fc(x)
 
         for i, layer in enumerate(self.inference_qyx):
             if i == num_layers - 1:
@@ -104,7 +104,7 @@ class InferenceNet(nn.Module):
         # Feature extraction
         x = self.encoderCNN(x)
         x = torch.flatten(x, start_dim=1)
-        x = self.cnn_to_fc(x)
+        # x = self.cnn_to_fc(x)
 
         concat = torch.cat((x, y), dim=1)
         for layer in self.inference_qzyx:
@@ -148,7 +148,7 @@ class GenerativeNet(nn.Module):
         modules = []
 
         self.hidden_dims = [32, 64, 128, 256, 512]
-        self.fc_to_cnn = nn.Linear(x_dim, self.hidden_dims[-1])
+        # self.fc_to_cnn = nn.Linear(x_dim, self.hidden_dims[-1])
 
         self.hidden_dims.reverse()
 
@@ -192,7 +192,7 @@ class GenerativeNet(nn.Module):
         for layer in self.generative_pxz:
             z = layer(z)
 
-        z = self.fc_to_cnn(z)
+        # z = self.fc_to_cnn(z)
         z = z.view(-1, self.hidden_dims[0], 1, 1)
         z = self.decoderCNN(z)
         z = self.final_layer(z)

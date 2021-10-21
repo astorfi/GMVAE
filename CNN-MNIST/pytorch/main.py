@@ -52,7 +52,7 @@ parser.add_argument('--batch_size', default=64, type=int,
                     help='mini-batch size (default: 64)')
 parser.add_argument('--batch_size_val', default=200, type=int,
                     help='mini-batch size of validation (default: 200)')
-parser.add_argument('--learning_rate', default=1e-5, type=float,
+parser.add_argument('--learning_rate', default=1e-4, type=float,
                     help='learning rate (default: 0.001)')
 parser.add_argument('--decay_epoch', default=-1, type=int, 
                     help='Reduces the learning rate every decay_epoch')
@@ -64,7 +64,7 @@ parser.add_argument('--num_classes', type=int, default=10,
                     help='number of classes (default: 10)')
 parser.add_argument('--gaussian_size', default=64, type=int,
                     help='gaussian size (default: 64)')
-parser.add_argument('--input_size', default=1024, type=int,
+parser.add_argument('--input_size', default=512, type=int,
                     help='input size (default: 784)')
 
 ## Partition parameters
@@ -157,8 +157,8 @@ else:
   test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=args.batch_size_val, shuffle=False)
 
 ## Calculate flatten size of each input data
-args.input_size = np.prod(train_dataset[0][0].size())
-print(args.input_size)
+# args.input_size = np.prod(train_dataset[0][0].size())
+# print(args.input_size)
 #########################################################
 ## Train and Test Model
 #########################################################

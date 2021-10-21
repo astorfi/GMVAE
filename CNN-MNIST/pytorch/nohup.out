@@ -2,206 +2,157 @@ Loading mnist dataset...
 /data/conda_env/torfia/lib/python3.8/site-packages/torchvision/datasets/mnist.py:498: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1623448234945/work/torch/csrc/utils/tensor_numpy.cpp:180.)
   return torch.from_numpy(parsed.astype(m[2], copy=False)).view(*s)
 784
-(Epoch 1 / 200) Train_Loss: 36.196; Val_Loss: 22.480   Train_ACC: 19.250; Val_ACC: 18.890   Train_NMI: 5.931; Val_NMI: 7.037
-(Epoch 2 / 200) Train_Loss: 18.136; Val_Loss: 14.956   Train_ACC: 16.687; Val_ACC: 16.710   Train_NMI: 4.556; Val_NMI: 4.221
-(Epoch 3 / 200) Train_Loss: 13.432; Val_Loss: 12.007   Train_ACC: 15.815; Val_ACC: 18.490   Train_NMI: 2.837; Val_NMI: 3.498
-(Epoch 4 / 200) Train_Loss: 11.469; Val_Loss: 10.729   Train_ACC: 15.702; Val_ACC: 17.170   Train_NMI: 2.141; Val_NMI: 2.917
-(Epoch 5 / 200) Train_Loss: 10.476; Val_Loss: 10.077   Train_ACC: 15.238; Val_ACC: 16.240   Train_NMI: 1.859; Val_NMI: 2.749
-(Epoch 6 / 200) Train_Loss: 9.943; Val_Loss: 9.692   Train_ACC: 14.757; Val_ACC: 16.010   Train_NMI: 1.563; Val_NMI: 2.511
-(Epoch 7 / 200) Train_Loss: 9.613; Val_Loss: 9.430   Train_ACC: 14.330; Val_ACC: 15.980   Train_NMI: 1.219; Val_NMI: 2.235
-(Epoch 8 / 200) Train_Loss: 9.408; Val_Loss: 9.255   Train_ACC: 14.287; Val_ACC: 15.540   Train_NMI: 1.256; Val_NMI: 2.341
-(Epoch 9 / 200) Train_Loss: 9.259; Val_Loss: 9.152   Train_ACC: 14.370; Val_ACC: 16.030   Train_NMI: 1.248; Val_NMI: 2.298
-(Epoch 10 / 200) Train_Loss: 9.152; Val_Loss: 9.072   Train_ACC: 14.092; Val_ACC: 15.980   Train_NMI: 1.041; Val_NMI: 2.187
-(Epoch 11 / 200) Train_Loss: 9.086; Val_Loss: 9.007   Train_ACC: 14.047; Val_ACC: 16.340   Train_NMI: 0.970; Val_NMI: 2.350
-(Epoch 12 / 200) Train_Loss: 9.030; Val_Loss: 8.974   Train_ACC: 13.610; Val_ACC: 16.110   Train_NMI: 0.948; Val_NMI: 3.086
-(Epoch 13 / 200) Train_Loss: 8.989; Val_Loss: 8.952   Train_ACC: 13.957; Val_ACC: 14.950   Train_NMI: 1.215; Val_NMI: 2.331
-(Epoch 14 / 200) Train_Loss: 8.955; Val_Loss: 8.882   Train_ACC: 13.408; Val_ACC: 16.360   Train_NMI: 1.018; Val_NMI: 2.877
-(Epoch 15 / 200) Train_Loss: 8.927; Val_Loss: 8.912   Train_ACC: 14.218; Val_ACC: 14.830   Train_NMI: 1.244; Val_NMI: 2.050
-(Epoch 16 / 200) Train_Loss: 8.907; Val_Loss: 8.864   Train_ACC: 13.562; Val_ACC: 16.490   Train_NMI: 1.048; Val_NMI: 2.447
-(Epoch 17 / 200) Train_Loss: 8.885; Val_Loss: 8.814   Train_ACC: 14.220; Val_ACC: 17.430   Train_NMI: 1.265; Val_NMI: 3.388
-(Epoch 18 / 200) Train_Loss: 8.867; Val_Loss: 8.828   Train_ACC: 13.768; Val_ACC: 17.410   Train_NMI: 1.392; Val_NMI: 3.946
-(Epoch 19 / 200) Train_Loss: 8.846; Val_Loss: 8.817   Train_ACC: 13.755; Val_ACC: 17.530   Train_NMI: 1.163; Val_NMI: 4.076
-(Epoch 20 / 200) Train_Loss: 8.829; Val_Loss: 8.810   Train_ACC: 13.655; Val_ACC: 16.330   Train_NMI: 1.032; Val_NMI: 2.712
-(Epoch 21 / 200) Train_Loss: 8.819; Val_Loss: 8.782   Train_ACC: 13.553; Val_ACC: 19.340   Train_NMI: 0.962; Val_NMI: 4.101
-(Epoch 22 / 200) Train_Loss: 8.812; Val_Loss: 8.781   Train_ACC: 14.090; Val_ACC: 16.600   Train_NMI: 1.331; Val_NMI: 3.191
-(Epoch 23 / 200) Train_Loss: 8.797; Val_Loss: 8.777   Train_ACC: 13.653; Val_ACC: 19.060   Train_NMI: 1.163; Val_NMI: 4.948
-(Epoch 24 / 200) Train_Loss: 8.799; Val_Loss: 8.761   Train_ACC: 14.127; Val_ACC: 17.730   Train_NMI: 1.157; Val_NMI: 4.214
-(Epoch 25 / 200) Train_Loss: 8.789; Val_Loss: 8.772   Train_ACC: 14.150; Val_ACC: 15.710   Train_NMI: 1.494; Val_NMI: 3.448
-(Epoch 26 / 200) Train_Loss: 8.768; Val_Loss: 8.740   Train_ACC: 13.712; Val_ACC: 19.410   Train_NMI: 1.281; Val_NMI: 4.517
-(Epoch 27 / 200) Train_Loss: 8.761; Val_Loss: 8.731   Train_ACC: 13.338; Val_ACC: 18.680   Train_NMI: 1.061; Val_NMI: 4.859
-(Epoch 28 / 200) Train_Loss: 8.752; Val_Loss: 8.727   Train_ACC: 13.888; Val_ACC: 17.160   Train_NMI: 1.296; Val_NMI: 3.428
-(Epoch 29 / 200) Train_Loss: 8.744; Val_Loss: 8.703   Train_ACC: 13.885; Val_ACC: 20.300   Train_NMI: 1.279; Val_NMI: 5.111
-(Epoch 30 / 200) Train_Loss: 8.738; Val_Loss: 8.701   Train_ACC: 14.657; Val_ACC: 17.420   Train_NMI: 1.848; Val_NMI: 4.295
-(Epoch 31 / 200) Train_Loss: 8.731; Val_Loss: 8.693   Train_ACC: 14.562; Val_ACC: 18.430   Train_NMI: 1.747; Val_NMI: 4.933
-(Epoch 32 / 200) Train_Loss: 8.725; Val_Loss: 8.696   Train_ACC: 13.800; Val_ACC: 19.380   Train_NMI: 1.263; Val_NMI: 5.835
-(Epoch 33 / 200) Train_Loss: 8.716; Val_Loss: 8.683   Train_ACC: 14.482; Val_ACC: 17.320   Train_NMI: 1.481; Val_NMI: 4.207
-(Epoch 34 / 200) Train_Loss: 8.705; Val_Loss: 8.681   Train_ACC: 13.943; Val_ACC: 17.400   Train_NMI: 1.218; Val_NMI: 3.765
-(Epoch 35 / 200) Train_Loss: 8.701; Val_Loss: 8.670   Train_ACC: 14.322; Val_ACC: 18.430   Train_NMI: 1.591; Val_NMI: 4.037
-(Epoch 36 / 200) Train_Loss: 8.697; Val_Loss: 8.669   Train_ACC: 13.632; Val_ACC: 17.790   Train_NMI: 1.518; Val_NMI: 4.086
-(Epoch 37 / 200) Train_Loss: 8.690; Val_Loss: 8.662   Train_ACC: 14.833; Val_ACC: 18.920   Train_NMI: 1.798; Val_NMI: 6.094
-(Epoch 38 / 200) Train_Loss: 8.682; Val_Loss: 8.656   Train_ACC: 13.993; Val_ACC: 19.330   Train_NMI: 1.502; Val_NMI: 5.953
-(Epoch 39 / 200) Train_Loss: 8.678; Val_Loss: 8.652   Train_ACC: 14.103; Val_ACC: 23.030   Train_NMI: 1.573; Val_NMI: 7.192
-(Epoch 40 / 200) Train_Loss: 8.676; Val_Loss: 8.653   Train_ACC: 14.307; Val_ACC: 21.410   Train_NMI: 1.668; Val_NMI: 6.147
-(Epoch 41 / 200) Train_Loss: 8.667; Val_Loss: 8.651   Train_ACC: 15.712; Val_ACC: 16.790   Train_NMI: 2.695; Val_NMI: 4.090
-(Epoch 42 / 200) Train_Loss: 8.663; Val_Loss: 8.650   Train_ACC: 14.462; Val_ACC: 20.710   Train_NMI: 1.693; Val_NMI: 5.492
-(Epoch 43 / 200) Train_Loss: 8.654; Val_Loss: 8.637   Train_ACC: 14.177; Val_ACC: 19.020   Train_NMI: 1.381; Val_NMI: 6.539
-(Epoch 44 / 200) Train_Loss: 8.651; Val_Loss: 8.620   Train_ACC: 14.250; Val_ACC: 17.190   Train_NMI: 1.593; Val_NMI: 5.313
-(Epoch 45 / 200) Train_Loss: 8.647; Val_Loss: 8.630   Train_ACC: 14.757; Val_ACC: 19.130   Train_NMI: 1.689; Val_NMI: 5.693
-(Epoch 46 / 200) Train_Loss: 8.643; Val_Loss: 8.614   Train_ACC: 14.830; Val_ACC: 20.950   Train_NMI: 2.130; Val_NMI: 6.822
-(Epoch 47 / 200) Train_Loss: 8.640; Val_Loss: 8.613   Train_ACC: 14.657; Val_ACC: 23.860   Train_NMI: 2.099; Val_NMI: 9.064
-(Epoch 48 / 200) Train_Loss: 8.637; Val_Loss: 8.609   Train_ACC: 15.287; Val_ACC: 18.880   Train_NMI: 2.524; Val_NMI: 6.812
-(Epoch 49 / 200) Train_Loss: 8.637; Val_Loss: 8.616   Train_ACC: 14.738; Val_ACC: 19.810   Train_NMI: 2.209; Val_NMI: 5.584
-(Epoch 50 / 200) Train_Loss: 8.627; Val_Loss: 8.618   Train_ACC: 15.448; Val_ACC: 15.900   Train_NMI: 2.156; Val_NMI: 4.280
-(Epoch 51 / 200) Train_Loss: 8.624; Val_Loss: 8.602   Train_ACC: 14.750; Val_ACC: 22.960   Train_NMI: 1.935; Val_NMI: 8.348
-(Epoch 52 / 200) Train_Loss: 8.623; Val_Loss: 8.599   Train_ACC: 15.220; Val_ACC: 16.620   Train_NMI: 2.793; Val_NMI: 4.670
-(Epoch 53 / 200) Train_Loss: 8.616; Val_Loss: 8.598   Train_ACC: 15.812; Val_ACC: 20.690   Train_NMI: 2.433; Val_NMI: 5.982
-(Epoch 54 / 200) Train_Loss: 8.614; Val_Loss: 8.583   Train_ACC: 14.612; Val_ACC: 19.140   Train_NMI: 1.943; Val_NMI: 6.055
-(Epoch 55 / 200) Train_Loss: 8.612; Val_Loss: 8.589   Train_ACC: 15.138; Val_ACC: 22.340   Train_NMI: 2.299; Val_NMI: 8.843
-(Epoch 56 / 200) Train_Loss: 8.607; Val_Loss: 8.575   Train_ACC: 15.020; Val_ACC: 18.520   Train_NMI: 2.132; Val_NMI: 4.954
-(Epoch 57 / 200) Train_Loss: 8.603; Val_Loss: 8.588   Train_ACC: 16.297; Val_ACC: 18.670   Train_NMI: 3.063; Val_NMI: 5.429
-(Epoch 58 / 200) Train_Loss: 8.601; Val_Loss: 8.581   Train_ACC: 15.107; Val_ACC: 17.600   Train_NMI: 2.604; Val_NMI: 6.303
-(Epoch 59 / 200) Train_Loss: 8.598; Val_Loss: 8.571   Train_ACC: 15.620; Val_ACC: 15.810   Train_NMI: 2.213; Val_NMI: 3.922
-(Epoch 60 / 200) Train_Loss: 8.593; Val_Loss: 8.575   Train_ACC: 15.880; Val_ACC: 23.450   Train_NMI: 2.551; Val_NMI: 8.280
-(Epoch 61 / 200) Train_Loss: 8.593; Val_Loss: 8.577   Train_ACC: 15.275; Val_ACC: 21.950   Train_NMI: 2.580; Val_NMI: 7.361
-(Epoch 62 / 200) Train_Loss: 8.593; Val_Loss: 8.570   Train_ACC: 14.600; Val_ACC: 22.650   Train_NMI: 2.054; Val_NMI: 8.491
-(Epoch 63 / 200) Train_Loss: 8.588; Val_Loss: 8.576   Train_ACC: 14.213; Val_ACC: 17.500   Train_NMI: 1.743; Val_NMI: 4.813
-(Epoch 64 / 200) Train_Loss: 8.585; Val_Loss: 8.566   Train_ACC: 14.402; Val_ACC: 24.470   Train_NMI: 1.932; Val_NMI: 10.139
-(Epoch 65 / 200) Train_Loss: 8.583; Val_Loss: 8.555   Train_ACC: 15.535; Val_ACC: 18.210   Train_NMI: 2.111; Val_NMI: 5.654
-(Epoch 66 / 200) Train_Loss: 8.584; Val_Loss: 8.561   Train_ACC: 14.717; Val_ACC: 19.100   Train_NMI: 2.619; Val_NMI: 6.075
-(Epoch 67 / 200) Train_Loss: 8.582; Val_Loss: 8.556   Train_ACC: 13.987; Val_ACC: 21.960   Train_NMI: 1.815; Val_NMI: 7.753
-(Epoch 68 / 200) Train_Loss: 8.577; Val_Loss: 8.557   Train_ACC: 14.335; Val_ACC: 19.260   Train_NMI: 1.941; Val_NMI: 5.708
-(Epoch 69 / 200) Train_Loss: 8.577; Val_Loss: 8.557   Train_ACC: 15.532; Val_ACC: 20.170   Train_NMI: 2.370; Val_NMI: 6.979
-(Epoch 70 / 200) Train_Loss: 8.574; Val_Loss: 8.545   Train_ACC: 13.812; Val_ACC: 20.410   Train_NMI: 1.774; Val_NMI: 5.529
-(Epoch 71 / 200) Train_Loss: 8.574; Val_Loss: 8.551   Train_ACC: 13.705; Val_ACC: 19.530   Train_NMI: 1.526; Val_NMI: 6.078
-(Epoch 72 / 200) Train_Loss: 8.571; Val_Loss: 8.552   Train_ACC: 14.803; Val_ACC: 20.250   Train_NMI: 1.919; Val_NMI: 6.196
-(Epoch 73 / 200) Train_Loss: 8.572; Val_Loss: 8.552   Train_ACC: 15.522; Val_ACC: 20.730   Train_NMI: 2.306; Val_NMI: 6.575
-(Epoch 74 / 200) Train_Loss: 8.568; Val_Loss: 8.545   Train_ACC: 15.373; Val_ACC: 20.920   Train_NMI: 2.964; Val_NMI: 7.972
-(Epoch 75 / 200) Train_Loss: 8.566; Val_Loss: 8.548   Train_ACC: 15.863; Val_ACC: 20.260   Train_NMI: 2.592; Val_NMI: 7.599
-(Epoch 76 / 200) Train_Loss: 8.567; Val_Loss: 8.546   Train_ACC: 16.133; Val_ACC: 21.100   Train_NMI: 2.713; Val_NMI: 7.996
-(Epoch 77 / 200) Train_Loss: 8.566; Val_Loss: 8.547   Train_ACC: 16.565; Val_ACC: 25.170   Train_NMI: 3.474; Val_NMI: 11.088
-(Epoch 78 / 200) Train_Loss: 8.563; Val_Loss: 8.547   Train_ACC: 17.152; Val_ACC: 20.600   Train_NMI: 2.985; Val_NMI: 9.052
-(Epoch 79 / 200) Train_Loss: 8.563; Val_Loss: 8.541   Train_ACC: 17.432; Val_ACC: 21.430   Train_NMI: 3.368; Val_NMI: 8.437
-(Epoch 80 / 200) Train_Loss: 8.563; Val_Loss: 8.543   Train_ACC: 15.950; Val_ACC: 25.690   Train_NMI: 3.216; Val_NMI: 11.464
-(Epoch 81 / 200) Train_Loss: 8.556; Val_Loss: 8.540   Train_ACC: 16.703; Val_ACC: 18.980   Train_NMI: 3.046; Val_NMI: 6.083
-(Epoch 82 / 200) Train_Loss: 8.560; Val_Loss: 8.533   Train_ACC: 18.397; Val_ACC: 25.190   Train_NMI: 4.039; Val_NMI: 10.246
-(Epoch 83 / 200) Train_Loss: 8.557; Val_Loss: 8.536   Train_ACC: 16.842; Val_ACC: 23.490   Train_NMI: 3.110; Val_NMI: 8.606
-(Epoch 84 / 200) Train_Loss: 8.557; Val_Loss: 8.535   Train_ACC: 17.735; Val_ACC: 21.490   Train_NMI: 3.182; Val_NMI: 6.215
-(Epoch 85 / 200) Train_Loss: 8.556; Val_Loss: 8.532   Train_ACC: 15.242; Val_ACC: 18.860   Train_NMI: 2.571; Val_NMI: 7.152
-(Epoch 86 / 200) Train_Loss: 8.553; Val_Loss: 8.533   Train_ACC: 17.113; Val_ACC: 20.520   Train_NMI: 3.564; Val_NMI: 7.442
-(Epoch 87 / 200) Train_Loss: 8.552; Val_Loss: 8.528   Train_ACC: 16.903; Val_ACC: 25.240   Train_NMI: 3.068; Val_NMI: 9.564
-(Epoch 88 / 200) Train_Loss: 8.551; Val_Loss: 8.528   Train_ACC: 16.545; Val_ACC: 21.850   Train_NMI: 3.027; Val_NMI: 7.019
-(Epoch 89 / 200) Train_Loss: 8.550; Val_Loss: 8.534   Train_ACC: 17.998; Val_ACC: 26.410   Train_NMI: 3.722; Val_NMI: 10.495
-(Epoch 90 / 200) Train_Loss: 8.550; Val_Loss: 8.525   Train_ACC: 18.522; Val_ACC: 24.570   Train_NMI: 4.730; Val_NMI: 10.580
-(Epoch 91 / 200) Train_Loss: 8.549; Val_Loss: 8.526   Train_ACC: 20.242; Val_ACC: 26.030   Train_NMI: 6.513; Val_NMI: 11.066
-(Epoch 92 / 200) Train_Loss: 8.549; Val_Loss: 8.537   Train_ACC: 19.525; Val_ACC: 22.320   Train_NMI: 5.628; Val_NMI: 7.566
-(Epoch 93 / 200) Train_Loss: 8.546; Val_Loss: 8.520   Train_ACC: 21.707; Val_ACC: 25.590   Train_NMI: 6.985; Val_NMI: 10.961
-(Epoch 94 / 200) Train_Loss: 8.547; Val_Loss: 8.522   Train_ACC: 20.190; Val_ACC: 26.470   Train_NMI: 7.611; Val_NMI: 12.406
-(Epoch 95 / 200) Train_Loss: 8.545; Val_Loss: 8.528   Train_ACC: 19.820; Val_ACC: 20.980   Train_NMI: 8.203; Val_NMI: 10.208
-(Epoch 96 / 200) Train_Loss: 8.541; Val_Loss: 8.519   Train_ACC: 19.727; Val_ACC: 21.350   Train_NMI: 7.983; Val_NMI: 9.983
-(Epoch 97 / 200) Train_Loss: 8.539; Val_Loss: 8.515   Train_ACC: 19.693; Val_ACC: 21.500   Train_NMI: 8.493; Val_NMI: 10.731
-(Epoch 98 / 200) Train_Loss: 8.534; Val_Loss: 8.510   Train_ACC: 19.835; Val_ACC: 23.740   Train_NMI: 8.674; Val_NMI: 11.416
-(Epoch 99 / 200) Train_Loss: 8.537; Val_Loss: 8.508   Train_ACC: 20.360; Val_ACC: 20.890   Train_NMI: 9.173; Val_NMI: 10.740
-(Epoch 100 / 200) Train_Loss: 8.532; Val_Loss: 8.505   Train_ACC: 20.033; Val_ACC: 21.690   Train_NMI: 9.106; Val_NMI: 11.451
-(Epoch 101 / 200) Train_Loss: 8.532; Val_Loss: 8.508   Train_ACC: 19.585; Val_ACC: 21.400   Train_NMI: 8.979; Val_NMI: 10.789
-(Epoch 102 / 200) Train_Loss: 8.529; Val_Loss: 8.504   Train_ACC: 20.183; Val_ACC: 23.360   Train_NMI: 9.477; Val_NMI: 11.295
-(Epoch 103 / 200) Train_Loss: 8.529; Val_Loss: 8.501   Train_ACC: 21.990; Val_ACC: 22.110   Train_NMI: 10.143; Val_NMI: 11.757
-(Epoch 104 / 200) Train_Loss: 8.526; Val_Loss: 8.503   Train_ACC: 20.542; Val_ACC: 22.350   Train_NMI: 9.579; Val_NMI: 11.241
-(Epoch 105 / 200) Train_Loss: 8.529; Val_Loss: 8.511   Train_ACC: 20.287; Val_ACC: 20.640   Train_NMI: 9.771; Val_NMI: 9.868
-(Epoch 106 / 200) Train_Loss: 8.525; Val_Loss: 8.498   Train_ACC: 21.172; Val_ACC: 24.250   Train_NMI: 9.823; Val_NMI: 12.748
-(Epoch 107 / 200) Train_Loss: 8.525; Val_Loss: 8.502   Train_ACC: 21.153; Val_ACC: 21.040   Train_NMI: 10.051; Val_NMI: 11.086
-(Epoch 108 / 200) Train_Loss: 8.523; Val_Loss: 8.497   Train_ACC: 20.713; Val_ACC: 21.530   Train_NMI: 10.037; Val_NMI: 11.059
-(Epoch 109 / 200) Train_Loss: 8.524; Val_Loss: 8.509   Train_ACC: 20.180; Val_ACC: 20.700   Train_NMI: 9.724; Val_NMI: 10.799
-(Epoch 110 / 200) Train_Loss: 8.522; Val_Loss: 8.500   Train_ACC: 20.137; Val_ACC: 22.610   Train_NMI: 9.875; Val_NMI: 11.553
-(Epoch 111 / 200) Train_Loss: 8.521; Val_Loss: 8.497   Train_ACC: 21.037; Val_ACC: 24.970   Train_NMI: 9.953; Val_NMI: 13.202
-(Epoch 112 / 200) Train_Loss: 8.519; Val_Loss: 8.496   Train_ACC: 20.905; Val_ACC: 23.530   Train_NMI: 9.876; Val_NMI: 12.281
-(Epoch 113 / 200) Train_Loss: 8.521; Val_Loss: 8.496   Train_ACC: 21.532; Val_ACC: 24.120   Train_NMI: 9.941; Val_NMI: 11.951
-(Epoch 114 / 200) Train_Loss: 8.520; Val_Loss: 8.496   Train_ACC: 21.810; Val_ACC: 25.000   Train_NMI: 10.552; Val_NMI: 13.212
-(Epoch 115 / 200) Train_Loss: 8.518; Val_Loss: 8.493   Train_ACC: 21.992; Val_ACC: 22.120   Train_NMI: 10.619; Val_NMI: 12.116
-(Epoch 116 / 200) Train_Loss: 8.517; Val_Loss: 8.484   Train_ACC: 20.807; Val_ACC: 21.630   Train_NMI: 10.552; Val_NMI: 11.943
-(Epoch 117 / 200) Train_Loss: 8.517; Val_Loss: 8.490   Train_ACC: 20.077; Val_ACC: 20.790   Train_NMI: 10.207; Val_NMI: 11.087
-(Epoch 118 / 200) Train_Loss: 8.516; Val_Loss: 8.499   Train_ACC: 21.287; Val_ACC: 22.800   Train_NMI: 10.163; Val_NMI: 11.425
-(Epoch 119 / 200) Train_Loss: 8.517; Val_Loss: 8.491   Train_ACC: 21.520; Val_ACC: 24.230   Train_NMI: 10.909; Val_NMI: 12.782
-(Epoch 120 / 200) Train_Loss: 8.517; Val_Loss: 8.493   Train_ACC: 20.943; Val_ACC: 22.040   Train_NMI: 10.719; Val_NMI: 11.570
-(Epoch 121 / 200) Train_Loss: 8.513; Val_Loss: 8.498   Train_ACC: 21.473; Val_ACC: 25.230   Train_NMI: 10.828; Val_NMI: 13.072
-(Epoch 122 / 200) Train_Loss: 8.515; Val_Loss: 8.489   Train_ACC: 20.272; Val_ACC: 22.040   Train_NMI: 10.759; Val_NMI: 11.984
-(Epoch 123 / 200) Train_Loss: 8.513; Val_Loss: 8.492   Train_ACC: 20.677; Val_ACC: 21.620   Train_NMI: 10.559; Val_NMI: 12.047
-(Epoch 124 / 200) Train_Loss: 8.511; Val_Loss: 8.491   Train_ACC: 20.923; Val_ACC: 24.860   Train_NMI: 10.550; Val_NMI: 12.724
-(Epoch 125 / 200) Train_Loss: 8.512; Val_Loss: 8.486   Train_ACC: 19.778; Val_ACC: 23.630   Train_NMI: 10.212; Val_NMI: 12.371
-(Epoch 126 / 200) Train_Loss: 8.513; Val_Loss: 8.492   Train_ACC: 20.638; Val_ACC: 25.310   Train_NMI: 10.472; Val_NMI: 12.470
-(Epoch 127 / 200) Train_Loss: 8.512; Val_Loss: 8.490   Train_ACC: 21.115; Val_ACC: 21.600   Train_NMI: 10.391; Val_NMI: 11.786
-(Epoch 128 / 200) Train_Loss: 8.509; Val_Loss: 8.488   Train_ACC: 21.378; Val_ACC: 23.450   Train_NMI: 10.874; Val_NMI: 12.403
-(Epoch 129 / 200) Train_Loss: 8.511; Val_Loss: 8.493   Train_ACC: 20.885; Val_ACC: 25.030   Train_NMI: 10.603; Val_NMI: 12.433
-(Epoch 130 / 200) Train_Loss: 8.509; Val_Loss: 8.487   Train_ACC: 20.430; Val_ACC: 23.860   Train_NMI: 10.243; Val_NMI: 12.647
-(Epoch 131 / 200) Train_Loss: 8.509; Val_Loss: 8.491   Train_ACC: 20.513; Val_ACC: 21.780   Train_NMI: 10.421; Val_NMI: 11.673
-(Epoch 132 / 200) Train_Loss: 8.510; Val_Loss: 8.488   Train_ACC: 21.663; Val_ACC: 24.550   Train_NMI: 10.947; Val_NMI: 13.418
-(Epoch 133 / 200) Train_Loss: 8.509; Val_Loss: 8.484   Train_ACC: 20.873; Val_ACC: 25.280   Train_NMI: 10.679; Val_NMI: 14.026
-(Epoch 134 / 200) Train_Loss: 8.508; Val_Loss: 8.479   Train_ACC: 20.677; Val_ACC: 21.320   Train_NMI: 10.685; Val_NMI: 12.318
-(Epoch 135 / 200) Train_Loss: 8.508; Val_Loss: 8.488   Train_ACC: 21.102; Val_ACC: 21.230   Train_NMI: 10.664; Val_NMI: 11.749
-(Epoch 136 / 200) Train_Loss: 8.507; Val_Loss: 8.487   Train_ACC: 21.117; Val_ACC: 24.180   Train_NMI: 10.474; Val_NMI: 12.607
-(Epoch 137 / 200) Train_Loss: 8.507; Val_Loss: 8.480   Train_ACC: 20.607; Val_ACC: 25.090   Train_NMI: 10.429; Val_NMI: 12.689
-(Epoch 138 / 200) Train_Loss: 8.508; Val_Loss: 8.492   Train_ACC: 20.975; Val_ACC: 24.590   Train_NMI: 10.481; Val_NMI: 13.041
-(Epoch 139 / 200) Train_Loss: 8.507; Val_Loss: 8.488   Train_ACC: 20.073; Val_ACC: 23.220   Train_NMI: 10.257; Val_NMI: 12.393
-(Epoch 140 / 200) Train_Loss: 8.507; Val_Loss: 8.483   Train_ACC: 20.290; Val_ACC: 25.260   Train_NMI: 10.470; Val_NMI: 13.828
-(Epoch 141 / 200) Train_Loss: 8.505; Val_Loss: 8.478   Train_ACC: 21.403; Val_ACC: 23.810   Train_NMI: 10.965; Val_NMI: 12.453
-(Epoch 142 / 200) Train_Loss: 8.504; Val_Loss: 8.488   Train_ACC: 20.307; Val_ACC: 21.970   Train_NMI: 10.787; Val_NMI: 12.151
-(Epoch 143 / 200) Train_Loss: 8.507; Val_Loss: 8.479   Train_ACC: 19.870; Val_ACC: 23.690   Train_NMI: 10.555; Val_NMI: 12.172
-(Epoch 144 / 200) Train_Loss: 8.504; Val_Loss: 8.481   Train_ACC: 20.440; Val_ACC: 23.570   Train_NMI: 10.561; Val_NMI: 12.758
-(Epoch 145 / 200) Train_Loss: 8.505; Val_Loss: 8.481   Train_ACC: 20.763; Val_ACC: 20.440   Train_NMI: 10.960; Val_NMI: 11.809
-(Epoch 146 / 200) Train_Loss: 8.504; Val_Loss: 8.483   Train_ACC: 21.073; Val_ACC: 24.130   Train_NMI: 11.057; Val_NMI: 13.001
-(Epoch 147 / 200) Train_Loss: 8.504; Val_Loss: 8.477   Train_ACC: 20.507; Val_ACC: 21.090   Train_NMI: 10.425; Val_NMI: 11.438
-(Epoch 148 / 200) Train_Loss: 8.503; Val_Loss: 8.476   Train_ACC: 20.463; Val_ACC: 23.240   Train_NMI: 10.425; Val_NMI: 12.827
-(Epoch 149 / 200) Train_Loss: 8.504; Val_Loss: 8.484   Train_ACC: 20.380; Val_ACC: 22.380   Train_NMI: 10.498; Val_NMI: 12.489
-(Epoch 150 / 200) Train_Loss: 8.502; Val_Loss: 8.482   Train_ACC: 21.465; Val_ACC: 21.480   Train_NMI: 10.674; Val_NMI: 11.748
-(Epoch 151 / 200) Train_Loss: 8.500; Val_Loss: 8.476   Train_ACC: 21.055; Val_ACC: 25.840   Train_NMI: 10.602; Val_NMI: 14.206
-(Epoch 152 / 200) Train_Loss: 8.502; Val_Loss: 8.488   Train_ACC: 20.687; Val_ACC: 23.780   Train_NMI: 10.825; Val_NMI: 12.944
-(Epoch 153 / 200) Train_Loss: 8.501; Val_Loss: 8.477   Train_ACC: 20.383; Val_ACC: 24.970   Train_NMI: 10.473; Val_NMI: 13.540
-(Epoch 154 / 200) Train_Loss: 8.502; Val_Loss: 8.481   Train_ACC: 20.102; Val_ACC: 23.170   Train_NMI: 10.169; Val_NMI: 12.803
-(Epoch 155 / 200) Train_Loss: 8.501; Val_Loss: 8.473   Train_ACC: 20.498; Val_ACC: 24.220   Train_NMI: 10.451; Val_NMI: 13.417
-(Epoch 156 / 200) Train_Loss: 8.499; Val_Loss: 8.478   Train_ACC: 20.665; Val_ACC: 23.360   Train_NMI: 10.784; Val_NMI: 13.089
-(Epoch 157 / 200) Train_Loss: 8.501; Val_Loss: 8.481   Train_ACC: 20.828; Val_ACC: 25.850   Train_NMI: 10.730; Val_NMI: 13.889
-(Epoch 158 / 200) Train_Loss: 8.499; Val_Loss: 8.474   Train_ACC: 21.797; Val_ACC: 23.420   Train_NMI: 10.839; Val_NMI: 12.721
-(Epoch 159 / 200) Train_Loss: 8.499; Val_Loss: 8.481   Train_ACC: 20.325; Val_ACC: 24.150   Train_NMI: 10.391; Val_NMI: 12.843
-(Epoch 160 / 200) Train_Loss: 8.502; Val_Loss: 8.471   Train_ACC: 21.357; Val_ACC: 24.860   Train_NMI: 10.852; Val_NMI: 13.937
-(Epoch 161 / 200) Train_Loss: 8.500; Val_Loss: 8.476   Train_ACC: 21.205; Val_ACC: 23.140   Train_NMI: 10.796; Val_NMI: 13.958
-(Epoch 162 / 200) Train_Loss: 8.496; Val_Loss: 8.477   Train_ACC: 21.007; Val_ACC: 23.560   Train_NMI: 10.837; Val_NMI: 12.603
-(Epoch 163 / 200) Train_Loss: 8.499; Val_Loss: 8.483   Train_ACC: 21.483; Val_ACC: 21.790   Train_NMI: 10.865; Val_NMI: 12.441
-(Epoch 164 / 200) Train_Loss: 8.499; Val_Loss: 8.474   Train_ACC: 20.747; Val_ACC: 22.060   Train_NMI: 10.829; Val_NMI: 12.109
-(Epoch 165 / 200) Train_Loss: 8.497; Val_Loss: 8.476   Train_ACC: 20.445; Val_ACC: 22.310   Train_NMI: 10.740; Val_NMI: 12.137
-(Epoch 166 / 200) Train_Loss: 8.499; Val_Loss: 8.479   Train_ACC: 20.958; Val_ACC: 23.020   Train_NMI: 10.492; Val_NMI: 12.657
-(Epoch 167 / 200) Train_Loss: 8.499; Val_Loss: 8.478   Train_ACC: 21.047; Val_ACC: 23.210   Train_NMI: 10.525; Val_NMI: 12.764
-(Epoch 168 / 200) Train_Loss: 8.498; Val_Loss: 8.473   Train_ACC: 20.602; Val_ACC: 24.290   Train_NMI: 10.828; Val_NMI: 12.841
-(Epoch 169 / 200) Train_Loss: 8.496; Val_Loss: 8.480   Train_ACC: 21.055; Val_ACC: 24.430   Train_NMI: 10.688; Val_NMI: 13.285
-(Epoch 170 / 200) Train_Loss: 8.497; Val_Loss: 8.473   Train_ACC: 20.507; Val_ACC: 24.420   Train_NMI: 10.906; Val_NMI: 14.218
-(Epoch 171 / 200) Train_Loss: 8.496; Val_Loss: 8.476   Train_ACC: 21.215; Val_ACC: 23.340   Train_NMI: 11.071; Val_NMI: 12.993
-(Epoch 172 / 200) Train_Loss: 8.498; Val_Loss: 8.470   Train_ACC: 21.135; Val_ACC: 20.660   Train_NMI: 10.814; Val_NMI: 11.535
-(Epoch 173 / 200) Train_Loss: 8.497; Val_Loss: 8.475   Train_ACC: 19.737; Val_ACC: 21.750   Train_NMI: 10.541; Val_NMI: 12.499
-(Epoch 174 / 200) Train_Loss: 8.497; Val_Loss: 8.474   Train_ACC: 19.875; Val_ACC: 21.420   Train_NMI: 10.317; Val_NMI: 11.955
-(Epoch 175 / 200) Train_Loss: 8.496; Val_Loss: 8.470   Train_ACC: 19.690; Val_ACC: 23.940   Train_NMI: 10.184; Val_NMI: 12.506
-(Epoch 176 / 200) Train_Loss: 8.497; Val_Loss: 8.473   Train_ACC: 20.575; Val_ACC: 23.650   Train_NMI: 10.569; Val_NMI: 13.409
-(Epoch 177 / 200) Train_Loss: 8.497; Val_Loss: 8.479   Train_ACC: 21.602; Val_ACC: 24.090   Train_NMI: 10.868; Val_NMI: 12.921
-(Epoch 178 / 200) Train_Loss: 8.496; Val_Loss: 8.470   Train_ACC: 20.895; Val_ACC: 22.570   Train_NMI: 10.471; Val_NMI: 11.928
-(Epoch 179 / 200) Train_Loss: 8.496; Val_Loss: 8.482   Train_ACC: 20.763; Val_ACC: 23.340   Train_NMI: 10.421; Val_NMI: 12.562
-(Epoch 180 / 200) Train_Loss: 8.495; Val_Loss: 8.466   Train_ACC: 21.540; Val_ACC: 22.620   Train_NMI: 10.735; Val_NMI: 12.563
-(Epoch 181 / 200) Train_Loss: 8.497; Val_Loss: 8.481   Train_ACC: 21.147; Val_ACC: 21.070   Train_NMI: 10.840; Val_NMI: 12.365
-(Epoch 182 / 200) Train_Loss: 8.495; Val_Loss: 8.467   Train_ACC: 21.723; Val_ACC: 23.000   Train_NMI: 10.820; Val_NMI: 12.349
-(Epoch 183 / 200) Train_Loss: 8.495; Val_Loss: 8.478   Train_ACC: 21.237; Val_ACC: 24.820   Train_NMI: 10.673; Val_NMI: 13.458
-(Epoch 184 / 200) Train_Loss: 8.497; Val_Loss: 8.471   Train_ACC: 21.795; Val_ACC: 22.240   Train_NMI: 10.771; Val_NMI: 11.725
-(Epoch 185 / 200) Train_Loss: 8.493; Val_Loss: 8.471   Train_ACC: 20.427; Val_ACC: 22.760   Train_NMI: 10.132; Val_NMI: 11.968
-(Epoch 186 / 200) Train_Loss: 8.495; Val_Loss: 8.477   Train_ACC: 20.772; Val_ACC: 21.580   Train_NMI: 10.839; Val_NMI: 12.019
-(Epoch 187 / 200) Train_Loss: 8.494; Val_Loss: 8.478   Train_ACC: 20.563; Val_ACC: 23.310   Train_NMI: 10.657; Val_NMI: 12.590
-(Epoch 188 / 200) Train_Loss: 8.493; Val_Loss: 8.472   Train_ACC: 21.962; Val_ACC: 23.310   Train_NMI: 10.717; Val_NMI: 12.754
-(Epoch 189 / 200) Train_Loss: 8.494; Val_Loss: 8.476   Train_ACC: 21.423; Val_ACC: 23.900   Train_NMI: 10.710; Val_NMI: 13.436
-(Epoch 190 / 200) Train_Loss: 8.493; Val_Loss: 8.471   Train_ACC: 22.042; Val_ACC: 22.680   Train_NMI: 11.022; Val_NMI: 12.281
-(Epoch 191 / 200) Train_Loss: 8.496; Val_Loss: 8.475   Train_ACC: 22.033; Val_ACC: 22.020   Train_NMI: 10.880; Val_NMI: 11.945
-(Epoch 192 / 200) Train_Loss: 8.495; Val_Loss: 8.474   Train_ACC: 20.747; Val_ACC: 20.920   Train_NMI: 10.520; Val_NMI: 11.731
-(Epoch 193 / 200) Train_Loss: 8.491; Val_Loss: 8.465   Train_ACC: 22.195; Val_ACC: 21.720   Train_NMI: 10.886; Val_NMI: 12.434
-(Epoch 194 / 200) Train_Loss: 8.494; Val_Loss: 8.469   Train_ACC: 21.880; Val_ACC: 23.630   Train_NMI: 10.766; Val_NMI: 12.743
-(Epoch 195 / 200) Train_Loss: 8.493; Val_Loss: 8.464   Train_ACC: 20.597; Val_ACC: 22.820   Train_NMI: 10.437; Val_NMI: 12.123
-(Epoch 196 / 200) Train_Loss: 8.496; Val_Loss: 8.466   Train_ACC: 20.628; Val_ACC: 23.150   Train_NMI: 10.482; Val_NMI: 12.570
-(Epoch 197 / 200) Train_Loss: 8.492; Val_Loss: 8.465   Train_ACC: 21.090; Val_ACC: 23.040   Train_NMI: 10.489; Val_NMI: 12.401
-(Epoch 198 / 200) Train_Loss: 8.492; Val_Loss: 8.463   Train_ACC: 20.662; Val_ACC: 24.020   Train_NMI: 10.536; Val_NMI: 13.560
-(Epoch 199 / 200) Train_Loss: 8.492; Val_Loss: 8.481   Train_ACC: 20.993; Val_ACC: 21.310   Train_NMI: 10.520; Val_NMI: 11.047
-(Epoch 200 / 200) Train_Loss: 8.492; Val_Loss: 8.466   Train_ACC: 21.132; Val_ACC: 24.640   Train_NMI: 10.357; Val_NMI: 12.684
-model saved...
-Testing phase...
-Accuracy: 24.64000, NMI: 12.68414
+(Epoch 1 / 200) Train_Loss: 37.021; Val_Loss: 20.625   Train_ACC: 18.643; Val_ACC: 19.200   Train_NMI: 5.929; Val_NMI: 7.929
+(Epoch 2 / 200) Train_Loss: 15.912; Val_Loss: 12.539   Train_ACC: 18.595; Val_ACC: 18.860   Train_NMI: 6.238; Val_NMI: 6.741
+(Epoch 3 / 200) Train_Loss: 11.468; Val_Loss: 10.403   Train_ACC: 17.535; Val_ACC: 18.670   Train_NMI: 4.471; Val_NMI: 5.316
+(Epoch 4 / 200) Train_Loss: 10.097; Val_Loss: 9.583   Train_ACC: 17.158; Val_ACC: 18.260   Train_NMI: 3.702; Val_NMI: 5.203
+(Epoch 5 / 200) Train_Loss: 9.522; Val_Loss: 9.293   Train_ACC: 16.043; Val_ACC: 17.830   Train_NMI: 3.020; Val_NMI: 5.165
+(Epoch 6 / 200) Train_Loss: 9.250; Val_Loss: 9.130   Train_ACC: 15.063; Val_ACC: 16.860   Train_NMI: 2.622; Val_NMI: 4.465
+(Epoch 7 / 200) Train_Loss: 9.096; Val_Loss: 9.004   Train_ACC: 14.763; Val_ACC: 17.150   Train_NMI: 2.440; Val_NMI: 4.197
+(Epoch 8 / 200) Train_Loss: 8.996; Val_Loss: 8.926   Train_ACC: 15.237; Val_ACC: 17.750   Train_NMI: 1.900; Val_NMI: 4.524
+(Epoch 9 / 200) Train_Loss: 8.948; Val_Loss: 8.892   Train_ACC: 15.055; Val_ACC: 19.110   Train_NMI: 2.270; Val_NMI: 5.364
+(Epoch 10 / 200) Train_Loss: 8.900; Val_Loss: 8.842   Train_ACC: 15.485; Val_ACC: 18.100   Train_NMI: 2.130; Val_NMI: 5.023
+(Epoch 11 / 200) Train_Loss: 8.874; Val_Loss: 8.815   Train_ACC: 15.198; Val_ACC: 17.340   Train_NMI: 2.435; Val_NMI: 4.859
+(Epoch 12 / 200) Train_Loss: 8.853; Val_Loss: 8.793   Train_ACC: 14.672; Val_ACC: 19.360   Train_NMI: 2.535; Val_NMI: 5.734
+(Epoch 13 / 200) Train_Loss: 8.832; Val_Loss: 8.778   Train_ACC: 15.030; Val_ACC: 20.100   Train_NMI: 3.025; Val_NMI: 6.334
+(Epoch 14 / 200) Train_Loss: 8.813; Val_Loss: 8.767   Train_ACC: 15.743; Val_ACC: 21.110   Train_NMI: 3.692; Val_NMI: 7.038
+(Epoch 15 / 200) Train_Loss: 8.804; Val_Loss: 8.769   Train_ACC: 17.005; Val_ACC: 23.440   Train_NMI: 4.865; Val_NMI: 9.036
+(Epoch 16 / 200) Train_Loss: 8.783; Val_Loss: 8.736   Train_ACC: 18.888; Val_ACC: 22.760   Train_NMI: 6.015; Val_NMI: 9.343
+(Epoch 17 / 200) Train_Loss: 8.778; Val_Loss: 8.743   Train_ACC: 17.250; Val_ACC: 22.350   Train_NMI: 6.232; Val_NMI: 7.796
+(Epoch 18 / 200) Train_Loss: 8.765; Val_Loss: 8.725   Train_ACC: 17.192; Val_ACC: 21.470   Train_NMI: 6.679; Val_NMI: 8.044
+(Epoch 19 / 200) Train_Loss: 8.759; Val_Loss: 8.705   Train_ACC: 18.852; Val_ACC: 19.430   Train_NMI: 7.292; Val_NMI: 9.361
+(Epoch 20 / 200) Train_Loss: 8.746; Val_Loss: 8.700   Train_ACC: 18.002; Val_ACC: 25.750   Train_NMI: 7.306; Val_NMI: 12.748
+(Epoch 21 / 200) Train_Loss: 8.735; Val_Loss: 8.695   Train_ACC: 19.758; Val_ACC: 24.990   Train_NMI: 8.051; Val_NMI: 11.929
+(Epoch 22 / 200) Train_Loss: 8.722; Val_Loss: 8.690   Train_ACC: 19.683; Val_ACC: 25.520   Train_NMI: 8.286; Val_NMI: 12.630
+(Epoch 23 / 200) Train_Loss: 8.717; Val_Loss: 8.677   Train_ACC: 19.662; Val_ACC: 22.570   Train_NMI: 8.897; Val_NMI: 10.596
+(Epoch 24 / 200) Train_Loss: 8.705; Val_Loss: 8.677   Train_ACC: 17.545; Val_ACC: 19.340   Train_NMI: 7.918; Val_NMI: 10.331
+(Epoch 25 / 200) Train_Loss: 8.699; Val_Loss: 8.651   Train_ACC: 21.237; Val_ACC: 21.090   Train_NMI: 9.021; Val_NMI: 12.069
+(Epoch 26 / 200) Train_Loss: 8.683; Val_Loss: 8.673   Train_ACC: 20.542; Val_ACC: 28.420   Train_NMI: 9.229; Val_NMI: 14.981
+(Epoch 27 / 200) Train_Loss: 8.675; Val_Loss: 8.651   Train_ACC: 20.012; Val_ACC: 21.910   Train_NMI: 8.611; Val_NMI: 11.073
+(Epoch 28 / 200) Train_Loss: 8.676; Val_Loss: 8.642   Train_ACC: 20.035; Val_ACC: 22.830   Train_NMI: 8.727; Val_NMI: 9.453
+(Epoch 29 / 200) Train_Loss: 8.668; Val_Loss: 8.634   Train_ACC: 20.057; Val_ACC: 21.370   Train_NMI: 8.770; Val_NMI: 10.403
+(Epoch 30 / 200) Train_Loss: 8.661; Val_Loss: 8.629   Train_ACC: 20.703; Val_ACC: 27.050   Train_NMI: 8.595; Val_NMI: 13.386
+(Epoch 31 / 200) Train_Loss: 8.656; Val_Loss: 8.613   Train_ACC: 20.355; Val_ACC: 25.140   Train_NMI: 8.954; Val_NMI: 15.092
+(Epoch 32 / 200) Train_Loss: 8.643; Val_Loss: 8.619   Train_ACC: 20.935; Val_ACC: 26.520   Train_NMI: 8.960; Val_NMI: 15.860
+(Epoch 33 / 200) Train_Loss: 8.643; Val_Loss: 8.612   Train_ACC: 20.815; Val_ACC: 21.240   Train_NMI: 8.506; Val_NMI: 9.188
+(Epoch 34 / 200) Train_Loss: 8.635; Val_Loss: 8.603   Train_ACC: 20.092; Val_ACC: 24.570   Train_NMI: 8.683; Val_NMI: 11.344
+(Epoch 35 / 200) Train_Loss: 8.631; Val_Loss: 8.614   Train_ACC: 20.532; Val_ACC: 25.580   Train_NMI: 9.000; Val_NMI: 14.466
+(Epoch 36 / 200) Train_Loss: 8.625; Val_Loss: 8.600   Train_ACC: 21.203; Val_ACC: 24.600   Train_NMI: 9.332; Val_NMI: 12.130
+(Epoch 37 / 200) Train_Loss: 8.617; Val_Loss: 8.583   Train_ACC: 21.620; Val_ACC: 23.580   Train_NMI: 9.449; Val_NMI: 13.331
+(Epoch 38 / 200) Train_Loss: 8.621; Val_Loss: 8.597   Train_ACC: 21.273; Val_ACC: 25.840   Train_NMI: 9.309; Val_NMI: 12.869
+(Epoch 39 / 200) Train_Loss: 8.612; Val_Loss: 8.572   Train_ACC: 21.557; Val_ACC: 27.280   Train_NMI: 9.479; Val_NMI: 14.154
+(Epoch 40 / 200) Train_Loss: 8.608; Val_Loss: 8.584   Train_ACC: 22.107; Val_ACC: 23.670   Train_NMI: 9.650; Val_NMI: 12.003
+(Epoch 41 / 200) Train_Loss: 8.602; Val_Loss: 8.569   Train_ACC: 23.860; Val_ACC: 25.940   Train_NMI: 9.773; Val_NMI: 12.197
+(Epoch 42 / 200) Train_Loss: 8.604; Val_Loss: 8.563   Train_ACC: 22.223; Val_ACC: 26.540   Train_NMI: 9.389; Val_NMI: 14.008
+(Epoch 43 / 200) Train_Loss: 8.595; Val_Loss: 8.580   Train_ACC: 22.258; Val_ACC: 24.810   Train_NMI: 9.813; Val_NMI: 13.524
+(Epoch 44 / 200) Train_Loss: 8.594; Val_Loss: 8.569   Train_ACC: 24.192; Val_ACC: 28.120   Train_NMI: 10.617; Val_NMI: 15.143
+(Epoch 45 / 200) Train_Loss: 8.587; Val_Loss: 8.556   Train_ACC: 24.323; Val_ACC: 28.720   Train_NMI: 10.694; Val_NMI: 15.511
+(Epoch 46 / 200) Train_Loss: 8.587; Val_Loss: 8.555   Train_ACC: 24.655; Val_ACC: 30.280   Train_NMI: 11.115; Val_NMI: 18.008
+(Epoch 47 / 200) Train_Loss: 8.585; Val_Loss: 8.559   Train_ACC: 21.357; Val_ACC: 23.600   Train_NMI: 9.386; Val_NMI: 11.689
+(Epoch 48 / 200) Train_Loss: 8.581; Val_Loss: 8.553   Train_ACC: 22.862; Val_ACC: 23.380   Train_NMI: 9.528; Val_NMI: 12.147
+(Epoch 49 / 200) Train_Loss: 8.578; Val_Loss: 8.557   Train_ACC: 23.435; Val_ACC: 29.710   Train_NMI: 9.736; Val_NMI: 15.899
+(Epoch 50 / 200) Train_Loss: 8.578; Val_Loss: 8.561   Train_ACC: 21.578; Val_ACC: 26.630   Train_NMI: 9.777; Val_NMI: 13.647
+(Epoch 51 / 200) Train_Loss: 8.576; Val_Loss: 8.555   Train_ACC: 23.092; Val_ACC: 23.760   Train_NMI: 10.288; Val_NMI: 11.623
+(Epoch 52 / 200) Train_Loss: 8.572; Val_Loss: 8.540   Train_ACC: 21.830; Val_ACC: 29.650   Train_NMI: 9.687; Val_NMI: 15.768
+(Epoch 53 / 200) Train_Loss: 8.571; Val_Loss: 8.538   Train_ACC: 21.748; Val_ACC: 25.570   Train_NMI: 9.876; Val_NMI: 13.129
+(Epoch 54 / 200) Train_Loss: 8.566; Val_Loss: 8.542   Train_ACC: 23.483; Val_ACC: 28.470   Train_NMI: 9.962; Val_NMI: 14.233
+(Epoch 55 / 200) Train_Loss: 8.564; Val_Loss: 8.531   Train_ACC: 23.925; Val_ACC: 24.310   Train_NMI: 9.988; Val_NMI: 13.193
+(Epoch 56 / 200) Train_Loss: 8.559; Val_Loss: 8.526   Train_ACC: 23.242; Val_ACC: 25.240   Train_NMI: 9.945; Val_NMI: 12.387
+(Epoch 57 / 200) Train_Loss: 8.555; Val_Loss: 8.532   Train_ACC: 23.820; Val_ACC: 25.850   Train_NMI: 10.158; Val_NMI: 13.117
+(Epoch 58 / 200) Train_Loss: 8.556; Val_Loss: 8.542   Train_ACC: 23.737; Val_ACC: 26.500   Train_NMI: 10.346; Val_NMI: 13.748
+(Epoch 59 / 200) Train_Loss: 8.554; Val_Loss: 8.526   Train_ACC: 23.862; Val_ACC: 28.050   Train_NMI: 10.276; Val_NMI: 14.602
+(Epoch 60 / 200) Train_Loss: 8.552; Val_Loss: 8.526   Train_ACC: 23.758; Val_ACC: 28.320   Train_NMI: 10.028; Val_NMI: 16.419
+(Epoch 61 / 200) Train_Loss: 8.549; Val_Loss: 8.522   Train_ACC: 23.902; Val_ACC: 25.540   Train_NMI: 10.180; Val_NMI: 13.098
+(Epoch 62 / 200) Train_Loss: 8.547; Val_Loss: 8.515   Train_ACC: 23.533; Val_ACC: 28.720   Train_NMI: 10.670; Val_NMI: 14.719
+(Epoch 63 / 200) Train_Loss: 8.545; Val_Loss: 8.512   Train_ACC: 23.222; Val_ACC: 22.510   Train_NMI: 10.010; Val_NMI: 11.587
+(Epoch 64 / 200) Train_Loss: 8.544; Val_Loss: 8.522   Train_ACC: 23.492; Val_ACC: 24.720   Train_NMI: 10.748; Val_NMI: 12.840
+(Epoch 65 / 200) Train_Loss: 8.544; Val_Loss: 8.517   Train_ACC: 23.495; Val_ACC: 26.180   Train_NMI: 10.380; Val_NMI: 13.246
+(Epoch 66 / 200) Train_Loss: 8.542; Val_Loss: 8.512   Train_ACC: 23.913; Val_ACC: 23.950   Train_NMI: 10.395; Val_NMI: 13.068
+(Epoch 67 / 200) Train_Loss: 8.537; Val_Loss: 8.517   Train_ACC: 23.903; Val_ACC: 25.450   Train_NMI: 10.380; Val_NMI: 14.162
+(Epoch 68 / 200) Train_Loss: 8.538; Val_Loss: 8.510   Train_ACC: 23.760; Val_ACC: 29.110   Train_NMI: 10.776; Val_NMI: 19.585
+(Epoch 69 / 200) Train_Loss: 8.539; Val_Loss: 8.516   Train_ACC: 21.965; Val_ACC: 23.040   Train_NMI: 10.528; Val_NMI: 12.636
+(Epoch 70 / 200) Train_Loss: 8.538; Val_Loss: 8.500   Train_ACC: 22.290; Val_ACC: 27.390   Train_NMI: 9.973; Val_NMI: 18.306
+(Epoch 71 / 200) Train_Loss: 8.534; Val_Loss: 8.511   Train_ACC: 23.213; Val_ACC: 24.170   Train_NMI: 10.980; Val_NMI: 12.636
+(Epoch 72 / 200) Train_Loss: 8.532; Val_Loss: 8.519   Train_ACC: 24.243; Val_ACC: 26.950   Train_NMI: 11.154; Val_NMI: 15.324
+(Epoch 73 / 200) Train_Loss: 8.532; Val_Loss: 8.518   Train_ACC: 24.005; Val_ACC: 25.080   Train_NMI: 10.801; Val_NMI: 13.532
+(Epoch 74 / 200) Train_Loss: 8.529; Val_Loss: 8.505   Train_ACC: 23.940; Val_ACC: 26.640   Train_NMI: 10.915; Val_NMI: 14.009
+(Epoch 75 / 200) Train_Loss: 8.532; Val_Loss: 8.503   Train_ACC: 23.992; Val_ACC: 26.910   Train_NMI: 10.878; Val_NMI: 13.733
+(Epoch 76 / 200) Train_Loss: 8.529; Val_Loss: 8.507   Train_ACC: 24.623; Val_ACC: 28.390   Train_NMI: 10.972; Val_NMI: 15.555
+(Epoch 77 / 200) Train_Loss: 8.528; Val_Loss: 8.498   Train_ACC: 22.978; Val_ACC: 22.480   Train_NMI: 10.459; Val_NMI: 12.965
+(Epoch 78 / 200) Train_Loss: 8.525; Val_Loss: 8.499   Train_ACC: 24.492; Val_ACC: 28.970   Train_NMI: 11.113; Val_NMI: 15.347
+(Epoch 79 / 200) Train_Loss: 8.528; Val_Loss: 8.495   Train_ACC: 23.558; Val_ACC: 24.090   Train_NMI: 10.834; Val_NMI: 14.978
+(Epoch 80 / 200) Train_Loss: 8.525; Val_Loss: 8.503   Train_ACC: 22.122; Val_ACC: 23.700   Train_NMI: 10.312; Val_NMI: 13.025
+(Epoch 81 / 200) Train_Loss: 8.524; Val_Loss: 8.492   Train_ACC: 21.877; Val_ACC: 23.890   Train_NMI: 10.887; Val_NMI: 13.347
+(Epoch 82 / 200) Train_Loss: 8.522; Val_Loss: 8.492   Train_ACC: 22.422; Val_ACC: 25.020   Train_NMI: 11.019; Val_NMI: 13.909
+(Epoch 83 / 200) Train_Loss: 8.523; Val_Loss: 8.495   Train_ACC: 23.198; Val_ACC: 22.910   Train_NMI: 10.846; Val_NMI: 14.649
+(Epoch 84 / 200) Train_Loss: 8.521; Val_Loss: 8.501   Train_ACC: 24.050; Val_ACC: 22.830   Train_NMI: 11.059; Val_NMI: 12.757
+(Epoch 85 / 200) Train_Loss: 8.524; Val_Loss: 8.502   Train_ACC: 24.617; Val_ACC: 22.840   Train_NMI: 11.114; Val_NMI: 14.733
+(Epoch 86 / 200) Train_Loss: 8.519; Val_Loss: 8.499   Train_ACC: 24.633; Val_ACC: 29.300   Train_NMI: 11.377; Val_NMI: 15.767
+(Epoch 87 / 200) Train_Loss: 8.519; Val_Loss: 8.488   Train_ACC: 22.705; Val_ACC: 23.730   Train_NMI: 10.452; Val_NMI: 13.044
+(Epoch 88 / 200) Train_Loss: 8.521; Val_Loss: 8.506   Train_ACC: 23.968; Val_ACC: 28.190   Train_NMI: 10.552; Val_NMI: 14.749
+(Epoch 89 / 200) Train_Loss: 8.519; Val_Loss: 8.500   Train_ACC: 24.102; Val_ACC: 29.370   Train_NMI: 10.670; Val_NMI: 17.674
+(Epoch 90 / 200) Train_Loss: 8.516; Val_Loss: 8.488   Train_ACC: 22.163; Val_ACC: 25.290   Train_NMI: 10.131; Val_NMI: 15.090
+(Epoch 91 / 200) Train_Loss: 8.515; Val_Loss: 8.491   Train_ACC: 22.810; Val_ACC: 24.310   Train_NMI: 10.543; Val_NMI: 13.891
+(Epoch 92 / 200) Train_Loss: 8.517; Val_Loss: 8.492   Train_ACC: 22.720; Val_ACC: 24.330   Train_NMI: 10.521; Val_NMI: 13.775
+(Epoch 93 / 200) Train_Loss: 8.514; Val_Loss: 8.494   Train_ACC: 23.098; Val_ACC: 24.000   Train_NMI: 10.753; Val_NMI: 12.880
+(Epoch 94 / 200) Train_Loss: 8.513; Val_Loss: 8.490   Train_ACC: 21.945; Val_ACC: 23.580   Train_NMI: 10.368; Val_NMI: 13.420
+(Epoch 95 / 200) Train_Loss: 8.512; Val_Loss: 8.486   Train_ACC: 21.268; Val_ACC: 26.240   Train_NMI: 10.600; Val_NMI: 13.208
+(Epoch 96 / 200) Train_Loss: 8.508; Val_Loss: 8.483   Train_ACC: 23.183; Val_ACC: 25.490   Train_NMI: 10.843; Val_NMI: 13.559
+(Epoch 97 / 200) Train_Loss: 8.510; Val_Loss: 8.478   Train_ACC: 22.078; Val_ACC: 23.870   Train_NMI: 10.522; Val_NMI: 13.219
+(Epoch 98 / 200) Train_Loss: 8.512; Val_Loss: 8.479   Train_ACC: 22.107; Val_ACC: 26.030   Train_NMI: 10.281; Val_NMI: 13.091
+(Epoch 99 / 200) Train_Loss: 8.509; Val_Loss: 8.494   Train_ACC: 21.363; Val_ACC: 22.230   Train_NMI: 10.476; Val_NMI: 12.651
+(Epoch 100 / 200) Train_Loss: 8.509; Val_Loss: 8.483   Train_ACC: 23.060; Val_ACC: 27.450   Train_NMI: 10.555; Val_NMI: 14.385
+(Epoch 101 / 200) Train_Loss: 8.510; Val_Loss: 8.481   Train_ACC: 22.505; Val_ACC: 27.620   Train_NMI: 10.615; Val_NMI: 15.815
+(Epoch 102 / 200) Train_Loss: 8.509; Val_Loss: 8.487   Train_ACC: 23.647; Val_ACC: 24.710   Train_NMI: 10.642; Val_NMI: 13.482
+(Epoch 103 / 200) Train_Loss: 8.508; Val_Loss: 8.489   Train_ACC: 24.377; Val_ACC: 24.110   Train_NMI: 11.358; Val_NMI: 13.883
+(Epoch 104 / 200) Train_Loss: 8.507; Val_Loss: 8.480   Train_ACC: 23.548; Val_ACC: 28.450   Train_NMI: 10.682; Val_NMI: 15.845
+(Epoch 105 / 200) Train_Loss: 8.507; Val_Loss: 8.482   Train_ACC: 23.513; Val_ACC: 25.400   Train_NMI: 10.898; Val_NMI: 13.597
+(Epoch 106 / 200) Train_Loss: 8.506; Val_Loss: 8.484   Train_ACC: 23.578; Val_ACC: 22.040   Train_NMI: 10.905; Val_NMI: 11.913
+(Epoch 107 / 200) Train_Loss: 8.504; Val_Loss: 8.482   Train_ACC: 22.958; Val_ACC: 26.580   Train_NMI: 10.374; Val_NMI: 13.806
+(Epoch 108 / 200) Train_Loss: 8.503; Val_Loss: 8.474   Train_ACC: 22.855; Val_ACC: 26.090   Train_NMI: 10.600; Val_NMI: 14.340
+(Epoch 109 / 200) Train_Loss: 8.506; Val_Loss: 8.468   Train_ACC: 23.598; Val_ACC: 28.180   Train_NMI: 10.522; Val_NMI: 15.968
+(Epoch 110 / 200) Train_Loss: 8.505; Val_Loss: 8.484   Train_ACC: 23.960; Val_ACC: 25.270   Train_NMI: 11.057; Val_NMI: 14.051
+(Epoch 111 / 200) Train_Loss: 8.503; Val_Loss: 8.477   Train_ACC: 23.080; Val_ACC: 25.180   Train_NMI: 10.669; Val_NMI: 13.953
+(Epoch 112 / 200) Train_Loss: 8.504; Val_Loss: 8.487   Train_ACC: 23.023; Val_ACC: 23.000   Train_NMI: 10.708; Val_NMI: 12.683
+(Epoch 113 / 200) Train_Loss: 8.501; Val_Loss: 8.475   Train_ACC: 21.205; Val_ACC: 26.480   Train_NMI: 10.757; Val_NMI: 16.391
+(Epoch 114 / 200) Train_Loss: 8.503; Val_Loss: 8.475   Train_ACC: 21.775; Val_ACC: 21.510   Train_NMI: 10.645; Val_NMI: 13.787
+(Epoch 115 / 200) Train_Loss: 8.502; Val_Loss: 8.488   Train_ACC: 22.733; Val_ACC: 23.650   Train_NMI: 10.835; Val_NMI: 12.838
+(Epoch 116 / 200) Train_Loss: 8.502; Val_Loss: 8.483   Train_ACC: 22.622; Val_ACC: 24.100   Train_NMI: 10.814; Val_NMI: 13.373
+(Epoch 117 / 200) Train_Loss: 8.501; Val_Loss: 8.477   Train_ACC: 22.160; Val_ACC: 23.870   Train_NMI: 11.113; Val_NMI: 13.590
+(Epoch 118 / 200) Train_Loss: 8.499; Val_Loss: 8.479   Train_ACC: 22.012; Val_ACC: 26.300   Train_NMI: 11.271; Val_NMI: 15.202
+(Epoch 119 / 200) Train_Loss: 8.498; Val_Loss: 8.470   Train_ACC: 22.315; Val_ACC: 22.780   Train_NMI: 11.141; Val_NMI: 13.718
+(Epoch 120 / 200) Train_Loss: 8.499; Val_Loss: 8.477   Train_ACC: 22.485; Val_ACC: 23.130   Train_NMI: 11.513; Val_NMI: 14.655
+(Epoch 121 / 200) Train_Loss: 8.496; Val_Loss: 8.470   Train_ACC: 21.860; Val_ACC: 27.950   Train_NMI: 11.530; Val_NMI: 17.012
+(Epoch 122 / 200) Train_Loss: 8.496; Val_Loss: 8.465   Train_ACC: 22.230; Val_ACC: 22.640   Train_NMI: 11.389; Val_NMI: 13.171
+(Epoch 123 / 200) Train_Loss: 8.497; Val_Loss: 8.466   Train_ACC: 22.012; Val_ACC: 22.270   Train_NMI: 11.225; Val_NMI: 12.697
+(Epoch 124 / 200) Train_Loss: 8.496; Val_Loss: 8.473   Train_ACC: 22.032; Val_ACC: 21.380   Train_NMI: 10.939; Val_NMI: 12.229
+Traceback (most recent call last):
+  File "main.py", line 169, in <module>
+    history_loss, model, gumbel_temp, hard_gumbel = gmvae.train(train_loader, val_loader)
+  File "/data/torfia/github/GMVAE/CNN-MNIST/pytorch/model/GMVAE.py", line 270, in train
+    train_loss, train_rec, train_gauss, train_cat, train_acc, train_nmi, trained_model_for_epoch = self.train_epoch(
+  File "/data/torfia/github/GMVAE/CNN-MNIST/pytorch/model/GMVAE.py", line 138, in train_epoch
+    out_net = self.network(data, self.gumbel_temp, self.hard_gumbel)
+  File "/data/conda_env/torfia/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data/torfia/github/GMVAE/CNN-MNIST/pytorch/networks/Networks.py", line 230, in forward
+    out_inf = self.inference(x, temperature, hard)
+  File "/data/conda_env/torfia/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data/torfia/github/GMVAE/CNN-MNIST/pytorch/networks/Networks.py", line 118, in forward
+    logits, prob, y = self.qyx(x, temperature, hard)
+  File "/data/torfia/github/GMVAE/CNN-MNIST/pytorch/networks/Networks.py", line 96, in qyx
+    x = layer(x, temperature, hard)
+  File "/data/conda_env/torfia/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data/torfia/github/GMVAE/CNN-MNIST/pytorch/networks/Layers.py", line 76, in forward
+    y = self.gumbel_softmax(logits, temperature, hard)
+  File "/data/torfia/github/GMVAE/CNN-MNIST/pytorch/networks/Layers.py", line 59, in gumbel_softmax
+    y = self.gumbel_softmax_sample(logits, temperature)
+  File "/data/torfia/github/GMVAE/CNN-MNIST/pytorch/networks/Layers.py", line 49, in gumbel_softmax_sample
+    y = logits + self.sample_gumbel(logits.size(), logits.is_cuda)
+  File "/data/torfia/github/GMVAE/CNN-MNIST/pytorch/networks/Layers.py", line 45, in sample_gumbel
+    U = U.to(self.device)
+RuntimeError: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.

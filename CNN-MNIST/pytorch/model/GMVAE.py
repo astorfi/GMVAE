@@ -261,8 +261,15 @@ class GMVAE:
         Returns:
             output: (dict) contains the history of train/val loss
         """
-        optimizer = optim.Adam(self.network.parameters(),
-                               lr=self.learning_rate)
+        optimizer = optim.Adam([
+                {'params': self.network.inference.inference_qyx.parameters()},
+                {'params': self.network.inference.inference_qzyx.parameters()},
+                {'params': self.network.generative.parameters()},
+                {'params': self.network.inference.encoderCNN.parameters(), 'lr': 1e-3}
+            ], lr=self.learning_rate)
+
+        # optimizer = optim.Adam(self.network.parameters(),
+        #                        lr=self.learning_rate)
         train_history_acc, val_history_acc = [], []
         train_history_nmi, val_history_nmi = [], []
 
